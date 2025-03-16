@@ -2,28 +2,23 @@ body {
     background-color: #0f0f23;
     color: white;
     font-family: 'Roboto', sans-serif;
-    min-height: 2095px;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 /* HEADER */
 .header {
     background-color: #1a1a3d;
-    padding: 15px 20px;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 10px 20px;
 }
 
 .logo {
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 24px;
+    font-weight: 800;
     color: white;
-    margin-left: 80px;
+    margin: 0;
 }
 
 /* NAVBAR */
@@ -32,21 +27,26 @@ body {
     justify-content: flex-end;
     padding: 0;
     margin: 0;
-    margin-right: 50px;
+    
 }
 
 .nav-item {
-    margin-left: 15px;
+    margin-left: 20px;
+    font-size: 20px !important;
+    font-weight: bold;
+
 }
 
 .nav-link {
     color: white !important;
-    font-size: 16px;
-    transition: color 0.3s ease;
+    font-size: 18px;
+}
+.nav-link:hover{
+    transform: scale(1.3);
 }
 
 .nav-item:hover .nav-link {
-    color: #9B59B6 !important;
+    color: #E61A86 !important;
 }
 
 /* HERO SECTION */
@@ -55,19 +55,20 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 0;
+    position: relative;
 }
 
 .hero-section .logo-img {
     width: 600px;
     height: auto;
+    margin-bottom: 20px;
 }
 
-h2 {
-    font-size: 36px;
+.hero-section h2 {
+    font-size: 48px;
     font-weight: 800;
-    margin-top: 40px;
+    margin: 20px 0;
 }
 
 .texto-roxo {
@@ -78,30 +79,37 @@ h2 {
     color: #E61A86 !important;
 }
 
+.cara_correndo{
+    width: 400px;
+    height: auto;
+    margin: 20px 0;
+}
+
 /* BOTÕES */
 .btn-group {
     display: flex;
-    gap: 15px;
+    gap: 60px;
     margin-top: 30px;
 }
 
 .btn {
-    width: 228px !important;
-    padding: 12px 24px;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 4px;
+    width: 200px !important;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    border-radius: 30px;
 }
 
 .btn-danger {
     background-color: #E61A86 !important;
     color: white !important;
-    transition: 0.3s;
+    transition: background-color 0.3s;
 }
 
 .btn-danger:hover {
-    background-color: darkred !important;
+    background-color: #C61470 !important;
 }
 
 /* FEATURES */
@@ -109,16 +117,18 @@ h2 {
     background: linear-gradient(to bottom, #1a1a3d, #0f0f23);
     padding: 50px 20px;
     text-align: center;
+    
 }
 
 .features h3 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 800;
+    margin-bottom: 15px;
 }
 
 .features p {
-    font-size: 18px;
-    max-width: 600px;
+    font-size: 16px;
+    max-width: 300px;
     margin: 0 auto;
 }
 
@@ -127,55 +137,63 @@ h2 {
     background-color: #1a1a3d;
     color: white;
     width: 100%;
-    height: 354px;
-    margin-top: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 20px 0;
     text-align: center;
+}
+
+.footer-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
 }
 
 .footer nav a {
     color: white;
     margin: 0 10px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .footer nav a:hover {
     text-decoration: underline;
 }
 
+.footer_home{
+    position: relative;
+    right: 20px;
+}
+
+.nomes_footer{
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+
+}
+
+.icone_no_footer{
+    border-color: red 10px;
+    padding-top: 30px;
+}
 /* RESPONSIVIDADE */
 @media (max-width: 1024px) {
     .logo {
-        font-size: 22px;
-        margin-left: 30px;
-    }
-
-    .nav {
-        margin-right: 20px;
+        font-size: 20px;
     }
 
     .nav-item {
         margin-left: 10px;
     }
 
-    .hero-section .logo-img {
-        width: 90%;
-    }
-
-    h2 {
-        font-size: 28px;
+    .hero-section h2 {
+        font-size: 36px;
     }
 
     .btn-group {
-        flex-direction: column;
+        gap: 15px;
     }
 
     .btn {
-        width: 100%;
+        width: 180px !important;
     }
 }
 
@@ -187,14 +205,12 @@ h2 {
     }
 
     .logo {
-        margin-left: 0;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .nav {
         flex-wrap: wrap;
         justify-content: center;
-        margin-right: 0;
     }
 
     .nav-item {
@@ -202,20 +218,28 @@ h2 {
     }
 
     .hero-section {
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding: 30px 0;
     }
 
     .hero-section .logo-img {
-        width: 40%;
+        width: 200px;
     }
 
-    h2 {
-        font-size: 24px;
+    .hero-section h2 {
+        font-size: 28px;
+    }
+
+    .running-char {
+        width: 150px;
     }
 
     .btn-group {
+        flex-direction: column;
         gap: 10px;
+    }
+
+    .btn {
+        width: 100% !important;
     }
 
     .features {
@@ -223,11 +247,159 @@ h2 {
     }
 
     .features p {
-        font-size: 16px;
+        font-size: 14px;
     }
 
-    .footer {
-        height: auto;
-        padding: 20px 10px;
+    .footer-logo {
+        width: 120px;
+    }
+}
+
+
+/* Barra de pesquisa */
+/* Ajustes na barra de pesquisa */
+.search-bar {
+    margin-left: 20px; /* Espaço entre o logo e a barra de pesquisa */
+    min-width: 400px;
+}
+
+.search-bar .form-control {
+    background-color: #ffffff; /* Fundo um pouco mais claro que o header */
+    border: none;
+    color: #0f0f23;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.search-bar .form-control::placeholder {
+    color: #aaa; /* Cor do placeholder */
+}
+
+.search-bar .btn-outline-light {
+    border-color: #9B59B6; /* Cor roxa para o botão de busca */
+    color: #9B59B6;
+    transition: all 0.3s ease;
+}
+
+.search-bar .btn-outline-light:hover {
+    background-color: #9B59B6;
+    color: white;
+}
+
+/* Ajuste no header para melhor alinhamento */
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que os elementos quebrem linha se necessário */
+}
+
+/* Garantir que o nav não quebre o layout */
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+/* Responsividade para a barra de pesquisa */
+@media (max-width: 768px) {
+    .search-bar {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%; /* Ocupa toda a largura em telas menores */
+        max-width: none;
+    }
+
+    .header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav {
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+
+/* Arruma navegação */
+
+.logo-header{
+    width: 60px;
+    display: flex;
+}
+
+ .header >.custom-container{
+    background-color: #1A1A2E;
+  
+ }
+
+ /* Classe customizada para aumentar o container */
+.custom-container {
+    max-width: 1500px; /* Aumenta a largura máxima para 1500px (ajuste conforme necessário) */
+    padding-left: 30px; /* Ajusta o padding interno, se desejar */
+    padding-right: 30px;
+}
+
+/* Opcional: Remover padding ou ajustá-lo para parecer ainda maior */
+.custom-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+/* Estilização da seção Features */
+.features {
+    background: linear-gradient(to bottom, #1a1a3d, #0f0f23);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Estilização dos títulos com barra */
+.features h3 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    position: relative; /* Necessário para posicionar o ::before */
+    padding-top: 20px; /* Espaço para a barra */
+}
+
+/* Adiciona a barra horizontal acima do título */
+.features h3::before {
+    content: ''; /* Necessário para o ::before funcionar */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza a barra */
+    width: 50px; /* Largura da barra (ajuste conforme necessário) */
+    height: 2px; /* Espessura da barra */
+    background-color: #aaa; /* Cor da barra (cinza claro) */
+}
+
+/* Estilização dos parágrafos */
+.features p {
+    font-size: 16px;
+    max-width: 300px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .features {
+        padding: 30px 10px;
+    }
+
+    .features h3 {
+        font-size: 18px;
+    }
+
+    .features p {
+        font-size: 14px;
+    }
+
+    .features h3::before {
+        width: 40px; /* Reduz a largura da barra em telas menores */
     }
 }

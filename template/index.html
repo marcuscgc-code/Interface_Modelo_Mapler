@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Bootstrap JS  -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<link rel="stylesheet" href="/static/home.css">
-<link rel="stylesheet" href="/script/script.js">
-<!-- Adição da fonte ROBOTO extrabold -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@800&display=swap" rel="stylesheet">
-
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Adição da fonte ROBOTO extrabold -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/home.css">
     <title>Home</title>
 </head>
 <body>
+    <!-- INICIO DO HEADER -->
     <header class="header">
-        <div class=" d-flex justify-content-between align-items-center py-1">
+        <div class="custom-container d-flex justify-content-between align-items-center py-1">
+            <img src="/Icones/icone_logo.ico" alt="logo-header" class="logo-header"> 
             <h1 class="logo">MAPLER</h1>
+            <!-- Barra de Pesquisa -->
+            <form class="search-bar d-flex align-items-center">
+                <input class="form-control me-1" type="search" placeholder="Pesquisar..." aria-label="Search">
+               
+            </form>
+            <!-- Navegação -->
             <nav>
                 <ul class="nav">
                     <li class="nav-item"><a class="nav-link" href="#">Portugol</a></li>
@@ -31,12 +35,12 @@
             </nav>
         </div>
     </header>
-    
+    <!-- FIM DO HEADER -->
     <main class="hero-section text-center">
         <div class="container">
-            <img src="/Icones mapler/logo_branco_mapler.png" alt="Mapler Logo" class="logo-img" style="display: block;">
-            <h2 style="margin-top: 626px;">Portugol <span class="highlight texto-roxo">hoje</span> e qualquer Linguagem <span class="text-danger">amanhã</span></h2>
-            <img src="/screen/caracorrendo.png" alt="">
+            <img src="/Icones/logo_branco_mapler.png" alt="Mapler Logo" class="logo-img">
+            <h2>Portugol <span class="highlight texto-roxo">hoje</span> e qualquer Linguagem <span class="text-danger">amanhã</span></h2>
+            <img src="/screen/caracorrendo.png" alt="Running Character" class="cara_correndo">
             
             <div class="btn-group mt-4">
                 <button class="btn btn-danger">PROGRAMAR</button>
@@ -45,34 +49,54 @@
             </div>
         </div>
     </main>
-    
     <section class="features text-center py-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h3>Disponível Online</h3>
-                    <p>Codifique em Portugol diretamente no navegador e transforme em diversas linguagens.</p>
+                    <h3>DISPONÍVEL ONLINE</h3>
+                    <p>Codifique em Portugol diretamente do navegador e transforme em diversas linguagens.</p>
                 </div>
                 <div class="col-md-4">
-                    <h3>Aprendizagem Acelerada</h3>
+                    <h3>APRENDIZAGEM ACELERADA</h3>
                     <p>Facilita a transição para C, Java, Python, JavaScript e muito mais.</p>
                 </div>
                 <div class="col-md-4">
-                    <h3>Para Estudantes e Educadores</h3>
+                    <h3>PARA ESTUDANTES E EDUCADORES</h3>
                     <p>Perfeito para iniciantes desenvolverem lógica com facilidade.</p>
                 </div>
             </div>
         </div>
     </section>
-    
-    <footer class="footer text-center py-4" style="margin-top: 1626px; height: 354px;">
-        <div class="container">
-            <p>©2025 Mapler Portugol</p>
-            <nav>
-                <a href="#">Sobre</a> | <a href="#">Home</a> | <a href="#">Comunidade</a> | <a href="#">Documentação</a>
-            </nav>
+   
+
+    <footer class="page-footer" style="background: #1A1A2E;">
+        <div class="container icone_no_footer">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="">
+                        <img src="/Icones/logo_branco_mapler.png" width="300px" height="auto" alt="egua">
+                    </h5>
+                </div>
+                <div class="col-12 col-lg-4 offset-lg-2">
+                    <ul>
+                        <li>
+                            <a class="nomes_footer" href="/">Home</a>
+                        </li>
+                        <li>
+                            <a class="nomes_footer" href="/sobre">Sobre</a>
+                        </li>
+                        <li>
+                            <a class="nomes_footer" href="comunidade">Comunidade</a>
+                        </li>
+                        <li>
+                            <a class="nomes_footer" style="font-weight: bold;" href="Nomes do Mapler" target="_blank">Documentação</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
         </div>
     </footer>
-    
 </body>
 </html>
