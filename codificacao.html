@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor Layout</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/codificao.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-dark text-white p-2">
+        <h1 class="h4 mb-0">MAPLER</h1>
+    </header>
+
+    <!-- Main Content: Split Code Editors -->
+    <div class="container-fluid mt-2">
+        <div class="row" style="height: 70vh;">
+            <!-- Left Code Editor -->
+            <div class="col-md-6 d-flex">
+                <div class="code-editor flex-grow-1 p-3">
+                    <h5>PORTUGOL</h5>
+                    <pre><code>1  include &lt;stdio.h&gt;
+2  include &lt;mathieu.cob&gt;
+3
+4  interface MATH
+5  {
+6      float sum(float a, float b);
+7      float sub(float a, float b);
+8  }
+9
+10 class Mathieu : implements MATH
+11 {
+12     method
+13     {
+14         float sum(float a, float b)
+15         {
+16             return a + b;
+17         }
+18     }
+19 }
+20 endClass</code></pre>
+                </div>
+            </div>
+            <!-- Right Code Editor -->
+            <div class="col-md-6 d-flex">
+                <div class="code-editor flex-grow-1 p-3">
+                    <h5>PYTHON</h5>
+                    <pre><code>1  include &lt;stdio.h&gt;
+2  include &lt;mathieu.cob&gt;
+3
+4  interface MATH
+5  {
+6      float sum(float a, float b);
+7      float sub(float a, float b);
+8  }
+9
+10 class Mathieu : implements MATH
+11 {
+12     method
+13     {
+14         float sum(float a, float b)
+15         {
+16             return a + b;
+17         }
+18     }
+19 }
+20 endClass</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <pre>
+        <code>
+          /* Seu código aqui */
+          function minhaFuncao() {
+            console.log("Olá, mundo!");
+          }
+        </code>
+      </pre>
+
+    <!-- Terminal Section -->
+    <div class="terminal p-3">
+        <p class="mb-0">Microsoft Windows [Version 10.0.15063]</p>
+        <p class="mb-0">(c) 2017 Microsoft Corporation. All rights reserved.</p>
+        <p class="mb-0">C:\Users\USER&gt;_</p>
+    </div>
+
+    <!-- Bootstrap JS (optional, for any interactive components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
