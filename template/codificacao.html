@@ -19,11 +19,15 @@
     
     <!-- MAPLER Custom CSS -->
     <link rel="stylesheet" href="/resources/static/css/mapler-web.css">
+    
+    <!-- Xterm.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css">
 </head>
 <body>
     <!-- Header -->
-    <header class="bg-dark text-white p-2">
-        <h1 class="h4 mb-0">MAPLER</h1>
+    <header class="bg-dark text-white p-2 ">
+        <img src="/icones/icone_logo.ico" alt="logo_do_header" class="logo-header">
+        <h1 class="h4 mb-md-0  style="display: inline;">MAPLER</h1>
     </header>
 
     <!-- Main Content: Split Code Editors -->
@@ -33,35 +37,14 @@
             <div class="col-md-6 d-flex">
                 <div class="code-editor flex-grow-1 p-3">
                     <h5>PORTUGOL</h5>
-                    <textarea id="portugol-editor">1  include <stdio.h>
-2  include <mathieu.cob>
-3
-4  interface MATH
-5  {
-6      float sum(float a, float b);
-7      float sub(float a, float b);
-8  }
-9
-10 class Mathieu : implements MATH
-11 {
-12     method
-13     {
-14         float sum(float a, float b)
-15         {
-16             return a + b;
-17         }
-18     }
-19 }
-20 endClass</textarea>
+                    <textarea id="portugol-editor"></textarea>
                 </div>
             </div>
             <!-- Right Code Editor -->
             <div class="col-md-6 d-flex">
                 <div class="code-editor flex-grow-1 p-3">
                     <h5>PYTHON</h5>
-                    <textarea id="python-editor">class Mathieu:
-    def sum(self, a, b):
-        return a + b</textarea>
+                    <textarea id="python-editor"></textarea>
                 </div>
             </div>
         </div>
@@ -69,9 +52,7 @@
 
     <!-- Terminal Section -->
     <div class="terminal p-3">
-        <p class="mb-0">Microsoft Windows [Version 10.0.15063]</p>
-        <p class="mb-0">(c) 2017 Microsoft Corporation. All rights reserved.</p>
-        <p class="mb-0">C:\Users\USER>_</p>
+        <div id="terminal"></div>
     </div>
 
     <!-- Bootstrap JS -->
@@ -79,85 +60,53 @@
 
     <!-- CodeMirror JS -->
     <script src="/resources/static/codemirror-5.65.2/lib/codemirror.js"></script>
-
-    <!-- CodeMirror Modes -->
     <script src="/resources/static/codemirror-5.65.2/mode/python/python.js"></script>
     <script src="/resources/static/codemirror-5.65.2/mode/portugol/portugol.js"></script>
-
-    <!-- CodeMirror Addons -->
     <script src="/resources/static/codemirror-5.65.2/addon/edit/closebrackets.js"></script>
     <script src="/resources/static/codemirror-5.65.2/addon/edit/matchbrackets.js"></script>
     <script src="/resources/static/codemirror-5.65.2/addon/comment/comment.js"></script>
 
+    <!-- Xterm.js -->
+    <script src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.js"></script>
     <script>
-        function verificarCarregamento() {
-    if (typeof CodeMirror === "undefined") {
-        console.error("Erro: CodeMirror não foi carregado. Verifique o caminho do arquivo codemirror.js.");
-        return false;
-    }
+        function inicializarEditores() {
+            const configEditor = {
+                lineNumbers: true,
+                theme: "portugol",
+                autoCloseBrackets: true,
+                matchBrackets: true,
+                lineWrapping: false
+            };
 
-    if (!CodeMirror.modes.portugol) {
-        console.error("Erro: O modo 'portugol' não foi carregado corretamente. Verifique o caminho do arquivo portugol.js.");
-        return false;
-    }
+            window.portugolEditor = CodeMirror.fromTextArea(document.getElementById("portugol-editor"), {
+                ...configEditor,
+                mode: "portugol"
+            });
 
-    if (!document.querySelector('link[href*="/resources/static/codemirror-5.65.2/theme/portugol.css"]')) {
-        console.warn("Aviso: O tema 'portugol' pode não estar carregado. Verifique o caminho do arquivo portugol.css.");
-    }
+            window.pythonEditor = CodeMirror.fromTextArea(document.getElementById("python-editor"), {
+                ...configEditor,
+                mode: "python"
+            });
+        }
 
-    return true;
-}
+        function inicializarTerminal() {
+            const term = new Terminal();
+            term.open(document.getElementById("terminal"));
+            term.write("Bem-vindo ao terminal!\r\n$ ");
 
-function inicializarEditores() {
-    if (!verificarCarregamento()) return;
+            term.onData(e => {
+                if (e === '\r') {
+                    term.write("\r\n$ ");
+                } else {
+                    term.write(e);
+                }
+            });
+        }
 
-    // Evita múltiplas inicializações do editor
-    if (window.portugolEditor || window.pythonEditor) return;
-
-    const configEditor = {
-        lineNumbers: true,
-        theme: "portugol",
-        autoCloseBrackets: true,
-        matchBrackets: true,
-        lineWrapping: true
-    };
-
-    // Inicializa o editor de Portugol
-    window.portugolEditor = CodeMirror.fromTextArea(document.getElementById("portugol-editor"), {
-        ...configEditor,
-        mode: "portugol"
-    });
-
-    // Inicializa o editor de Python
-    window.pythonEditor = CodeMirror.fromTextArea(document.getElementById("python-editor"), {
-        ...configEditor,
-        mode: "python"
-    });
-
-    // Garante que os editores mantenham a altura fixa sem crescer
-    function ajustarAlturaEditores() {
-        document.querySelectorAll('.code-editor').forEach(editor => {
-            const h5Height = editor.querySelector('h5') ? editor.querySelector('h5').offsetHeight : 0;
-            const padding = parseInt(window.getComputedStyle(editor).paddingTop) * 2;
-            const alturaDisponivel = editor.offsetHeight - h5Height - padding;
-            const cm = editor.querySelector('.CodeMirror');
-            if (cm) cm.style.height = `${alturaDisponivel}px`;
+        window.addEventListener('load', () => {
+            inicializarEditores();
+            inicializarTerminal();
         });
-    }
-
-    ajustarAlturaEditores();
-    window.addEventListener('resize', ajustarAlturaEditores);
-
-    setTimeout(() => {
-        window.portugolEditor.refresh();
-        window.pythonEditor.refresh();
-    }, 100);
-}
-
-window.addEventListener('load', inicializarEditores);
-
-
-
     </script>
 </body>
 </html>
