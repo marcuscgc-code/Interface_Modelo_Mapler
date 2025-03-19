@@ -1,0 +1,230 @@
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MAPLER - Interpretador Portugol">
+    <meta name="keywords" content="MAPLER, MACP, MA, CP, interpretador ,compilador, portugol, maranhão, brasil, programação, programacao, desenvolvimento, algoritmo">
+    <meta name="robots" content="INDEX,FOLLOW" />
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{css/codigo.css}">
+    <link rel="stylesheet" th:href="@{css/font-awesome/css/all.min.css}">
+    <link rel="stylesheet" th:href="@{/codemirror-5.65.2/lib/codemirror.css}">
+    <link rel="stylesheet" th:href="@{/codemirror-5.65.2/theme/portugol.css}">
+    <link rel="stylesheet" th:href="@{/css/mapler-web.css}">
+    <!-- novos modulos -->
+    <script th:src="@{/codemirror-5.65.2/addon/edit/closebrackets.js}"></script>
+    <script th:src="@{/codemirror-5.65.2/addon/edit/matchbrackets.js}"></script>
+    <script th:src="@{/codemirror-5.65.2/addon/comment/comment.js}"></script>
+    <!-- <script src="https://codemirror.net/addon/mode/simple.js"></script -->
+        
+
+        <!--Novo mode portugol customizar -->
+    <script th:src="@{/codemirror-5.65.2/mode/portugol/portugol.js}"></script>
+    <link rel="shortcut icon" th:href="@{images/favicon.ico}" type="image/x-icon">
+    <title>Mapler Web</title>
+</head>
+
+<body>
+
+<div id="application" class="d-flex flex-column bg-dark text-light">
+    <div id="nav-bar" class="d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center p-1">
+            <a href="/" class="text-light">
+                <div id="btn-home" class="p-1 mx-3"><i class="fas fa-home fs-5"></i></div>
+            </a>
+
+            <!-- Arquivo -->
+            <div class="dropdown py-1 px-2 me-0">
+                <span class="" id="dropdownMenuArquivo" data-bs-toggle="dropdown" aria-expanded="false">Arquivo</span>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuArquivo">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+
+            <!-- Exemplos -->
+            <div class="dropdown py-1 px-2 me-0">
+                <span class="" id="dropdownMenuExemplos" data-bs-toggle="dropdown" aria-expanded="false">Exemplos</span>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuExemplos">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+
+            <!-- Linguagem -->
+            <div class="dropdown py-1 px-2 me-0">
+                <span class="" id="dropdownMenuLinguagem" data-bs-toggle="dropdown" aria-expanded="false">Linguagem</span>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLinguagem">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+
+            <!-- Configuracoes -->
+            <div class="dropdown py-1 px-2 me-0">
+                <span class="" id="dropdownMenuConfiguracoes" data-bs-toggle="dropdown" aria-expanded="false">Configurações</span>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuConfiguracoes">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+
+            <!-- Sobre -->
+            <div class="dropdown py-1 px-2 me-0">
+                <span class="" id="dropdownMenuSobre" data-bs-toggle="dropdown" aria-expanded="false">Sobre</span>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuSobre">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div id="btn-tema" class="me-3" style="cursor: pointer;"><i class="fas fa-adjust"></i></div>
+    </div>
+
+    <div id="main" class="d-flex" style="height: 100%;">
+        <!-- Sidebar -->
+        <div id="sidebar" class="d-flex flex-column col-2 p-5">
+            <div id="btn-executar" class="d-flex align-items-center fs-5 mb-2" style="cursor: pointer;" onclick="ocultarExibirElem(terminal)">
+                <i class="fas fa-play me-1" style="color: rgb(6,161,60);"></i>
+                <div class="">Executar</div>
+            </div>
+            <div id="btn-debug" class="d-flex align-items-center fs-5 mb-2" style="cursor: pointer;" onclick="ocultarExibirElem(codigoExemplo)">
+                <i class="fas fa-bug me-1" style="color: rgb(8,212,248);"></i>
+                <div class="">Debug</div>
+            </div>
+            <div id="btn-tradzir" class="d-flex align-items-center fs-5 mb-2" style="cursor: pointer;">
+                <i class="fas fa-code me-1" style="color: rgb(241,176,6);"></i>
+                <div class="">Traduzir</div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div id="content" class="d-flex flex-column justify-content-center">
+            <!-- Editable codes and Exemple codes -->
+            <div id="codigos" class="d-flex justify-content-center align-items-stretch flex-fill">
+                <div id="codigo-editavel" class="flex-fill fs-5">
+                    <!-- <textarea id="editor"></textarea> -->
+                    <textarea id="codigo">
+variaveis
+	soma, divisao, subtracao, multiplicacao: modulo;
+	a, b:inteiro;
+inicio
+	a<-10;
+	b<-5;
+	soma;
+	subtracao;
+	multiplicacao;
+	divisao;
+fim
+
+modulo soma
+	escrever a, "+", b, "=", a+b;
+fim modulo;
+
+modulo multiplicacao
+	escrever a, "*", b, "=", a*b;
+fim modulo;
+
+modulo subtracao
+	escrever a, "-", b, "=", a-b;
+fim modulo;
+
+modulo divisao
+	escrever a, "/", b, "=", a/b;
+fim modulo;
+
+
+//Modelo de inicio
+//Estrutura Básica
+variaveis
+	//Nesta área declaramos as variaveis
+    //utilizamos no algoritmo
+var_nome:cadeia
+inicio //Apartir daqui começa o algoritmo
+ escrever "Digite seu nome";
+ ler var_nome;
+ escrever "Olá", var_nome;
+ fim// Esta instrução indica o fim do algoritmo
+                        </textarea>
+                </div>
+                <div id="codigo-exemplo" class="flex-fill p-3 fs-5 d-none">Exemplos</div>
+            </div>
+
+            <!-- Terminal -->
+            <div id="terminal" class="flex-fill p-3 fs-5 d-none">
+                Ola mundo! <br> Fim execução. 0.001
+            </div>
+        </div>
+    </div>
+
+</div>
+<footer th:replace="~{/fragmentos/footerPortugol :: footer}"></footer>
+
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js/codigo.js}"></script>
+<script th:src="@{/font-awesome/js/all.min.js}"></script>
+
+<script th:src="@{/codemirror-5.65.2/lib/codemirror.js}"></script>
+<script th:src="@{/codemirror-5.65.2/mode/javascript/javascript.js}"></script>
+<script th:src="@{/codemirror-5.65.2/mode/portugol/portugol.js}"></script>
+<script th:src="@{/codemirror-5.65.2/addon/edit/closebrackets.js}"></script>
+<script th:src="@{/codemirror-5.65.2/addon/edit/matchbrackets.js}"></script>
+<script th:src="@{/codemirror-5.65.2/addon/comment/comment.js}"></script>
+
+<script>
+  const editor = CodeMirror.fromTextArea(
+    document.getElementById("codigo"), {
+        mode: "portugol", // Atualize o modo para Portugol
+        theme: "portugol", // Use o tema customizado
+        lineNumbers: true,
+        autoCloseBrackets: true,
+    }
+);
+    // editor.setSize("100%", "100%");
+</script>
+
+<script id="script-split-codigo-terminal">
+    Split(['#codigos', '#terminal'], {
+        gutterSize: 5,
+        direction: "vertical",
+        sizes: [70, 30],
+        // minSizes: [300, 100]
+    });
+</script>
+
+<script>
+    Split(['#codigo-editavel', '#codigo-exemplo'], {
+        gutterSize: 5
+    });
+</script>
+
+<script>
+    const codigoEditavel = document.querySelector("#codigo-exemplo");
+    const codigoExemplo = document.querySelector("#codigo-exemplo");
+    const terminal = document.querySelector("#terminal");
+
+    const btnExecutar = document.querySelector("#btn-executar");
+    const btnExemplos = document.querySelector("#btn-exemplos");
+
+
+    function ocultarExibirElem(elem) {
+        if (elem.classList.contains("d-none")) {
+            elem.classList.remove("d-none");
+        } else {
+            elem.classList.add("d-none");
+        }
+    }
+</script>
+</body>
+
+</html>

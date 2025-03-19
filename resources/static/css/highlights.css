@@ -1,0 +1,45 @@
+
+.pre{
+    font-family: "SFMono-Regular","Menlo","Monaco","Consolas","Liberation Mono","Courier New",monospace;
+    font-weight: 300;
+    background-color: #202324;
+    padding: 1.5rem;
+    white-space: nowrap;
+}
+
+.pre2{
+    font-family: "SFMono-Regular","Menlo","Monaco","Consolas","Liberation Mono","Courier New",monospace;
+    font-weight: 300;
+    white-space: nowrap;
+}
+
+/*tamanho da imagem como proporcional*/
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+.codigo{
+    color: #ddd9d2;
+}
+
+.reservada{
+    font-weight: bold;
+    color: rgb(63, 167, 242);
+}
+
+.tipo{
+    color: rgb(243, 178, 80);
+}
+
+.string{
+    color: rgb(237, 50, 50);
+}
+
+.comentario{
+    color: rgb(128, 158, 114);
+}
+
+.caractere{
+    color: rgb(53, 214, 183);
+}

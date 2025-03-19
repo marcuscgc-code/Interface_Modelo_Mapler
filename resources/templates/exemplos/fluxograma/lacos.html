@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+<body>
+
+<!-- Header -->
+<!-- Cabecalho -->
+<header th:replace="~{/fragmentos/header :: header}"></header>
+    <!-- Corpo principal do site -->
+    <main>
+        <div class="container py-5 px-3 pt-3 px-sm-5">
+            <!-- Menu -->
+            <div th:replace="@{/fragmentos/menu-exemplo-portugol.html}"></div>
+            <div th:replace="@{/fragmentos/menu-exemplo-fluxograma.html}"></div>
+            <!-- Content -->
+            
+        <!-- Secao principal -->
+        <section>
+            <div class="mt-4">
+
+            </div>
+        </section>
+
+        </div>
+    </main>
+
+    <!-- Rodape -->
+    <footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+    <!-- JS -->
+    <!-- Bootstrap 5 Bundle Core -->
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script></body>
+
+</html>

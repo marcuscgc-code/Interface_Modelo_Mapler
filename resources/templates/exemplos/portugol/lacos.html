@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+<body>
+
+<!-- Header -->
+<!-- Cabecalho -->
+<header th:replace="~{/fragmentos/header :: header}"></header>
+    <!-- Corpo principal do site -->
+    <main>
+        <div class="container py-5 px-3 pt-3 px-sm-5">
+            <!-- Menu -->
+            <div th:replace="@{/fragmentos/menu-exemplo-portugol.html}"></div>
+            <div th:replace="@{/fragmentos/menu-exemplo-fluxograma.html}"></div>
+            <!-- Content -->
+            
+            <!-- Secao principal -->
+            <section>
+                <div class="mt-4">
+                    <!-- Visao Geral -->
+                    <section id="VisaoGeral">
+                        <!-- Descrição rapida -->
+                        <!-- <hr class="mt-5"> -->
+                        <h1>Laços de Repetição</h1>
+                        <p class="lead">
+                            São estruturas que utilizam condições para repetir trechos de código. Usamos os comandos <code>para</code>, <code>enquanto</code> e <code>repita</code>.
+                        </p>
+                    </section>
+
+                    <!-- Para -->
+                    <section id="Para">
+                        <hr class="mt-5">
+                        <h2>Comando Para</h2>
+                        <p class="lead">
+                            O laço <code>para</code> repete um trecho de código enquanto o valor de uma determinada variável estiver no intervalo definido.
+                        </p>
+
+                        <pre class="pre">
+                            <span class="comentario">// Sintaxe do comando para</span><br>
+                            <span class="reservada">variaveis</span><br>
+                            <span class="reservada">início</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">para </span>&lt;var><span class="reservada"> de </span>&lt;inicio> <span class="reservada">ate </span>&lt;fim><span class="reservada"> passo </span>&lt;inc><span class="reservada"> faca</span>  <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;trecho de código> <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim</span><span class="reservada"> para</span>; <br>
+                            <span class="reservada">fim</span><br>
+                        </pre>
+
+                        <ul class="lead">
+                            <li><strong>var:</strong> variável de controle</li>
+                            <li><strong>início:</strong> valor inicial</li>
+                            <li><strong>fim:</strong> valor final</li>
+                            <li><strong>inc:</strong> valor do incremento</li>
+                        </ul>
+
+                        <div class="alert alert-warning" role="alert">
+                            <h4 class="alert-heading">Observação!</h4>
+                            <ul>
+                                <li>quando inicio &lt; fim, o laço irá incrementar o valor da variável</li>
+                                <li>quando inicio = fim, o laço irá rodar uma única vez</li>
+                                <li>quando inicio > fim, o laço não executará</li>
+                            </ul>
+                        </div>
+
+                        <h4 class="mt-5">Exemplo</h4>
+                        <pre class="pre">
+                            <span class="comentario">// Exemplo de Repetição</span><br>
+                            <span class="reservada">variaveis</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;i<span class="caractere">: </span><span class="tipo">inteiro</span>;<br>
+                            <span class="reservada">inicio</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">para </span>i<span class="reservada"> de </span>1 <span class="reservada">ate </span>5<span class="reservada"> passo </span>1<span class="reservada"> faca</span>  <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span>i; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim</span><span class="reservada"> para</span>; <br>
+                            <span class="reservada">fim</span><br>
+                        </pre>
+
+                        <div class="alert alert-warning" role="alert">
+                            <h4 class="alert-heading">Observação!</h4>
+                            <p>
+                                O comando "para" aceita outros blocos de "para" dentro de seu &lt;trecho de codigo>. <br>
+                                Porém, estes devem ser fechados antes que o "para" mais externo finalize.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Enquanto -->
+                    <section id="Enquanto">
+                        <hr class="mt-5">
+                        <h2>Comando Enquanto</h2>
+                        <p class="lead">
+                            O <code>enquanto</code> irá repetir um trecho de código enquanto sua condição for verdadeira.
+                        </p>
+
+                        <pre class="pre">
+                            <span class="reservada">variaveis</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;i<span class="caractere">: </span><span class="tipo">inteiro</span>;<br>
+
+                            <span class="reservada">inicio</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;i <span class="caractere">&lt;-</span> 1;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Enquanto essa condição for verdadeira</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">enquanto </span>i &lt;= 5<span class="reservada"> faca</span> <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Execute esse trecho de código</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span>i;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i <span class="caractere">&lt;-</span> i + 1;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim</span><span class="reservada"> enquanto</span>;<br>
+                            <span class="reservada">fim</span><br>
+                        </pre>
+
+                        <div class="alert alert-warning" role="alert">
+                            <h4 class="alert-heading">Observação!</h4>
+                            <p>
+                                O comando "enquanto" aceita outros blocos de "enquanto" dentro de seu &lt;trecho de codigo>. <br>
+                                Porém, estes devem ser fechados antes que o "enquanto" mais externo finalize.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Repita -->
+                    <section id="Repita">
+                        <hr class="mt-5">
+                        <h2>Comando Repita</h2>
+                        <p class="lead">
+                            O <code>repita</code> é um laço que obrigatoriamente rodará os comandos internos pelo menos uma vez, isso porque ele faz a verificação somente depois executar seu bloco interno.
+                        </p>
+
+                        <pre class="pre">
+                            <span class="reservada">variaveis</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;x<span class="caractere">:</span><span class="tipo">inteiro</span>;<br>
+
+                            <span class="reservada">inicio</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;x<span class="caractere">&lt;-</span>1;<br><br>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Executa o trecho de código primeiro</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Depois repete enquanto a condição for verdadeira</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">repita</span> <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span>x;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x<span class="caractere">&lt;-</span> x+1;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ate </span><span class="caractere">(</span>x &lt;= 5<span class="caractere">)</span>;<br>
+
+                            <span class="reservada">fim</span><br>
+                        </pre>
+
+                        <div class="alert alert-warning" role="alert">
+                            <h4 class="alert-heading">Observação!</h4>
+                            <p>
+                                O comando "enquanto" aceita outros blocos de "enquanto" dentro de seu &lt;trecho de codigo>. <br>
+                                Porém, estes devem ser fechados antes que o "enquanto" mais externo finalize.
+                            </p>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Rodape -->
+    <footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+    <!-- JS -->
+    <!-- Bootstrap 5 Bundle Core -->
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script></body>
+
+</html>

@@ -1,0 +1,28 @@
+body{
+    background-color: #1C1E1F;
+    color: #ddd9d2;
+    display: block;
+}
+
+.rosa{
+    color: #D03384;
+    font-weight: 400;
+}
+
+.alert-warning{
+    border-color: #7C5C00;
+    background-color: #513E00;
+    color: #FBDE86;
+}
+
+a{
+    text-decoration: none;
+}
+
+#accordionBugs img{
+    width: 80%;
+}
+
+.bug-linhas-associacao{
+    display: inline-block;
+}

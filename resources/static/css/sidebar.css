@@ -1,0 +1,42 @@
+
+.modal .modal-content{
+    width: 300px;
+}
+
+.modal-content{
+    background-color: #1C1E1F;
+}
+
+.btn-toggle {
+    display: inline-flex;
+    align-items: center;
+    padding: .25rem .5rem;
+    font-weight: 600;
+    color: #aaa9a6;
+    background-color: transparent;
+    border: 0;
+}
+
+.btn-toggle:hover,
+.btn-toggle:focus {
+    color: #ddd9d2;
+    box-shadow: 0 0 0 0 !important;
+    outline: 0 !important;
+}
+
+.btn-toggle[aria-expanded="true"] {
+    color: #ddd9d2;
+}
+
+.btn-toggle-nav a {
+    display: inline-flex;
+    padding: .1875rem .5rem;
+    margin-top: .125rem;
+    margin-left: 1.25rem;
+    text-decoration: none;
+    color: #aaa9a6;
+}
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
+    color: #f8f9fa;
+}

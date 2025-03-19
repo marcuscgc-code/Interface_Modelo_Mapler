@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+<body>
+
+<!-- Header -->
+<!-- Cabecalho -->
+<header th:replace="~{/fragmentos/header :: header}"></header>
+
+    <main class="container py-5 px-3 pt-3 px-sm-5">
+    <!-- Corpo principal do site -->
+    <div class="container py-5 px-3 pt-3 px-sm-5">
+        <h1 class="mb-4">Suporte ao usuário</h1>
+        <div class="accordion mb-3" id="accordionAManual">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingManual">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseManual" aria-expanded="false" aria-controls="collapseManual">
+                        Manual do usuário
+                    </button>
+                </h2>
+                <div id="collapseManual" class="accordion-collapse collapse " aria-labelledby="headingManual" data-bs-parent="#accordionManual">
+                    <div class="accordion-body">
+                        <p>Com dúvidas quanto ao download, instalação ou uso? Fique à vontade para verificar nosso manual do usuário.</p>
+                        <a href="/ajuda/manuais#VisaoGeral"><button class="btn btn-light">Manual</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion mb-3" id="accordionForum">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingForum">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForum" aria-expanded="false" aria-controls="collapseForum">
+                        Fórum de discussão
+                    </button>
+                </h2>
+                <div id="collapseForum" class="accordion-collapse collapse " aria-labelledby="headingForum" data-bs-parent="#accordionForum">
+                    <div class="accordion-body">
+                        <p>O projeto Mapler conta com um fórum de discussão entre usuários.
+                            Nele, é possível informar problemas e sugerir novas funcionalidades, além de ser um excelente espaço para sanar dúvidas sobre os exercícios propostos. Seu feedback é muito importante no processo de melhoria contínua do Mapler!</p>
+                        <a href="https://sourceforge.net/p/portugol/discussion/"><button class="btn btn-light">Fórum</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion mb-3" id="accordionBugs">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingBugs">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBugs" aria-expanded="false" aria-controls="collapseBugs">
+                        Possíveis bugs e dificuldades
+                    </button>
+                </h2>
+                <div id="collapseBugs" class="accordion-collapse collapse " aria-labelledby="headingBugs" data-bs-parent="#accordionBugs">
+                    <div class="accordion-body">
+                        <p>OBS: Todos os possíveis bugs já foram repassados à equipe de desenvolvimento e serão solucionados em futuras versões!</p>
+                        <div class="accordion mb-3" id="accordionBugs1">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingBugs1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBugs1" aria-expanded="false" aria-controls="collapseBugs1">
+                                        Qual arquivo abrir?
+                                    </button>
+                                </h2>
+                                <div id="collapseBugs1" class="accordion-collapse collapse " aria-labelledby="headingBugs1" data-bs-parent="#accordionBugs1">
+                                    <div class="accordion-body">
+                                        <div class="mb-3">
+                                            <p>Com um software de extração de arquivos compactados, extraia o conteúdo e abra o executável <i>Mapler-executavel.jar</i>, como na imagem abaixo:</p>
+                                            <img th:src="@{/images/ajuda/abertura_mapler.png}" width="100%" alt="Abertura do Mapler">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion mb-3" id="accordionBugs2">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingBugs2">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBugs2" aria-expanded="false" aria-controls="collapseBugs2">
+                                        Como fechar o Debugger?
+                                    </button>
+                                </h2>
+                                <div id="collapseBugs2" class="accordion-collapse collapse " aria-labelledby="headingBugs2" data-bs-parent="#accordionBugs2">
+                                    <div class="accordion-body">
+                                        <div class="mb-3">
+                                            <p>Uma vez aberto, o debugger, que é a ferramenta para depuração e correção de erros, não possui nenhum ícone indicativo para fechá-lo.
+                                                Para tal, apenas clique novamente no ícone do Debugger,como na imagem abaixo, que a janela será fechada.
+                                            </p>
+                                            <img th:src="@{/images/ajuda/fecha_debug.png}" width="100%" alt="Fechar janela do Debug">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion mb-3" id="accordionBugs3">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingBugs3">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBugs3" aria-expanded="false" aria-controls="collapseBugs3">
+                                        Fluxogramas: Início e Fim não aparecem ao serem clicados
+                                    </button>
+                                </h2>
+                                <div id="collapseBugs3" class="accordion-collapse collapse " aria-labelledby="headingBugs3" data-bs-parent="#accordionBugs3">
+                                    <div class="accordion-body">
+                                        <div class="mb-3">
+                                            <p>Observe os elementos já posicionados, provavelmente você já adicionou um início e/ou fim
+                                                na área de trabalho do Mapler. Em um fluxograma, você só pode ter um elemento ínicio e um elemento fim, conforme nosso <a href="/manuais#VisaoGeral">Manual</a>.
+                                                Em futuras versões, pretendemos criar uma aviso de revisão ao usuário quando o mesmo tentar esta ação.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion mb-3" id="accordionBugs4">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingBugs4">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBugs4" aria-expanded="false" aria-controls="collapseBugs4">
+                                        Alterações em um projeto não sendo salvas ao encerrar o Mapler direto
+                                    </button>
+                                </h2>
+                                <div id="collapseBugs4" class="accordion-collapse collapse " aria-labelledby="headingBugs4" data-bs-parent="#accordionBugs4">
+                                    <div class="accordion-body">
+                                        <div class="mb-3">
+                                            <p>Nosso programa ainda não avisa que existem alterações pendentes para serem salvas. Por ora, NÃO
+                                                RECOMENDAMOS utilizar o item <i>Sair</i>, do menu <i>Arquivo</i>, nem fechar direto pelo X da janela,
+                                                a menos que possua certeza que já salvou as alterações em seu projeto.
+                                            </p>
+                                            <figure>
+                                                <img th:src="@{/images/ajuda/fecha_programa_direto.png}" alt="Ícones que fecham o Mapler direto">
+                                                <figcaption>NÃO utilize estes ícones sem ter salvo o progesso no projeto previamente!</figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion mb-3" id="accordionBugs5">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingBugs5">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBugs5" aria-expanded="false" aria-controls="collapseBugs5">
+                                        Fluxogramas: Linhas de associação desajustadas ao abrir um projeto
+                                    </button>
+                                </h2>
+                                <div id="collapseBugs5" class="accordion-collapse collapse " aria-labelledby="headingBugs5" data-bs-parent="#accordionBugs5">
+                                    <div class="accordion-body">
+                                        <div class="mb-3">
+                                            <p> Este é um erro estético que ocorre ao abrir um fluxograma salvo no computador, onde as linhas de associação
+                                                aparecem desalinhadas. Para solucionar, basta clicar nos elementos associados, que elas ficarão
+                                                centralizadas entre os itens, a forma correta e esperada de exibição.
+                                            </p>
+                                            <figure class="bug-linhas-associacao ">
+                                                <img th:src="@{/images/ajuda/linhas_desajustadas.png}" alt="Linhas de associação desajustadas">
+                                                <figcaption>Fluxograma ao ser aberto</figcaption>
+                                            </figure>
+                                            <figure class="bug-linhas-associacao">
+                                                <img th:src="@{/images/ajuda/linhas_ajustadas.png}" alt="Linhas de assoiação ajustadas">
+                                                <figcaption>Fluxograma ajustado</figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion mb-3" id="accordionBugs6">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingBugs6">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBugs6" aria-expanded="false" aria-controls="collapseBugs6">
+                                        Ao abrir um projeto, ele aparece com códigos estranhos
+                                    </button>
+                                </h2>
+                                <div id="collapseBugs6" class="accordion-collapse collapse " aria-labelledby="headingBugs6" data-bs-parent="#accordionBugs6">
+                                    <div class="accordion-body">
+                                        <div class="mb-3">
+                                            <p> Isto ocorre porque você provavelmente tentou abrir um fluxograma pela tela de abertura de arquivos
+                                                Portugol, ou vice-versa. O Mapler trabalha, até este momento, com a extensão <i>.mapler</i>, não
+                                                sendo possível diferenciar se o arquivo é um código portugol ou um fluxograma somente observando a extensão. <strong>Quando isto
+                                                    acontecer, apenas feche o arquivo e o abra com o tipo correto.</strong>
+                                            </p>
+                                            <figure>
+                                                <img th:src="@{/images/ajuda/abertura_errada.png}" alt="Arquivo aberto em tipo inválido!">
+                                                <figcaption>Exemplo de arquivo aberto incorretamente!</figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion mb-3" id="accordionExercicios">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingExercicios">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExercicios" aria-expanded="false" aria-controls="collapseExercicios">
+                        Onde encontrar exercícios para praticar?
+                    </button>
+                </h2>
+                <div id="collapseExercicios" class="accordion-collapse collapse " aria-labelledby="headingExercicios" data-bs-parent="#accordionExercicios">
+                    <div class="accordion-body">
+                        <p>Pensando em nossos usuários, elaboramos exercícios com resolução em portugol e em fluxograma, além de explicarmos os elementos utilizados nos exercícios propostos!</p>
+                        <a href="ajuda/fluxograma/geral"><button class="btn btn-light">Exercícios</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- Rodape -->
+<footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+
+<!-- JS -->
+<!-- Bootstrap 5 Bundle Core -->
+<script th:src="@{js/bootstrap.bundle.min.js}"></script></body>
+
+</html>

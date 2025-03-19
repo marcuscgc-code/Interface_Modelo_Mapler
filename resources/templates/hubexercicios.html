@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+<body>
+
+<!-- Header -->
+<!-- Cabecalho -->
+<header th:replace="~{/fragmentos/header :: header}"></header>
+    <!-- Corpo principal do site -->
+    <!-- Corpo principal do site -->
+    <main>
+        <div class="container py-5 px-3 pt-3 px-sm-5">
+            <h1>Listas de Execícios de <span class="rosa">Portugol</span></h1>
+            <h3>Orientações: </h3>
+            <ul>
+                <li>Leia as questões e tente resolver por conta própria;</li>
+                <li>Verifique a resposta em <span class="rosa">portugol</span> e em <span class="rosa">fluxograma</span> disponibilizada;</li>
+            </ul>
+            <!-- Menu -->
+            <div th:replace="fragmentos/menu-hubexercicios.html"></div>
+            <h4 class="mt-5">Estruturas Sequenciais:</h4>
+            <p class="lead">
+                As estruturas sequenciais são a forma mais simples de controle de fluxo em programação. Elas consistem em um conjunto de instruções que são executadas em ordem, uma após a outra, da esquerda para a direita e de cima para baixo. Em outras palavras, as instruções são executadas de forma sequencial, sem desvios. Essa é a base da execução de um programa, onde as operações são realizadas em uma sequência predefinida.
+            </p>
+            <h4 class="mt-5">Estruturas de Decisão:</h4>
+            <p class="lead">
+                As estruturas de decisão permitem que um programa tome decisões com base em condições específicas. Elas permitem que o programa escolha entre diferentes caminhos de execução, dependendo se uma condição é verdadeira ou falsa. As estruturas de decisão mais comuns são os comandos "<a class="rosa" href="/exemplo/portugol/condicionais#Se" target="_self">se</a>" e "<a class="rosa" href="/exemplo/portugol/condicionais#Senao" target="_self">senao</a>", que permitem que o programa execute um bloco de código se uma condição for verdadeira e outro bloco de código se a condição for falsa. Isso permite que o programa se adapte dinamicamente a diferentes situações.
+            </p>
+            <h4 class="mt-5">Estruturas de Repetição:</h4>
+            <p class="lead">
+                As estruturas de repetição (também conhecidas como loops) permitem que um conjunto de instruções seja executado várias vezes, com base em uma condição específica. Elas são usadas para automatizar tarefas repetitivas e economizar tempo de programação. Os loops mais comuns são o "<a class="rosa" href="/exemplo/portugol/lacos#Para" target="_self">para</a>", o "<a class="rosa" href="/exemplo/portugol/lacos#Enquanto" target="_self">enquanto</a>" e o "<a class="rosa" href="/exemplo/portugol/lacos#Repita" target="_self">repita</a>". Eles permitem que você execute um bloco de código repetidamente até que uma determinada condição seja atendida.
+            </p>
+            <h4 class="mt-5">Procedimentos:</h4>
+            <p class="lead">
+                "<a class="rosa" href="/exemplo/portugol/modulos#VisaoGeral" target="_self">Módulos</a>" são procedimentos que podem ser chamados para executar uma tarefa específica. Procedimentos são blocos de código reutilizáveis que permitem dividir um programa em partes menores e mais gerenciáveis. A principal vantagem desses módulos é a reutilização de código, o que torna o programa mais organizado e mais fácil de manter.
+            </p>
+        </div>
+    </main>
+
+<!-- Rodape -->
+<footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+<!-- JS -->
+<!-- Bootstrap 5 Bundle Core -->
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script></body>
+</html>

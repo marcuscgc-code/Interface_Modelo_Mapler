@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+<body>
+
+<!-- Header -->
+<!-- Cabecalho -->
+<header th:replace="~{/fragmentos/header :: header}"></header>
+
+<main>
+    <div class="container py-5 px-3 pt-3 px-sm-5">
+        <!-- Content -->
+        <!-- Primeira secao -->
+        <section>
+            <h1>Sobre o projeto Mapler: </h1>
+            <p class="lead mt-3">
+                O principal objetivo do projeto Mapler é possibilitar a geração de códigos em linguagens como Pascal, C, C++, Python, Ruby, TypeScript, CoffeScript, JavaScript e Java a partir do código elaborado pelos alunos em Portugol, uma pseudo-linguagem estruturada em português. Essa transição suave entre Portugol e linguagens de programação mais avançadas é fundamental para preparar os alunos para os cursos de Computação e Programação.
+            </p>
+            <p class="lead mt-3">
+                Este é um projeto voluntário que, ao longo dos anos, passou por diversas atualizações e melhorias. Além disso, foram desenvolvidos recursos educacionais, incluindo wikis explicativos, foram criados para apoiar os estudantes em sua jornada de aprendizado. O projeto Mapler representa um esforço colaborativo e educacional, visando aprimorar a experiência de programação dos alunos brasileiros.
+            </p>
+        </section>
+
+
+        <!-- Segunda secao -->
+        <section>
+            <div class="container py-5 px-3 pt-3 px-sm-0">
+                <!-- Accordion Equipe -->
+                <div class="accordion mb-3" id="accordionEquipe">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingEquipe">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEquipe" aria-expanded="true" aria-controls="collapseEquipe">
+                                Nossa Equipe
+                            </button>
+                        </h2>
+                        <div id="collapseEquipe" class="accordion-collapse collapse" aria-labelledby="headingEquipe" data-bs-parent="#accordionEquipe">
+                            <div class="accordion-body">
+                                Atualmente o projeto é gerenciado por professores/alunos do IFMA Monte Castelo e por membros da OnlyTI.
+
+                                <p class="lead">
+                                    <strong>Coordenação e Colaboração do Projeto</strong>
+                                </p>
+
+                                <ul class="lead">
+                                    <li><span class="rosa">Prof. MSc. Daniel Lima Gomes Jr.</span> <strong>(IFMA)</strong>, <strong>Coordenador</strong></li>
+                                    <li><span class="rosa">Prof. MSc. Ulysses Santos Sousa</span> <strong>(IFMA)</strong>, Colaborador</li>
+                                    <li><span class="rosa">Prof. MSc. Raimundo Osvaldo</span> <strong>(IFMA)</strong>, Colaborador</li>
+                                </ul>
+
+                                <p class="lead">
+                                    <strong>Desenvolvedores:</strong>
+                                </p>
+
+                                <ul class="lead">
+                                    <li><span class="rosa">Daniel da Silva de Araújo</span> (<strong>IFMA</strong>), responsável pelo back-end da aplicação;</li>
+                                    <li><span class="rosa">Elias Rocha Lima</span> (<strong>IFMA e OnlyTI</strong>), agilista, responsável pela infraestrura do projeto, suporte no desenvolvimento do site e da aplicação;</li>
+                                    <li><span class="rosa">João Pedro Brasil</span> (<strong>OnlyTI</strong>), contribuições com o design e interfaces do site Mapler.</li>
+                                    <li><span class="rosa">Kauã Nogueira Araujo</span> (<strong>OnlyTI</strong>), contribuições com o design e interfaces do site Mapler.</li>
+                                    <li><span class="rosa">Lucas Sauham Sousa Moreira</span> (<strong>OnlyTI</strong>), contribuições com o design e interfaces do site Mapler.</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Accordion Historico -->
+                <div class="accordion mb-3" id="accordionHistorico">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingHistorico">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHistorico" aria-expanded="true" aria-controls="collapseHistorico">
+                                Breve Histórico
+                            </button>
+                        </h2>
+                        <div id="collapseHistorico" class="accordion-collapse collapse" aria-labelledby="headingHistorico" data-bs-parent="#accordionHistorico">
+                            <div class="accordion-body">
+                                <ul>
+                                    <div class="mt-5">
+                                        <p class="lead">
+                                            Este projeto foi idealizado e iniciado em 2006 na <span class="rosa">Universidade Federal do Maranhão</span> e desenvolvido durante a disciplina de <span class="rosa">Compiladores</span> no curso de <span class="rosa">Graduação em Ciência da Computação</span>                        pelos alunos na época:
+                                        </p>
+
+                                        <ul class="lead">
+                                            <li><strong class="rosa">Daniel Lima Gomes Júnior</strong></li>
+                                            <li><strong class="rosa">Leandro de Sousa Marques</strong></li>
+                                            <li><strong class="rosa">Ulysses Santos Sousa</strong></li>
+                                        </ul>
+
+                                        <p class="lead">
+                                            Os professores que participaram para a construção da versão inicial do projeto:
+                                        </p>
+
+                                        <ul class="lead">
+                                            <li>
+                                                <strong class="rosa">Prof. Dr. Carlos de Salles Soares Neto </strong><strong>(orientador)</strong><br>
+                                                <strong><span class="text-secondary"><em>Disciplina: Compiladores</em> (versão inicial);</span></strong>
+                                            </li>
+
+                                            <li>
+                                                <strong class="rosa">Prof. Dr. Luciano Reis Coutinho</strong>
+                                                <br>
+                                                <strong><span class="text-muted"><em>Disciplina: Projeto</em> de Compiladores (melhoria da ferramenta);</span></strong>
+                                            </li>
+
+                                            <li>
+                                                <strong class="rosa">Prof. Dr. Alexandre César Tavares Vidal</strong>
+                                                <br>
+                                                <strong><span class="text-muted"><em>Disciplina: Padrões</em> de Projeto (Refatoração com padrões de Projeto)</span></strong>
+                                            </li>
+
+                                        </ul>
+
+                                        <p class="lead">
+                                            Desde o ano de <strong>2007</strong>, após a publicação de um pequeno site que permitia o download da ferramenta, temos recebido e-mails de alunos de outras partes do país que estavam com dúvidas na utilização do programa e por
+                                            conta de outras atividades, resolvemos criar somente agora um projeto no <span class="rosa">SourceForge</span> para a melhoria da versão existente e extensão para criação de uma ferramenta que possa melhorar o ensino de programação.
+                                            A partir de 2011 foi criado o grupo de pesquisa utilizando o <strong>SVN</strong> para controlar as versões de desenvolvimento do projeto.
+                                        </p>
+                                        <p class="lead">
+                                            Atualmente, o Projeto Mapler é gerenciado pela <span class="rosa">Only TI</span>, uma empresa júnior composta por alunos do bacharelado em Sistemas de Informação do Instituto Federal do Maranhão (IFMA).
+                                        </p>
+
+                                    </div>
+                                    <!-- Accordion Membros 2022 -->
+                                    <div class="accordion mb-3" id="accordionMembros2022">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingMembros2022">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMembros2022" aria-expanded="true" aria-controls="collapseMembros2022">
+                                                    Membros do Projeto em 2022
+                                                </button>
+                                            </h2>
+                                            <div id="collapseMembros2022"  class="accordion-collapse collapse" aria-labelledby="headingMembros2022" data-bs-parent="#accordionMembros2022">
+                                                <div class="accordion-body" style="background-color: #1a1b1b;">
+                                                    <ul>
+                                                        <div class="mt-5">
+                                                            <p class="lead">
+                                                                <strong>Coordenação e Colaboração do Projeto</strong>
+                                                            </p>
+
+                                                            <ul class="lead">
+                                                                <li><span class="rosa">Prof. MSc. Daniel Lima Gomes Jr.</span> <strong>(IFMA)</strong>, <strong>Coordenador</strong></li>
+                                                                <li><span class="rosa">Prof. MSc. Ulysses Santos Sousa</span> <strong>(IFMA)</strong>, Colaborador</li>
+                                                                <li><span class="rosa">Prof. MSc. Raimundo Osvaldo</span> <strong>(IFMA)</strong>, Colaborador</li>
+                                                            </ul>
+
+                                                            <p class="lead">
+                                                                <strong>Alunos:</strong>
+                                                            </p>
+
+                                                            <ul class="lead">
+                                                                <li><span class="rosa">David Gomes</span> (<strong>IFMA</strong>), responsável pelo site do mapler;</li>
+                                                                <li><span class="rosa">Elias Rocha Lima</span> (<strong>IFMA</strong>), responsável pela infraestrura do projeto, suporte no desenvolvimento do site e front-end da aplicação;</li>
+                                                                <li><span class="rosa">Kerlyson Santos</span> (<strong>IFMA</strong>), responsável pelo back-end e suporte ao front-end da aplicação;</li>
+                                                                <li><span class="rosa">Wendell Amorim</span> (<strong>IFMA</strong>), contribuições com o design das logos e interfaces do Mapler.</li>
+                                                            </ul>
+                                                        </div>
+                                                        <br><br>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Accordion Membros 2020 -->
+                                    <div class="accordion mb-3" id="accordionMembros2020">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingMembros2020">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMembros2020" aria-expanded="true" aria-controls="collapseMembros2011">
+                                                    Membros do Projeto em 2020
+                                                </button>
+                                            </h2>
+                                            <div id="collapseMembros2020"  class="accordion-collapse collapse" aria-labelledby="headingMembros2020" data-bs-parent="#accordionMembros2020">
+                                                <div class="accordion-body" style="background-color: #1a1b1b;">
+                                                    <ul>
+                                                        <div class="mt-5">
+                                                            <p class="lead">
+                                                                <strong>Coordenação e Colaboração do Projeto</strong>
+                                                            </p>
+
+                                                            <ul class="lead">
+                                                                <li><span class="rosa">Prof. MSc. Daniel Lima Gomes Jr.</span> <strong>(IFMA)</strong>, <strong>Coordenador</strong></li>
+                                                                <li><span class="rosa">Prof. MSc. Ulysses Santos Sousa</span> <strong>(IFMA)</strong>, Colaborador</li>
+                                                                <li><span class="rosa">Prof. MSc. Raimundo Osvaldo</span> <strong>(IFMA)</strong>, Colaborador</li>
+                                                            </ul>
+
+                                                            <p class="lead">
+                                                                <strong>Alunos:</strong>
+                                                            </p>
+
+                                                            <ul class="lead">
+                                                                <li><span class="rosa">David Gomes</span> <strong>(IFMA)</strong></li>
+                                                                <li><span class="rosa">Elias Rocha Lima</span> <strong>(IFMA)</strong></li>
+                                                                <li><span class="rosa">Kerlyson Santos</span> <strong>(IFMA)</strong></li>
+                                                                <li><span class="rosa">Wendell Amorim</span> <strong>(IFMA)</strong></li>
+                                                                <li><span class="rosa">Yasmin Araujo Fernandes</span> <strong>(IFMA)</strong></li>
+                                                            </ul>
+                                                            <br><br>
+                                                        </div>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Accordion Membros 2011 -->
+                                    <div class="accordion mb-3" id="accordionMembros2011">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingMembros2011">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMembros2011" aria-expanded="true" aria-controls="collapseMembros2011">
+                                                    Membros do Projeto em 2011
+                                                </button>
+                                            </h2>
+                                            <div id="collapseMembros2011"  class="accordion-collapse collapse" aria-labelledby="headingMembros2011" data-bs-parent="#accordionMembros2011">
+                                                <div class="accordion-body" style="background-color: #1a1b1b;">
+                                                    <ul>
+                                                        <div class="mt-5">
+                                                            <p class="lead">
+                                                                <strong>Coordenação e Colaboração do Projeto</strong>
+                                                            </p>
+
+                                                            <ul class="lead">
+                                                                <li><span class="rosa">Prof. Dr. Carlos de Salles Soares Neto</span> <strong>(UFMA)</strong>, <strong>Coordenador</strong></li>
+                                                                <li><span class="rosa">Prof. MSc. Daniel Lima Gomes Jr.</span> <strong>(IFMA)</strong>, <strong>Coordenador</strong></li>
+                                                                <li><span class="rosa">Prof. MSc. Ulysses Santos Sousa</span> <strong>(IFMA)</strong>, Colaborador</li>
+                                                                <li><span class="rosa">Prof. MSc. Gilvan de Oliveira Vilarim</span> <strong>(IFRJ)</strong>, Colaborador</li>
+                                                                <li><span class="rosa">Leandro Sousa Marques</span>, Colaborador</li>
+                                                            </ul>
+
+                                                            <p class="lead">
+                                                                <strong>Alunos:</strong>
+                                                            </p>
+
+                                                            <ul class="lead">
+                                                                <li><span class="rosa">Hedvan Fernandes Pinto</span> <strong>(UFMA-PPGEE)</strong></li>
+                                                                <li><span class="rosa">Leonardo W. M. Silva</span> <strong>(Graduando, UFMA)</strong></li>
+                                                                <li><span class="rosa">Welyab Silva Paula</span> <strong>(Graduando, UFMA)</strong></li>
+                                                                <li><span class="rosa">Rafaela Cristina Neri Magalhães</span> <strong>(PIBIC-Jr, IFMA)</strong></li>
+                                                            </ul>
+                                                        </div>
+                                                        <br><br>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Accordion Contato -->
+                <div class="accordion mb-3" id="accordionContato">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingContato">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContato" aria-expanded="true" aria-controls="collapseContato">
+                                Contato
+                            </button>
+                        </h2>
+                        <div id="collapseContato" class="accordion-collapse collapse" aria-labelledby="headingContato" data-bs-parent="#accordionContato">
+                            <div class="accordion-body">
+                                <ul>
+                                    <p class="lead mt-3">
+                                        Atualmente estamos respondendo duvidas, sugestões de melhorias e contatos em gerais por e-mail. <br>
+                                        <a class="text-decoration-none" href="mailto:compiladorportugol@gmail.com">
+                                            <span class="rosa">
+                                                compiladorportugol@gmail.com
+                                            </span>
+                                        </a>
+                                    </p>
+
+                                    <p class="lead mt-5">
+                                        Mais informações podem ser encontradas na página do projeto no SourceForge: <br>
+                                        <a class="text-decoration-none" href="https://sourceforge.net/projects/portugol/">
+                                            <span class="rosa">
+                                                sourceforge.net/projects/portugol
+                                            </span>
+                                        </a>
+                                    </p>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Rodape -->
+<footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+<!-- JS -->
+<!-- Bootstrap 5 Bundle Core -->
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+
+</html>

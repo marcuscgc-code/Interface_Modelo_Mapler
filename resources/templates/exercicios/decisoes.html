@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+<body>
+
+<!-- Header -->
+<!-- Cabecalho -->
+<header th:replace="~{/fragmentos/header :: header}"></header>
+<!-- Corpo principal do site -->
+<main>
+    <div class="container py-5 px-3 pt-3 px-sm-5">
+        <!-- Menu -->
+        <div th:replace="@{/fragmentos/menu-hubexercicios.html}"></div>
+        <!-- Content -->
+
+        <!-- Secao principal -->
+        <section>
+            <div class="mt-4">
+                <h1>Estruturas de Decisão</h1>
+
+                <p><a class="rosa" href="/exemplo/portugol/condicionais#Se" target="_self">Se</a><span class="rosa">-</span><a class="rosa" href="/exemplo/portugol/condicionais#Senao" target="_self">senao</a>:</p>
+                <ul>
+                    <li>A estrutura "se" permite que você avalie uma condição. Se a condição for verdadeira, o bloco de código associado ao "se" é executado.</li>
+                    <li>Se a condição do "se" for falsa, você pode usar "senao" para especificar um bloco de código alternativo que será executado.</li>
+                    <li>Você também pode encadear vários "senao se" para testar várias condições em sequência e executar o bloco de código do primeiro "se" ou "senao se" cuja condição for verdadeira.</li>
+                </ul>
+                <br><hr>
+                <h2>Exercícios:</h2>
+                <br>
+                <section id="questao1">
+                    <h3>Questao 1</h3>
+                    <p>Peça ao usuário para inserir sua idade e informe se ele é menor de idade ou maior de idade.</p>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR1" aria-expanded="false" aria-controls="#collapseR1">
+                                    Resolução
+                                </button>
+                            </h2>
+                            <div id="collapseR1" class="accordion-collapse collapse" data-bs-parent="questao1">
+                                <div class="accordion-body">
+                                        <pre class="pre2">
+                                            <span class="reservada">variaveis</span><br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;idade<span class="caractere">:</span> <span class="tipo">inteiro</span>;<br>
+                                            <span class="reservada">inicio</span><br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Digite a sua idade:"</span>;<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> idade;<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">//verifica se a idade é menor que 18</span><br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">se</span> <span class="caractere">(</span> idade < 18 <span class="caractere">)</span> <span class="reservada">entao</span><br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">//se a condição for verdadeira então o programa exibe essa mensagem.</span><br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Você é menor de idade."</span>;<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">senao</span><br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">//caso a condição seja falsa então essa mensagem é exibida.</span><br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Você é maior de idade."</span>;<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim se</span>;<br>
+                                            <span class="reservada">fim</span>
+                                        </pre>
+                                    <div>
+                                        <h3 class="mt-4">Fluxograma</h3>
+                                        <hr>
+                                        <figure class="figure">
+                                            <img th:src="@{/images/exercicios/decisao/questao1e2.png}" class="rounded float-left" alt="resolução da questão 1 com fluxogramas">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="questao2">
+                    <div class="mt-4">
+                        <h3>Questao 2</h3>
+                        <p>Crie um programa que determine se um número inserido pelo usuário é par ou ímpar.</p>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR2" aria-expanded="false" aria-controls="#collapseR2">
+                                        Resolução
+                                    </button>
+                                </h2>
+                                <div id="collapseR2" class="accordion-collapse collapse" data-bs-parent="questao2">
+                                    <div class="accordion-body">
+                                            <pre class="pre2">
+                                                <span class="reservada">variaveis</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;numero<span class="caractere">:</span> <span class="tipo">inteiro</span>;<br>
+                                                <span class="reservada">inicio</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Digite um número inteiro:"</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> numero;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">//A condição verifica se o número é divisível por 2, ou seja, se o resto da divisão por 2 é igual a 0, então o número é par.</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">se</span> <span class="caractere">(</span> numero % 2 = 0 <span class="caractere">)</span> <span class="reservada">entao</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"O número inserido é par."</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">senao</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"O número inserido é ímpar."</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim se</span>;<br>
+                                                <span class="reservada">fim</span>
+                                            </pre>
+                                        <div>
+                                            <h3 class="mt-4">Fluxograma</h3>
+                                            <hr>
+                                            <figure class="figure">
+                                                <img th:src="@{/images/exercicios/decisao/questao1e2.png}" class="rounded float-left" alt="resolução da questão 2 com fluxogramas">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="questao3">
+                    <div class="mt-4">
+                        <h3>Questao 3</h3>
+                        <p>Faça um programa que determine se um número é positivo, negativo ou zero.</p>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR3" aria-expanded="false" aria-controls="#collapseR3">
+                                        Resolução
+                                    </button>
+                                </h2>
+                                <div id="collapseR3" class="accordion-collapse collapse" data-bs-parent="questao3">
+                                    <div class="accordion-body">
+                                            <pre class="pre2">
+                                                <span class="reservada">variaveis</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;numero<span class="caractere">:</span> <span class="tipo">real</span>;<br>
+                                                <span class="reservada">inicio</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Digite um número:"</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> numero;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">se</span> <span class="caractere">(</span> numero > 0 <span class="caractere">)</span> <span class="reservada">entao</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"O número é positivo."</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">senao se</span> <span class="caractere">(</span> numero < 0 <span class="caractere">)</span> <span class="reservada">entao</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"O número é negativo."</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">senao</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"O número é zero"</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim se</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim se</span>;<br>
+                                                <span class="reservada">fim</span>
+                                            </pre>
+                                        <div>
+                                            <h3 class="mt-4">Fluxograma</h3>
+                                            <hr>
+                                            <figure class="figure">
+                                                <img th:src="@{/images/exercicios/decisao/questao3.png}" class="rounded float-left" alt="resolução da questão 3 com fluxogramas">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="questao4">
+                    <div class="mt-4">
+                        <h3>Questao 4</h3>
+                        <p>Encontre o dobro de um número caso ele seja positivo e o seu triplo caso seja negativo, imprimindo o resultado.</p>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR4" aria-expanded="false" aria-controls="#collapseR4">
+                                        Resolução
+                                    </button>
+                                </h2>
+                                <div id="collapseR4" class="accordion-collapse collapse" data-bs-parent="questao4">
+                                    <div class="accordion-body">
+                                            <pre class="pre2">
+                                                <span class="reservada">variaveis</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;numero<span class="caractere">:</span> <span class="tipo">real</span>;<br>
+                                                <span class="reservada">inicio</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Digite um número positivo ou negativo:"</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> numero;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">se</span> <span class="caractere">(</span>numero > 0<span class="caractere">)</span> <span class="reservada">entao</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="caractere">(</span>numero*2<span class="caractere">)</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">senao</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="caractere">(</span>numero*3<span class="caractere">)</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim se</span>;<br>
+                                                <span class="reservada">fim</span>
+                                            </pre>
+                                        <div>
+                                            <h3 class="mt-4">Fluxograma</h3>
+                                            <hr>
+                                            <figure class="figure">
+                                                <img th:src="@{/images/exercicios/decisao/questao4.png}" class="rounded float-left" alt="resolução da questão 4 com fluxogramas">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="questao5">
+                    <div class="mt-4">
+                        <h3>Questao 5</h3>
+                        <p>Desenvolva um programa que classifique um triângulo como equilátero, isósceles ou escaleno, com base nas medidas dos lados inseridos.</p>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR5" aria-expanded="false" aria-controls="#collapseR5">
+                                        Resolução
+                                    </button>
+                                </h2>
+                                <div id="collapseR5" class="accordion-collapse collapse" data-bs-parent="questao5">
+                                    <div class="accordion-body">
+                                            <pre class="pre2">
+                                                <span class="reservada">variaveis</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;lado1, lado2, lado3<span class="caractere">:</span> <span class="tipo">inteiro</span>;<br>
+                                                <span class="reservada">inicio</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Digite o comprimento do primeiro lado do triângulo:"</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> lado1;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Digite o comprimento do segundo lado do triângulo:"</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> lado2;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Digite o comprimento do terceiro lado do triângulo:"</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> lado3;<br><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">se</span> <span class="caractere">(</span>lado1 + lado2 > lado3<span class="caractere">)</span> <span class="reservada">e</span> <span class="caractere">(</span>lado1 + lado3 > lado2<span class="caractere">)</span> <span class="reservada">e</span> <span class="caractere">(</span>lado2 + lado3 > lado1<span class="caractere">)</span> <span class="reservada">entao</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">se</span> <span class="caractere">(</span>lado1 = lado2<span class="caractere">)</span> <span class="reservada">e</span> <span class="caractere">(</span>lado1 = lado3<span class="caractere">)</span> <span class="reservada">e</span> <span class="caractere">(</span>lado2 = lado3<span class="caractere">)</span> <span class="reservada">entao</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Este é um triângulo equilátero."</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">senao se</span> <span class="caractere">(</span>lado1 = lado2<span class="caractere">)</span> <span class="reservada">ou</span> <span class="caractere">(</span>lado1 = lado3<span class="caractere">)</span> <span class="reservada">ou</span> <span class="caractere">(</span>lado2 = lado3<span class="caractere">)</span> <span class="reservada">entao</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Este é um triângulo isósceles."</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">senao</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Este é um triângulo escaleno."</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim se</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim se</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">senao</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"As medidas fornecidas não formam um triângulo."</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim se</span>;<br>
+                                                <span class="reservada">fim</span>
+                                            </pre>
+                                        <div>
+                                            <h3 class="mt-4">Fluxograma</h3>
+                                            <hr>
+                                            <figure class="figure">
+                                                <img th:src="@{/images/exercicios/decisao/questao5.png}" class="rounded float-left" alt="resolução da questão 5 com fluxogramas">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Footer -->
+<!-- Rodape -->
+<footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+<!-- JS -->
+<!-- Bootstrap 5 Bundle Core -->
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+
+</html>

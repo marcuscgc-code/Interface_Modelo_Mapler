@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+<body>
+
+<!-- Header -->
+<!-- Cabecalho -->
+<header th:replace="~{/fragmentos/header :: header}"></header>
+<!-- Corpo principal do site -->
+<main>
+    <div class="container py-5 px-3 pt-3 px-sm-5">
+        <!-- Content -->
+
+        <!-- Primeira secao -->
+        <section>
+            <div>
+                <h1>Baixar Versão Atual</h1>
+                <div class="d-flex flex-row align-items-center">
+                    <div class="d-flex flex-column ">
+                        <div class="h5">Download para:</div>
+                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                            <!-- Link de Download para Windows -->
+                            <a href="https://sourceforge.net/projects/portugol/files/Mapler-windows-0.0.6.zip/download" target="_blank">
+                                <button type="button" class="btn btn-outline-primary me-1">Windows</button>
+                            </a>
+
+                            <!-- Link de Download para Linux -->
+                            <a href="https://sourceforge.net/projects/portugol/files/Mapler-linux-0.0.6.zip/download" target="_blank">
+                                <button type="button" class="btn btn-outline-primary me-1">Linux</button>
+                            </a>
+
+                            <!-- Link de Download para MacOS -->
+                            <a href="https://sourceforge.net/projects/portugol/files/Mapler-mac-0.0.6.zip/download" target="_blank">
+                                <button type="button" class="btn btn-outline-primary me-1">MacOS</button>
+                            </a>
+                        </div>
+                        <div class="pt-4">
+                            <h5>
+                                [Update] - Versão v0.0.6
+                            </h5>
+                            <ul class="lead">
+                                <li>Correção de pequenos bugs.</li>
+                                <li>adicionado 4 novas linguagens de tradução</li>
+                                <ul>
+                                    <li>CoffeScript</li>
+                                    <li>JavaScript</li>
+                                    <li>Ruby</li>
+                                    <li>TypeScript</li>
+                                </ul>
+                                <li>Refatoração dos <a href="https://portugol.sourceforge.io/fluxograma/geral.html"><span class="rosa">fluxogramas</span></a></li>
+                                <ul>
+                                    <li>Melhorias visuais nas figuras</li>
+                                    <li>Corrreção de bugs</li>
+                                    <li>Nova interface de tradução</li>
+                                    <li>Nova interface de console</li>
+                                    <li>Tradução de fluxograma para as linguagens C, C++, Java, JavaScript, Ruby, CoffeScript,Pascal, Python, TypeScript</li>
+                                </ul>
+                            </ul>
+                            <p>Necessário JAVA 11 ou superior.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Segunda secao -->
+        <section>
+            <div class="container py-5 px-3 pt-3 px-sm-0">
+                <!-- Menu -->
+                <div class="accordion mb-3" id="accordionExamplos">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingExemplos">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplos" aria-expanded="false" aria-controls="collapseExemplos">
+                                Histórico de Versões
+                            </button>
+                        </h2>
+                        <div id="collapseExemplos" class="accordion-collapse collapse show" aria-labelledby="headingExemplos" data-bs-parent="#accordionExamplos">
+                            <div id="accordionVersao" class = "accordion-body">
+                                <div class="accordion mb-3">
+                                    <h5 class="accordion-header">
+                                        <button class="accordion-button custom-icon" type="button" data-bs-toggle="collapse" data-bs-target="#versao05" aria-expanded="true" aria-controls="versao06">
+                                            [Update] - Versão v0.0.5
+                                        </button>
+                                    </h5>
+                                    <div id="versao05" class="accordion-collapse collapse">
+                                        <div class="accordion-body">
+                                            <ul class="lead">
+                                                <li>Nova interface de <a href="https://portugol.sourceforge.io/fluxograma/geral.html"><span class="rosa">fluxogramas</span></a>.</li>
+                                                <li>Correção de pequenos bugs.</li>
+                                                <li>
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div class="d-flex flex-column ">
+                                                            <div class="h5">Download desta versão:</div>
+                                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                                                <!-- Link de Download para Windows -->
+                                                                <a href="https://sourceforge.net/projects/portugol/files/mapler_v0.0.5_windows.zip/download" target="_blank">
+                                                                    <button type="button" class="btn btn-outline-primary me-1">Windows</button>
+                                                                </a>
+
+                                                                <!-- Link de Download para Linux -->
+                                                                <a href="https://sourceforge.net/projects/portugol/files/mapler_v0.0.5_linux.zip/download" target="_blank">
+                                                                    <button type="button" class="btn btn-outline-primary me-1">Linux</button>
+                                                                </a>
+
+                                                                <!-- Link de Download para MacOS -->
+                                                                <a href="https://sourceforge.net/projects/portugol/files/mapler_v0.0.5_mac.zip/download" target="_blank">
+                                                                    <button type="button" class="btn btn-outline-primary me-1">MacOS</button>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <p>Necessário JAVA 11 ou superior.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion mb-3">
+                                    <h5 class="accordion-header">
+                                        <button class="accordion-button custom-icon" type="button" data-bs-toggle="collapse" data-bs-target="#versao04" aria-expanded="true" aria-controls="versao05">
+                                            [Update] - Versão v0.0.4
+                                        </button>
+                                    </h5>
+                                    <div id="versao04" class="accordion-collapse collapse">
+                                        <div class="accordion-body">
+                                            <ul class="lead">
+                                                <li>Exemplos atualizado.</li>
+                                                <li>Correção de pequenos bugs.</li>
+                                                <li>
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div class="d-flex flex-column ">
+                                                            <div class="h5">Download desta versão:</div>
+                                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                                                <!-- Link de Download para Windows -->
+                                                                <a href="https://sourceforge.net/projects/portugol/files/mapler_v0.0.4_windows.zip/download" target="_blank">
+                                                                    <button type="button" class="btn btn-outline-primary me-1">Windows</button>
+                                                                </a>
+
+                                                                <!-- Link de Download para Linux -->
+                                                                <a href="https://sourceforge.net/projects/portugol/files/mapler_v0.0.4_linux.zip/download" target="_blank">
+                                                                    <button type="button" class="btn btn-outline-primary me-1">Linux</button>
+                                                                </a>
+
+                                                                <!-- Link de Download para MacOS -->
+                                                                <a href="https://sourceforge.net/projects/portugol/files/mapler_v0.0.4_mac.zip/download" target="_blank">
+                                                                    <button type="button" class="btn btn-outline-primary me-1">MacOS</button>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <p>Necessário JAVA 11 ou superior.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion mb-3">
+                                    <h5 class="accordion-header">
+                                        <button class="accordion-button custom-icon" type="button" data-bs-toggle="collapse" data-bs-target="#versao03" aria-expanded="true" aria-controls="versao05">
+                                            [Update] - Versão v0.0.3
+                                        </button>
+                                    </h5>
+                                    <div id="versao03" class="accordion-collapse collapse">
+                                        <div class="accordion-body">
+                                            <ul class="lead">
+                                                <li>Adicionado temas;</li>
+                                                <li>Tamanho da fonte personalizado;</li>
+                                                <li>Correção de bugs ao salvar arquivo;</li>
+                                                <li>Exemplos atualizado.</li>
+                                                <li>Adicionado icone ao software.</li>
+                                                <li>Refeito a build para diferentes sistemas.</li>
+                                                <li>
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div class="d-flex flex-column ">
+                                                            <div class="h5">Download desta versão:</div>
+                                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                                                <!-- Link de Download para Windows -->
+                                                                <a href="https://sourceforge.net/projects/portugol/files/mapler_win_v0.0.3.zip/download" target="_blank">
+                                                                    <button type="button" class="btn btn-outline-primary me-1">Windows</button>
+                                                                </a>
+
+                                                                <!-- Link de Download para Linux -->
+                                                                <a href="https://sourceforge.net/projects/portugol/files/mapler_linux_v0.0.3.zip/download" target="_blank">
+                                                                    <button type="button" class="btn btn-outline-primary me-1">Linux</button>
+                                                                </a>
+
+                                                                <!-- Link de Download para MacOS -->
+                                                                <a href="https://sourceforge.net/projects/portugol/files/mapler_mac_v0.0.3.zip/download" target="_blank">
+                                                                    <button type="button" class="btn btn-outline-primary me-1">MacOS</button>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <p>Necessário JAVA 11 ou superior.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion mb-3">
+                                    <h5 class="accordion-header">
+                                        <button class="accordion-button custom-icon" type="button" data-bs-toggle="collapse" data-bs-target="#versao02" aria-expanded="true" aria-controls="versao05">
+                                            [Update] - Versão v0.0.2
+                                        </button>
+                                    </h5>
+                                    <div id="versao02" class="accordion-collapse collapse">
+                                        <div class="accordion-body">
+                                            <ul class="lead">
+                                                <li>Ajustes no mover da tela código;</li>
+                                                <li>Links da tela inicial ajustados para o site;</li>
+                                                <li>Desativado LOG do interpretador;</li>
+                                                <li>Exemplos de modulos atualizado.</li>
+                                                <li>
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div class="d-flex flex-column ">
+                                                            <div class="h5">Download desta versão:</div>
+                                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                                                <!-- Link de Download para Windows -->
+                                                                <a href="https://sourceforge.net/projects/portugol/files/mapler_v0.0.2.zip/download" target="_blank">
+                                                                    <button type="button" class="btn btn-outline-primary me-1">DOWNLOAD</button>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <p>Necessário JAVA 11 ou superior.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion mb-3">
+                                    <h5 class="accordion-header">
+                                        <button class="accordion-button custom-icon" type="button" data-bs-toggle="collapse" data-bs-target="#versao01" aria-expanded="true" aria-controls="versao05">
+                                            [Update] - Versão v0.0.1
+                                        </button>
+                                    </h5>
+                                    <div id="versao01" class="accordion-collapse collapse">
+                                        <div class="accordion-body">
+                                            <ul class="lead">
+                                                <li>Adicionado exemplos na área código;</li>
+                                                <li>Adicionado sistema para depuração passo-a-passo (DEBUG);</li>
+                                                <li>Tradução para a linguagem <span class="rosa">Python</span>;</li>
+                                                <li>Nova estrutura de interpretação;</li>
+                                                <li>Nova estrutura de colorir na área código;</li>
+                                                <li>Nova interface para o sistema;</li>
+                                                <li>Design do projeto reformulado;</li>
+                                                <li>Projeto <span class="rosa">MACP</span> renomeado para <span class="rosa">Mapler</span>;</li>
+                                                <li>Tradução em <span class="rosa">Java</span>, <span class="rosa">C</span>, <span class="rosa">C++</span> e <span class="rosa">Pascal</span> adicionados ao <span class="rosa">Mapler</span>.</li>
+                                                <li>
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div class="d-flex flex-column ">
+                                                            <div class="h5">Download desta versão:</div>
+                                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                                                <!-- Link de Download para Windows -->
+                                                                <a href="https://sourceforge.net/projects/portugol/files/mapler_v0.0.1.zip/download" target="_blank">
+                                                                    <button type="button" class="btn btn-outline-primary me-1">DOWNLOAD</button>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <p>Necessário JAVA 11 ou superior.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5">
+
+            </div>
+        </section>
+
+    </div>
+</main>
+<!-- Rodape -->
+<footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+<!-- JS -->
+<!-- Bootstrap 5 Bundle Core -->
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script></body>
+</html>

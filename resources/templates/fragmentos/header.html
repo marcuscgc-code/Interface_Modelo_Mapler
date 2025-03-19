@@ -1,0 +1,88 @@
+<header th:fragment="header" xmlns:th="">
+    <nav class="navbar navbar-expand-lg navbar-dark p-3" id="cabecalho">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <!-- No mobile o logo deve ficar a esquerda -->
+            <a href="/" class="navbar-brand">
+                <img src="https://portugol.sourceforge.io/assets/images/mapler-logo.png" alt="Logo do Mapler" width="40px">
+            </a>
+
+            <!-- Nome do Projeto -->
+            <!-- No mobile o nome deve ficar centralizado -->
+            <a href="/" class="navbar-brand">
+                <strong>MAPLER</strong>
+            </a>
+
+            <!-- Botao para abrir o menu (Disponivel apenas no mobile) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Lista de Itens -->
+            <!-- Colocar classe "active" na tag "a" para dizer que esta ativo -->
+            <!-- Nao foi inserido nessa versao por nao ter essa dinamica -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/codigo">
+                            Portugol
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/fluxograma">
+                            Fluxograma
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/exemplo">
+                            Exemplos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/desenvolvimento">
+                            Desenvolvimento
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ajuda">
+                            Ajuda
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/hubexercicios">
+                            Exercícios
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/comecaquiz">
+                            Quiz
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Linha que vai dividir os menus -->
+                <!-- Disponivel apenas no Mobile -->
+                <hr class="text-white">
+
+                <!-- Segunda lista de itens -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/sobre">
+                            Sobre
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/download">
+                            Download
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

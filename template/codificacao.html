@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor Layout</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- CodeMirror CSS -->
+    <link rel="stylesheet" href="/resources/static/codemirror-5.65.2/lib/codemirror.css">
+    
+    <!-- CodeMirror Theme -->
+    <link rel="stylesheet" href="/resources/static/codemirror-5.65.2/theme/portugol.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/codificao.css">
+    
+    <!-- MAPLER Custom CSS -->
+    <link rel="stylesheet" href="/resources/static/css/mapler-web.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-dark text-white p-2">
+        <h1 class="h4 mb-0">MAPLER</h1>
+    </header>
+
+    <!-- Main Content: Split Code Editors -->
+    <div class="container-fluid mt-2">
+        <div class="row" style="height: 70vh;">
+            <!-- Left Code Editor -->
+            <div class="col-md-6 d-flex">
+                <div class="code-editor flex-grow-1 p-3">
+                    <h5>PORTUGOL</h5>
+                    <textarea id="portugol-editor">1  include <stdio.h>
+2  include <mathieu.cob>
+3
+4  interface MATH
+5  {
+6      float sum(float a, float b);
+7      float sub(float a, float b);
+8  }
+9
+10 class Mathieu : implements MATH
+11 {
+12     method
+13     {
+14         float sum(float a, float b)
+15         {
+16             return a + b;
+17         }
+18     }
+19 }
+20 endClass</textarea>
+                </div>
+            </div>
+            <!-- Right Code Editor -->
+            <div class="col-md-6 d-flex">
+                <div class="code-editor flex-grow-1 p-3">
+                    <h5>PYTHON</h5>
+                    <textarea id="python-editor">class Mathieu:
+    def sum(self, a, b):
+        return a + b</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terminal Section -->
+    <div class="terminal p-3">
+        <p class="mb-0">Microsoft Windows [Version 10.0.15063]</p>
+        <p class="mb-0">(c) 2017 Microsoft Corporation. All rights reserved.</p>
+        <p class="mb-0">C:\Users\USER>_</p>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CodeMirror JS -->
+    <script src="/resources/static/codemirror-5.65.2/lib/codemirror.js"></script>
+
+    <!-- CodeMirror Modes -->
+    <script src="/resources/static/codemirror-5.65.2/mode/python/python.js"></script>
+    <script src="/resources/static/codemirror-5.65.2/mode/portugol/portugol.js"></script>
+
+    <!-- CodeMirror Addons -->
+    <script src="/resources/static/codemirror-5.65.2/addon/edit/closebrackets.js"></script>
+    <script src="/resources/static/codemirror-5.65.2/addon/edit/matchbrackets.js"></script>
+    <script src="/resources/static/codemirror-5.65.2/addon/comment/comment.js"></script>
+
+    <script>
+        function verificarCarregamento() {
+    if (typeof CodeMirror === "undefined") {
+        console.error("Erro: CodeMirror não foi carregado. Verifique o caminho do arquivo codemirror.js.");
+        return false;
+    }
+
+    if (!CodeMirror.modes.portugol) {
+        console.error("Erro: O modo 'portugol' não foi carregado corretamente. Verifique o caminho do arquivo portugol.js.");
+        return false;
+    }
+
+    if (!document.querySelector('link[href*="/resources/static/codemirror-5.65.2/theme/portugol.css"]')) {
+        console.warn("Aviso: O tema 'portugol' pode não estar carregado. Verifique o caminho do arquivo portugol.css.");
+    }
+
+    return true;
+}
+
+function inicializarEditores() {
+    if (!verificarCarregamento()) return;
+
+    // Evita múltiplas inicializações do editor
+    if (window.portugolEditor || window.pythonEditor) return;
+
+    const configEditor = {
+        lineNumbers: true,
+        theme: "portugol",
+        autoCloseBrackets: true,
+        matchBrackets: true,
+        lineWrapping: true
+    };
+
+    // Inicializa o editor de Portugol
+    window.portugolEditor = CodeMirror.fromTextArea(document.getElementById("portugol-editor"), {
+        ...configEditor,
+        mode: "portugol"
+    });
+
+    // Inicializa o editor de Python
+    window.pythonEditor = CodeMirror.fromTextArea(document.getElementById("python-editor"), {
+        ...configEditor,
+        mode: "python"
+    });
+
+    // Garante que os editores mantenham a altura fixa sem crescer
+    function ajustarAlturaEditores() {
+        document.querySelectorAll('.code-editor').forEach(editor => {
+            const h5Height = editor.querySelector('h5') ? editor.querySelector('h5').offsetHeight : 0;
+            const padding = parseInt(window.getComputedStyle(editor).paddingTop) * 2;
+            const alturaDisponivel = editor.offsetHeight - h5Height - padding;
+            const cm = editor.querySelector('.CodeMirror');
+            if (cm) cm.style.height = `${alturaDisponivel}px`;
+        });
+    }
+
+    ajustarAlturaEditores();
+    window.addEventListener('resize', ajustarAlturaEditores);
+
+    setTimeout(() => {
+        window.portugolEditor.refresh();
+        window.pythonEditor.refresh();
+    }, 100);
+}
+
+window.addEventListener('load', inicializarEditores);
+
+
+
+    </script>
+</body>
+</html>

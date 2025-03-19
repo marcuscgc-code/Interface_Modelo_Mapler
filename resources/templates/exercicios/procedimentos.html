@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+<body>
+
+<!-- Header -->
+<!-- Cabecalho -->
+<header th:replace="~{/fragmentos/header :: header}"></header>
+<!-- Corpo principal do site -->
+<main>
+    <div class="container py-5 px-3 pt-3 px-sm-5">
+        <!-- Menu -->
+        <div th:replace="@{/fragmentos/menu-hubexercicios.html}"></div>
+        <!-- Content -->
+
+        <!-- Secao principal -->
+        <section id="VisaoGeral">
+            <div class="mt-4">
+                <h1>Procedimentos</h1>
+                <p><a class="rosa" href="/exemplo/portugol/modulos#VisaoGeral" target="_self">Módulos</a>:</p>
+                <ul>
+                    <li>Um módulo executa uma tarefa específica ou ação.</li>
+                    <li>São úteis quando você precisa realizar a mesma tarefa em várias partes do seu código, evitando a duplicação de código.</li>
+                </ul>
+                <br><hr>
+                <h2>Exercícios:</h2>
+                <br>
+                <section id="questao1">
+                    <h3>Questao 1</h3>
+                    <p>Crie um módulo em Portugol chamado "saudacao" que exiba a mensagem "Olá, mundo!" quando for chamado a partir do programa principal.</p>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR1" aria-expanded="false" aria-controls="#collapseR1">
+                                    Resolução
+                                </button>
+                            </h2>
+                            <div id="collapseR1" class="accordion-collapse collapse" data-bs-parent="questao1">
+                                <div class="accordion-body">
+                                        <pre class="pre2">
+                                            <span class="reservada">variaveis</span><br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;saudacao<span class="caractere">:</span> <span class="tipo">modulo</span>;<br>
+                                            <span class="reservada">inicio</span><br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;saudacao;<br>
+                                            <span class="reservada">fim</span> <br>
+                                            <span class="tipo">modulo</span> saudacao <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Olá mundo!"</span>;<br>
+                                            <span class="reservada">fim</span> <span class="tipo">modulo</span>;
+                                        </pre>
+                                    <div>
+                                        <h3 class="mt-4">Fluxograma</h3>
+                                        <hr>
+                                        <figure class="figure">
+                                            <img th:src="@{/images/exercicios/modulos/questao1.png}" class="rounded float-left" alt="resolução da questão 1 com fluxogramas">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="questao2">
+                    <div class="mt-4">
+                        <h3>Questao 2</h3>
+                        <p>Desenvolva um módulo chamado "calculadora" com soma, subtração, multiplicação e divisão dois números. Em seguida, crie um programa principal que use essas funções para realizar cálculos simples.</p>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR2" aria-expanded="false" aria-controls="#collapseR2">
+                                        Resolução
+                                    </button>
+                                </h2>
+                                <div id="collapseR2" class="accordion-collapse collapse" data-bs-parent="questao2">
+                                    <div class="accordion-body">
+                                            <pre class="pre2">
+                                                <span class="reservada">variaveis</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;calculadora<span class="caractere">:</span> <span class="tipo">modulo</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;num1<span class="caractere">:</span> <span class="tipo">real</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;num2<span class="caractere">:</span> <span class="tipo">real</span>;<br>
+                                                <span class="reservada">inicio</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;num2<span class="caractere"><-</span>10;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;num2<span class="caractere"><-</span>2;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;calculadora;<br>
+                                                <span class="reservada">fim</span> <br>
+                                                <span class="tipo">modulo</span> calculadora<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp<span class="reservada">escrever</span> num1,<span class="string">"+"</span>, num2, <span class="string">"="</span>, num1+num2;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp<span class="reservada">escrever</span> num1,<span class="string">"-"</span>, num2, <span class="string">"="</span>, num1-num2;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp<span class="reservada">escrever</span> num1,<span class="string">"x"</span>, num2, <span class="string">"="</span>, num1*num2;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp<span class="reservada">escrever</span> num1,<span class="string">"/"</span>, num2, <span class="string">"="</span>, num1/num2;<br>
+                                                <span class="reservada">fim</span> <span class="tipo">modulo</span>;
+                                            </pre>
+                                        <div>
+                                            <h3 class="mt-4">Fluxograma</h3>
+                                            <hr>
+                                            <figure class="figure">
+                                                <img th:src="@{/images/exercicios/modulos/questao2.png}" class="rounded float-left" alt="resolução da questão 2 com fluxogramas">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="questao3">
+                    <div class="mt-4">
+                        <h3>Questao 3</h3>
+                        <p>Crie um módulo chamado "Conversor" que contenha funções para converter temperatura de Celsius para Fahrenheit e vice-versa. Em seguida, escreva um programa principal que permita ao usuário escolher qual conversão deseja realizar.</p>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR3" aria-expanded="false" aria-controls="#collapseR3">
+                                        Resolução
+                                    </button>
+                                </h2>
+                                <div id="collapseR3" class="accordion-collapse collapse" data-bs-parent="questao3">
+                                    <div class="accordion-body">
+                                            <pre class="pre2">
+                                                <span class="reservada">variaveis</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;celsiusPFarh<span class="caractere">:</span> <span class="tipo">modulo</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;farhPCelsius<span class="caractere">:</span> <span class="tipo">modulo</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;temperatura<span class="caractere">:</span> <span class="tipo">real</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;escolha<span class="caractere">:</span> <span class="tipo">cadeia</span>;<br>
+                                                <span class="reservada">inicio</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Informe a temperatura:"</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> temperatura;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"escolha a conversão (CPF - CELSIUS PARA FARHEINHEIT- OU FPC - FARHEINHEIT PAR CELSIUS):"</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> escolha;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">se</span> escolha = <span class="string">"CPF"</span>  <span class="reservada">entao</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; celsiusPFarh; <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">senao se</span> escolha = <span class="string">"FPC"</span> <span class="reservada">entao</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;farhPCelsius;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim se</span>;<br>
+                                                <span class="reservada">fim</span> <br>
+                                                <span class="tipo">modulo</span> celsiusPFarh <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"A conversão da sua temperatura para farhenheit é: "</span>, <span class="caractere">(</span>temperatura * 9/5 <span class="caractere">)</span> + 32;<br>
+                                                <span class="reservada">fim</span> <span class="tipo">modulo</span>; <br>
+                                                <span class="tipo">modulo</span> farhPCelsius <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"A conversão da sua temperatura para celsius é: "</span>, <span class="caractere">(</span>temperatura - 32 <span class="caractere">)</span> * 5/9;<br>
+                                                <span class="reservada">fim</span> <span class="tipo">modulo</span>;
+                                            </pre>
+                                        <div>
+                                            <h3 class="mt-4">Fluxograma</h3>
+                                            <hr>
+                                            <figure class="figure">
+                                                <img th:src="@{/images/exercicios/modulos/questao3.png}" class="rounded float-left" alt="resolução da questão 3 com fluxogramas">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="questao4">
+                    <div class="mt-4">
+                        <h3>Questao 4</h3>
+                        <p>Implemente um módulo chamado "fibonacci" que tenha uma função para gerar os primeiros n termos da sequência de Fibonacci. Escreva um programa principal que utilize esse módulo para exibir termos da sequência até o número informado pelo usuário.</p>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR4" aria-expanded="false" aria-controls="#collapseR4">
+                                        Resolução
+                                    </button>
+                                </h2>
+                                <div id="collapseR4" class="accordion-collapse collapse" data-bs-parent="questao4">
+                                    <div class="accordion-body">
+                                            <pre class="pre2">
+                                                <span class="reservada">variaveis</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;fibonacci<span class="caractere">:</span> <span class="tipo">modulo</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;i, a, b, proximo, n<span class="caractere">:</span> <span class="tipo">inteiro</span>;<br>
+                                                <span class="reservada">inicio</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Digite um número positivo para parada da sequência fibonacci:"</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> n;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;fibonacci;<br>
+                                                <span class="reservada">fim</span> <br>
+                                                <span class="tipo">modulo</span> farhPCelsius <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;a <span class="caractere"><-</span> 0<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;b <span class="caractere"><-</span> 1<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">para</span> i <span class="reservada">de</span> 1 <span class="reservada">ate</span> n <span class="reservada">passo </span> 1 <span class="reservada">faca</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="reservada">escrever </span>a;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; proximo <span class="caractere"><-</span> a + b; <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a <span class="caractere"><-</span> b;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b <span class="caractere"><-</span> proximo;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim para</span> <br>
+                                                <span class="reservada">fim</span> <span class="tipo">modulo</span>;
+                                            </pre>
+                                        <div>
+                                            <h3 class="mt-4">Fluxograma</h3>
+                                            <hr>
+                                            <figure class="figure">
+                                                <img th:src="@{/images/exercicios/modulos/questao4.png}" class="rounded float-left" alt="resolução da questão 4 com fluxogramas">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="questao5">
+                    <div class="mt-4">
+                        <h3>Questao 5</h3>
+                        <p>Desenvolva um programa que simule um banco digital, com as funções básicas de uma conta bancária.<br>
+                        <ul>
+                            <li>Criar conta</li>
+                            <li>saque ( não pode sacar mais do que o valor do saldo )</li>
+                            <li>deposito </li>
+                            <li>verificação de saldo</li>
+                        </ul>
+                        lembre de fazer um menu que apareça todas as operações possíveis, esse menu deve reaparecer após o usuário terminar uma operação ( exceto ao sair );
+                        </p>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR5" aria-expanded="false" aria-controls="#collapseR5">
+                                        Resolução
+                                    </button>
+                                </h2>
+                                <div id="collapseR5" class="accordion-collapse collapse" data-bs-parent="questao5">
+                                    <div class="accordion-body">
+                                            <pre class="pre2">
+                                                <span class="reservada">variaveis</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;criarConta<span class="caractere">:</span> <span class="tipo">modulo</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;depositar<span class="caractere">:</span> <span class="tipo">modulo</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;sacar<span class="caractere">:</span> <span class="tipo">modulo</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;deposito<span class="caractere">:</span> <span class="tipo">real</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;verificarSaldo<span class="caractere">:</span> <span class="tipo">modulo</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;saldo<span class="caractere">:</span> <span class="tipo">real</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;saque<span class="caractere">:</span> <span class="tipo">real</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;titular<span class="caractere">:</span> <span class="tipo">cadeia</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;escolha<span class="caractere">:</span> <span class="tipo">inteiro</span>;<br>
+                                                <span class="reservada">inicio</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Bem vindo ao sistema bancário em portugol: "</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">repita</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Escolha uma operação: "</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"1. Criar conta: "</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"2. Depositar: "</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"3. Sacar: "</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"4. Verificar saldo: "</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"0. Sair: "</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Escolha uma operação: "</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler </span>escolha;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">se </span>escolha = 1 <span class="reservada">entao</span> <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;criarConta;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim se</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">se </span>escolha = 2 <span class="reservada">entao</span> <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;depositar;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim se</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">se </span>escolha = 3 <span class="reservada">entao</span> <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sacar;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim se</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">se </span>escolha = 4 <span class="reservada">entao</span> <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;verificarSaldo;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim se</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">se </span>escolha = 0 <span class="reservada">entao</span> <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span><span class="string"> "Saindo..."</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim se</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ate </span><span class="caractere">(</span>escolha > 0 <span class="reservada">e</span> escolha < 4<span class="caractere">)</span>;<br>
+                                                <span class="reservada">fim</span> <br>
+                                                <span class="tipo">modulo</span> criarConta <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;saldo <span class="caractere"><-</span> 0.0;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Insira o nome do títular"</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> titular;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Insira o saldo inicial da conta"</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> saldo;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Nome do titular: "</span>, titular,<span class="string">"Saldo inicial: "</span>, saldo</span>;<br>
+                                                <span class="reservada">fim</span> <span class="tipo">modulo</span>;<br>
+                                                <span class="tipo">modulo</span> depositar<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Insira o valor a ser depositado"</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> deposito;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;saldo <span class="caractere"><-</span> saldo + deposito; <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Saldo pós deposito: "</span>, saldo;<br>
+                                                <span class="reservada">fim</span> <span class="tipo">modulo</span>; <br>
+                                                <span class="tipo">modulo</span> sacar <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Insira o valor a ser sacado"</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> saque;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">se</span> saque > saldo <span class="reservada">entao</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Impossível sacar mais do que o valor do saldo: "</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">senao</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;saldo <span class="caractere"><-</span> saldo - saque;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Saldo pos saque: "</span>, saldo;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim se</span>;<br>
+                                                <span class="reservada">fim</span> <span class="tipo">modulo</span>;<br>
+                                                <span class="tipo">modulo</span> verificarSaldo <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Valor atual do saldo: "</span>, saldo;<br>
+                                                <span class="reservada">fim</span> <span class="tipo">modulo</span>;<br>
+                                            </pre>
+                                        <div>
+                                            <h3 class="mt-4">Fluxograma</h3>
+                                            <hr>
+                                            <figure class="figure">
+                                                <img th:src="@{/images/exercicios/modulos/questao5.png}" class="rounded float-left" alt="resolução da questão 5 com fluxogramas">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Footer -->
+<!-- Rodape -->
+<footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+<!-- JS -->
+<!-- Bootstrap 5 Bundle Core -->
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+
+</html>

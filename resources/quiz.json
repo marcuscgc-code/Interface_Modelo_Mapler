@@ -1,0 +1,221 @@
+[{
+  "id": 1,
+  "question": " Qual é o símbolo utilizado para atribuição de valor em Portugol?",
+  "answers" : [ "<-",":=","=","==","==="],
+  "correct" : "<-",
+  "link" : "/exemplo/portugol/tipos#Numericos",
+  "image": ""
+},
+{
+  "id": 2,
+  "question": " Qual estrutura de repetição permite executar um bloco de código enquanto uma condição é verdadeira em Portugol?",
+  "answers" : [ "repita", "para", "enquanto", "loop", "faça-enquanto"],
+  "correct" : "enquanto",
+  "link" : "/exemplo/portugol/lacos#Enquanto",
+  "image": ""
+},
+{
+  "id": 3,
+  "question": "Em Portugol, para comparar se dois valores são iguais, qual operador é comumente utilizado?",
+  "answers": [
+      "<>",
+      "=",
+      "!=",
+      "==",
+      "<="
+  ],
+  "correct": "=",
+  "link" : "/exemplo/portugol/condicionais",
+  "image": ""
+},
+{
+  "id": 4,
+  "question": "Qual tipo de dado é utilizado para armazenar valores inteiros em Portugol?",
+  "answers": [
+      "inteiro",
+      "real",
+      "caractere",
+      "texto",
+      "decimal"
+  ],
+  "correct": "inteiro",
+  "link" : "/exemplo/portugol/tipos",
+  "image": "" 
+},
+{
+  "id": 5,
+  "question": "Qual dos seguintes não é um tipo de loop comum em Portugol?",
+  "answers": [
+      "para",
+      "para-cada",
+      "enquanto",
+      "repita",
+      "NDA"
+  ],
+  "correct": "para-cada",
+  "link" : "/exemplo/portugol/lacos",
+  "image": "" 
+},
+{
+  "id": 6,
+  "question": "Em Portugol, qual é o termo utilizado para nomear um bloco de código que pode ser reutilizado em diferentes partes de um programa em Portugol?",
+  "answers": [
+      "modulo",
+      "classe",
+      "função",
+      "variável",
+      "estrutura"
+  ],
+  "correct": "modulo",
+  "link" : "/exemplo/portugol/modulos",
+  "image": "" 
+},
+{
+  "id": 7,
+  "question": "No portugol do MAPLER, para interromper a execução de um loop de repetição, qual comando pode ser utilizado?",
+  "answers": [
+      "para",
+      "pare-aqui",
+      "encerra",
+      "interrompe",
+      "NDA"
+  ],
+  "correct": "NDA",
+  "link" : "/exemplo/portugol/lacos",
+  "image": ""
+  },
+  {
+    "id": 8,
+    "question": "Qual estrutura de dados em Portugol permite armazenar múltiplos valores em uma única variável, associando cada valor a uma posição numérica?",
+    "answers": [
+        "lista",
+        "cadeia",
+        "vetor",
+        "tupla",
+        "mapa"
+    ],
+    "correct": "vetor",
+    "link" : "/exemplo/portugol/tipos#Vetor",
+    "image": "" 
+  },
+  {
+      "id": 9,
+      "question": "O que é um algoritmo?",
+      "answers": [
+          "Um algoritmo é uma sequência finita de instruções bem definidas para resolver um problema",
+          "É um conjunto de passos aleatórios para solucionar um problema específico",
+          "Define uma série de problemas para uma solução complexa",
+          "Consiste em uma única instrução para solucionar qualquer problema computacional",
+          "Um algoritmo é um tipo específico de linguagem de programação"
+      ],
+      "correct": "Um algoritmo é uma sequência finita de instruções bem definidas para resolver um problema",
+      "link" : "https://tecnoblog.net/responde/o-que-e-algoritmo/",
+      "image": "" 
+  },
+  {
+      "id": 10,
+      "question": "O que é um laço de repetição em programação?",
+      "answers": [
+          "Uma estrutura que armazena múltiplos valores",
+          "Um tipo de dado numérico",
+          "Uma instrução que executa um bloco de código repetidamente até que uma condição seja atendida",
+          "Um comentário no código que repete uma instrução"
+      ],
+      "correct": "Uma instrução que executa um bloco de código repetidamente até que uma condição seja atendida",
+      "link" : "",
+      "image": "/exemplo/portugol/lacos" 
+  },
+  {
+      "id": 11,
+      "question": "Qual é a diferença entre um laço 'para' e um laço 'enquanto' em programação?",
+      "answers": [
+          "Ambos funcionam da mesma maneira, apenas possuem nomes diferentes",
+          "Um laço 'para' tem um número pré-definido de vezes que será executado, enquanto um laço 'enquanto' verifica condições",
+          "Um laço 'para' não existe em linguagens de programação modernas",
+          "Um laço 'para' é mais eficiente que um laço 'enquanto'"
+      ],
+      "correct": "Um laço 'para' tem um número pré-definido de vezes que será executado, enquanto um laço 'enquanto' verifica condições",
+      "link" : "",
+      "image": "/exemplo/portugol/lacos" 
+  },
+  {
+      "id": 12,
+      "question": "O que é um 'se' em portugol?",
+      "answers": [
+          "Uma estrutura que armazena múltiplos valores",
+          "Um tipo de dado",
+          "Uma instrução que executa um bloco de código se uma condição for verdadeira",
+          "Um loop de repetição condicional"
+      ],
+      "correct": "Uma instrução que executa um bloco de código se uma condição for verdadeira",
+      "link" : "/exemplo/portugol/condicionais#Se",
+      "image": ""
+  },
+  {
+      "id": 13,
+      "question": "Em programação, o que é a 'lógica booleana'?",
+      "answers": [
+          "Um tipo de dado matemático",
+          "Um método para armazenar números inteiros",
+          "Uma forma de expressar dados complexos",
+          "Um sistema de lógica que lida com dois valores: verdadeiro e falso"
+      ],
+      "correct": "Um sistema de lógica que lida com dois valores: verdadeiro e falso",
+      "link" : "https://www.tecmundo.com.br/programacao/1527-logica-booleana-saiba-um-pouco-mais-sobre-esta-logica-e-como-ela-funciona.htm",
+      "image": ""
+  },
+  {
+      "id": 14,
+      "question": "O que é um 'senao' em portugol?",
+      "answers": [
+          "Uma palavra-chave usada para declarar variáveis",
+          "Uma estrutura para imprimir resultados na tela",
+          "Uma instrução que é executada caso a condição de um 'se' não seja atendida",
+          "Uma função que não retorna valor"
+      ],
+      "correct": "Uma instrução que é executada caso a condição de um 'if' não seja atendida",
+      "link" : "/exemplo/portugol/condicionais#Senao",
+      "image": ""
+  },
+  {
+      "id": 15,
+      "question": "Por que é importante aprender lógica de programação?",
+      "answers": [
+          "A lógica de programação é necessária apenas para resolver problemas matemáticos",
+          "Ela não é importante, pois os compiladores já fazem todo o trabalho",
+          "Ajuda a desenvolver habilidades de resolução de problemas e a criar algoritmos eficientes",
+          "A lógica de programação é útil apenas para programadores experientes"
+      ],
+      "correct": "Ajuda a desenvolver habilidades de resolução de problemas e a criar algoritmos eficientes",
+      "link" : "",
+      "image": ""
+  },
+  {
+      "id": 16,
+      "question": "Escolha a opção em que o x é incializado com o valor 10 corretamente no portugol:",
+      "answers": [
+          "x -> 10;",
+          "10 <- x",
+          "x = 10;",
+          "x <- 10;",
+          "x <- 10"
+      ],
+      "correct": "x -> 10;",
+      "link" : "/exemplo/portugol/tipos#Numericos",
+      "image": ""
+  },
+  {
+      "id": 17,
+      "question": "Qual é a saída do seguinte código?",
+      "answers": [
+          "x é maior que y",
+          "x é menor que y",
+          "x é igual a y",
+          "O programa não compila",
+          "O código possui um erro de lógica"
+      ],
+      "correct": "x é menor que y",
+      "link" : "/exemplo/portugol/operacoes",
+      "image": "imagem_id_17.png"
+  }
+]

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+<body>
+
+<!-- Header -->
+<!-- Cabecalho -->
+<header th:replace="~{/fragmentos/header :: header}"></header>
+    <!-- Corpo principal do site -->
+    <main>
+        <div class="w-100 p-3 h-100">
+          <div class="row h-100">
+              <div class="col-sm-1" >
+                  <h5>Figuras</h5>
+                  <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                      <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-selected="false">Inicio</a>
+                      <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-selected="false">Entrada</a>
+                      <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-selected="false">Saida</a>
+                      <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-selected="false">Processamento</a>
+                      <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-selected="false">Decisao</a>
+                      <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-selected="false">Fim</a>
+                  </div>
+              </div>
+              <div class="col-sm-11" style="background-color: white">
+
+              </div>
+          </div>
+        </div>
+
+    </main>
+
+<!-- Rodape -->
+
+<footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+<!-- JS -->
+<!-- Bootstrap 5 Bundle Core -->
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script></body>
+</html>

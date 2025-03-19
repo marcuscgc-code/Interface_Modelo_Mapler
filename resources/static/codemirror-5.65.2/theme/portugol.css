@@ -1,0 +1,113 @@
+/* Portugol Theme for CodeMirror */
+.cm-s-portugol.CodeMirror, .cm-s-portugol .CodeMirror-gutters {
+    background-color: #202324 !important; /* Fundo branco */
+    color: #000000 !important; /* Texto preto */
+    border: none;
+}
+.cm-s-portugol .CodeMirror-gutters {
+    background: #202324; /* Fundo das margens */
+    border-right: 1px solid #ddd;
+    color: #888;
+}
+.cm-s-portugol .CodeMirror-cursor {
+    border-left: 1px solid black; /* Cursor preto */
+}
+.cm-s-portugol .CodeMirror-linenumber {
+    color: #f8f8f2;
+}
+.cm-s-portugol .CodeMirror-selected {
+    background: #243443;
+}
+.cm-s-portugol .CodeMirror-line::selection, .cm-s-portugol .CodeMirror-line > span::selection, .cm-s-portugol .CodeMirror-line > span > span::selection {
+    background: #243443;
+}
+.cm-s-portugol .CodeMirror-line::-moz-selection, .cm-s-portugol .CodeMirror-line > span::-moz-selection, .cm-s-portugol .CodeMirror-line > span > span::-moz-selection {
+    background: #243443;
+}
+.cm-s-portugol .cm-comment {
+    color: #6c9e6d; /* Cinza para comentários */
+}
+.cm-s-portugol .cm-string, .cm-s-portugol .cm-string-2 {
+    color: #ff0000; /* Vermelho para strings */
+}
+.cm-s-portugol .cm-number {
+    color: #800080; /* Roxo para números */
+}
+.cm-s-portugol .cm-variable {
+    color: #ffffff; /* Verde para variáveis */
+}
+.cm-s-portugol .cm-variable-2 {
+    color: #f8f8f2;
+}
+.cm-s-portugol .cm-def {
+    color: #0000ff; /* Azul para definições */
+}
+.cm-s-portugol .cm-operator {
+    color: #ffc014; /* Preto para operadores */
+}
+.cm-s-portugol .cm-keyword {
+    color: #3fa6f3; /* Azul para palavras-chave */
+    font-weight: bold;
+}
+.cm-s-portugol .cm-atom {
+    color: #bd93f9;
+}
+
+/* a cor pra metadadps */
+.cm-s-portugol .cm-meta {
+    color: #808080; 
+}
+.cm-s-portugol .cm-tag {
+    color: #ff6541;
+}
+.cm-s-portugol .cm-attribute {
+    color: #66D9EF;
+}
+.cm-s-portugol .cm-qualifier {
+    color: #72C05D;
+}
+.cm-s-portugol .cm-property {
+    color: #f8f8f2;
+}
+.cm-s-portugol .cm-builtin {
+    color: #ffa500; /* Laranja para funções internas */
+}
+.cm-s-portugol .cm-variable-3, .cm-s-portugol .cm-type {
+    color: #ffb86c;
+}
+.cm-s-portugol .cm-header {
+    color: #000080; /* Azul escuro para cabeçalhos */
+    font-weight: bold;
+}
+.cm-s-portugol .CodeMirror-activeline-background {
+    background: #243443;
+}
+.cm-s-portugol .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: white !important;
+}
+
+/* novas alteraçoes */
+
+.cm-s-portugol .cm-operator {
+    color: #ffffff; /* Branco para vírgulas, ponto e vírgula e outros operadores */
+}
+
+/*Mudanca de cor para os dois pontos   */
+.cm-s-portugol .cm-punctuation {
+    color: #34d6a8; 
+}
+
+
+/* Adiçao de "<-" personalizado */
+.cm-s-portugol .cm-assignment {
+    color: #35d7b6; 
+    font-weight: bold; 
+}
+
+
+/* mudança da cor do curso que veio com padronzação Preto */
+.cm-s-portugol .CodeMirror-cursor {
+    border-left: 3px solid #ff7f4d !important; 
+    width: 2px; 
+}

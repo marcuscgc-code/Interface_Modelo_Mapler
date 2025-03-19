@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+<body>
+
+<!-- Header -->
+<!-- Cabecalho -->
+<header th:replace="~{/fragmentos/header :: header}"></header>
+
+<!-- Corpo principal do site -->
+<main>
+    <div class="container py-5 px-3 pt-3 px-sm-5">
+        <!-- Menu -->
+        <div th:replace="@{/fragmentos/menu-hubexercicios.html}"></div>
+        <!-- Content -->
+
+        <!-- Secao principal -->
+        <section id="VisaoGeral">
+            <div class="mt-4">
+                <h1>Estruturas Sequenciais</h1>
+                <p>
+                    A estrutura sequencial é a maneira mais básica de organizar o fluxo de execução de um programa. Ela é usada para realizar tarefas passo a passo e não envolve a tomada de decisões ou a repetição de ações. À medida que um programa se torna mais complexo, estruturas de decisão e repetição são adicionadas para criar lógica condicional e loops, permitindo que o programa lide com situações variáveis e execute ações repetitivas.
+                </p>
+                <br><hr>
+                <h2>Exercícios:</h2>
+                <br>
+                <section id="questao1">
+                    <h3>Questão 1</h3>
+                    <p>Escreva um programa que solicite ao usuário seu nome e, em seguida, exiba uma saudação personalizada.</p>
+                    <div class="accordion" id="resposta1">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR1" aria-expanded="false" aria-controls="#collapseR1">
+                                    Resolução
+                                </button>
+                            </h2>
+                            <div id="collapseR1" class="accordion-collapse collapse" data-bs-parent="resposta1">
+                                <div class="accordion-body">
+                                        <pre class="pre2">
+                                            <span class="comentario">// Recebendo nome do usuário no tipo cadeia e imprimindo no console</span><br>
+                                            <span class="reservada">variaveis</span><br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;nome<span class="caractere">:</span> <span class="tipo">cadeia</span>;<br>
+                                            <span class="reservada">inicio</span><br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Digite seu nome:"</span>;<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> nome;<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Olá "</span>, nome;<br>
+                                            <span class="reservada">fim</span>
+                                        </pre>
+                                    <div>
+                                        <h3 class="mt-4">Fluxograma</h3>
+                                        <hr>
+                                        <figure class="figure">
+                                            <img th:src="@{/images/exercicios/sequencial/questao1.png}" class="rounded float-left" alt="resolução da questão 1 com fluxogramas">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="questao2">
+                    <div class="mt-4">
+                        <h3>Questão 2</h3>
+                        <p>Crie um programa que calcule a área de um retângulo. O usuário deve inserir a largura e a altura, e o programa deve exibir a área.</p>
+                        <div class="accordion" id="resposta2">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR2" aria-expanded="false" aria-controls="#collapseR2">
+                                        Resolução
+                                    </button>
+                                </h2>
+                                <div id="collapseR2" class="accordion-collapse collapse" data-bs-parent="resposta2">
+                                    <div class="accordion-body">
+                                            <pre class="pre2">
+                                                <span class="comentario">// Recebendo altura e largura para descobrir area do retângulo</span><br>
+                                                <span class="reservada">variaveis</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;altura<span class="caractere">:</span> <span class="tipo">real</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;largura<span class="caractere">:</span> <span class="tipo">real</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;area<span class="caractere">:</span> <span class="tipo">real</span>;<br>
+                                                <span class="reservada">inicio</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Digite a altura: "</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> altura;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Digite a largura: "</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> largura;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Fórmula para área do retângulo</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;area <span class="caractere"><-</span> altura <span class="caractere">*</span> largura;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"A área do retângulo é: "</span>, area;<br>
+                                                <span class="reservada">fim</span>
+                                            </pre>
+                                        <div>
+                                            <h3 class="mt-4">Fluxograma</h3>
+                                            <hr>
+                                            <figure class="figure">
+                                                <img th:src="@{/images/exercicios/sequencial/questao2.png}" class="rounded float-left" alt="resolução da questão 2 com fluxogramas">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="questao3">
+                    <div class="mt-4">
+                        <h3>Questão 3</h3>
+                        <p>Desenvolva um programa que converta uma temperatura de graus Fahrenheit para Celsius. O usuário deve inserir a temperatura em Fahrenheit, e o programa deve exibir a temperatura equivalente em Celsius.</p>
+                        <div class="accordion" id="resposta3">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR3" aria-expanded="false" aria-controls="#collapseR3">
+                                        Resolução
+                                    </button>
+                                </h2>
+                                <div id="collapseR3" class="accordion-collapse collapse" data-bs-parent="resposta3">
+                                    <div class="accordion-body">
+                                           <pre class="pre2">
+                                                <span class="comentario">// Recebendo altura e largura para descobrir area do retângulo</span><br>
+                                                <span class="reservada">variaveis</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;temperaturaF<span class="caractere">:</span> <span class="tipo">real</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;temperaturaC<span class="caractere">:</span> <span class="tipo">real</span>;<br>
+                                                <span class="reservada">inicio</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Digite a temperatura em graus Fahrenheit: "</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> temperaturaF;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Fórmula de conversão de Fahrenheit para Celsius</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;temperaturaC <span class="caractere"><-</span> <span class="caractere">(</span> temperaturaF <span class="caractere">-</span> 32 <span class="caractere">) * </span> 5<span class="caractere">/</span>9;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"A temperatura equivalente em graus Celsius é: "</span>, temperaturaC;<br>
+                                                <span class="reservada">fim</span>
+                                           </pre>
+                                        <div>
+                                            <h3 class="mt-4">Fluxograma</h3>
+                                            <hr>
+                                            <figure class="figure">
+                                                <img th:src="@{/images/exercicios/sequencial/questao3.png}" class="rounded float-left" alt="resolução da questão 3 com fluxogramas">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="questao4">
+                    <div class="mt-4">
+                        <h3>Questão 4</h3>
+                        <p>Faça um programa que calcule o preço total de uma compra em um supermercado. O usuário deve inserir o preço e a quantidade de três produtos diferentes, e o programa deve exibir o preço total.</p>
+                        <div class="accordion" id="resposta4">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR4" aria-expanded="false" aria-controls="#collapseR4">
+                                        Resolução
+                                    </button>
+                                </h2>
+                                <div id="collapseR4" class="accordion-collapse collapse" data-bs-parent="resposta4">
+                                    <div class="accordion-body">
+                                            <pre class="pre2">
+                                                <span class="comentario">//recebendo altura e largura para descobrir area do retângulo</span><br>
+                                                <span class="reservada">variaveis</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;produto1<span class="caractere">:</span> <span class="tipo">real</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;quantidadeProduto1<span class="caractere">:</span> <span class="tipo">inteiro</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;produto2<span class="caractere">:</span> <span class="tipo">real</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;quantidadeProduto2<span class="caractere">:</span> <span class="tipo">inteiro</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;produto3<span class="caractere">:</span> <span class="tipo">real</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;quantidadeProduto3<span class="caractere">:</span> <span class="tipo">inteiro</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;total<span class="caractere">:</span> <span class="tipo">real</span>;<br>
+                                                <span class="reservada">inicio</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Digite o preço do produto 1: "</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> produto1;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Digite a quantidade do produto 1: "</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> quantidadeProduto1;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Digite o preço do produto 2: "</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> produto2;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Digite a quantidade do produto 2: "</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> quantidadeProduto2;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Digite o preço do produto 3: "</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> produto3;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Digite a quantidade do produto 3: "</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> quantidadeProduto3;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;total <span class="caractere"><-</span> <span class="caractere">(</span> produto1<span class="caractere"> * </span> quantidadeProduto1 <span class="caractere">)</span> <span class="caractere"> + </span> <span class="caractere">(</span> produto2<span class="caractere"> * </span> quantidadeProduto2 <span class="caractere">)</span> <span class="caractere"> + </span> <span class="caractere">(</span> produto3<span class="caractere"> * </span> quantidadeProduto3 <span class="caractere">)</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"O preço total da compra é: "</span>, total;<br>
+                                                <span class="reservada">fim</span>
+                                            </pre>
+                                        <div>
+                                            <h3 class="mt-4">Fluxograma</h3>
+                                            <hr>
+                                            <figure class="figure">
+                                                <img th:src="@{/images/exercicios/sequencial/questao4.png}" class="rounded float-left" alt="resolução da questão 4 com fluxogramas">
+                                            </figure>
+                                        </div>
+                                        <div class="alert alert-warning" role="alert">
+                                            <h4 class="alert-heading">Observação!</h4>
+                                            <p>
+                                                Este exercício pode ser melhor resolvido utilizando a estrutura de dados <a href="https://portugol.sourceforge.io/exemplos/tipos.html#Vetor"><span class="rosa">vetor</span> </a> e o laço<a href="https://portugol.sourceforge.io/exemplos/lacos.html#Para"> <span class="rosa">para</span></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="questao5">
+                    <div class="mt-4">
+                        <h3>Questão 5</h3>
+                        <p>Crie um programa em Portugol que calcule o salário líquido de um funcionário com base no salário bruto, descontando um valor fixo de 20%. O usuário deve inserir o salário bruto, e o programa deve calcular e exibir o salário líquido após o desconto.</p>
+                        <div class="accordion" id="resposta5">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR5" aria-expanded="false" aria-controls="#collapseR5">
+                                        Resolução
+                                    </button>
+                                </h2>
+                                <div id="collapseR5" class="accordion-collapse collapse" data-bs-parent="resposta5">
+                                    <div class="accordion-body">
+                                            <pre class="pre2">
+                                                <span class="comentario">//recebendo altura e largura para descobrir area do retângulo</span><br>
+                                                <span class="reservada">variaveis</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;salarioBruto<span class="caractere">:</span> <span class="tipo">real</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;salarioLiquido<span class="caractere">:</span> <span class="tipo">real</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;desconto<span class="caractere">:</span> <span class="tipo">real</span>;<br>
+                                                <span class="reservada">inicio</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Digite o salário bruto do funcionário: "</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> salarioBruto;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Calcula o desconto (20% do salário bruto)</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;desconto <span class="caractere"><-</span> salarioBruto <span class="caractere">*</span> 0.20;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Calcula o salário líquido após o desconto</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;salarioLiquido <span class="caractere"><-</span> salarioBruto <span class="caractere">-</span> desconto;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"O salário líqudio do funcionário é: "</span>, salarioLiquido;<br>
+                                                <span class="reservada">fim</span>
+                                            </pre>
+                                        <div>
+                                            <h3 class="mt-4">Fluxograma</h3>
+                                            <hr>
+                                            <figure class="figure">
+                                                <img th:src="@{/images/exercicios/sequencial/questao5.png}" class="rounded float-left" alt="resolução da questão 5 com fluxogramas">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Footer -->
+<!-- Rodape -->
+<footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+<!-- JS -->
+<!-- Bootstrap 5 Bundle Core -->
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+
+</html>

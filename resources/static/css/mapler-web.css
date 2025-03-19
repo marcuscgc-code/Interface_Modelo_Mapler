@@ -1,0 +1,71 @@
+div#nav-bar, .dropdown-menu{
+    background-color: rgb(21, 21, 21) !important;
+}
+
+#btn-home:hover{
+    background-color: rgb(138, 132, 132) !important;
+    color: rgb(27, 27, 27) !important;
+}
+
+.dropdown{
+    font-size: 0.9rem !important;
+}
+
+.dropdown-item{
+    color: #F8F9FA !important;
+}
+
+.dropdown:hover, .dropdown-item:hover{
+    background-color: rgb(0, 128, 255) !important;
+    color: #F8F9FA !important;
+}
+
+div#sidebar{
+    background-color: rgb(40, 42, 54);
+}
+
+div#content{
+    background-color: rgb(33, 34, 44);
+    font-family: monospace;
+}
+
+div#codigo-editavel{
+    overflow: auto;
+    white-space: nowrap;
+}
+
+textarea#codigo{
+    /* background-color: inherit;
+    border: none; */
+/*
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit; */
+
+    /* resize: none;
+    white-space: nowrap; */
+    /* width: 100%;
+    height: 100% !important; */
+}
+
+.CodeMirror{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+textarea#codigo:focus{
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    background-color: #202324;
+    color: #aba499;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #454a4d;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+<body>
+
+<!-- Header -->
+<!-- Cabecalho -->
+<header th:replace="~{/fragmentos/header :: header}"></header>
+    <!-- Corpo principal do site -->
+    <main>
+        <div class="container py-5 px-3 pt-3 px-sm-5">
+            <!-- Menu -->
+            <<div th:replace="@{/fragmentos/menu-exemplo-portugol.html}"></div>
+            <div th:replace="@{/fragmentos/menu-exemplo-fluxograma.html}"></div>
+            <!-- Content -->
+            
+            <!-- Secao principal -->
+            <section>
+                <div class="mt-4">
+                    <h1 id="VisaoGeral">Estrutura do Código</h1>
+                    <p class="lead">
+                        A Estrutura Básica de um código Portugol consiste em 3 áreas: <code>variaveis</code>, <code>inicio</code> e <code>fim</code>.
+                    </p>
+
+                    <ul class="lead">
+                        <li><code><strong>variaveis</strong>:</code> declaração de todas as variáveis e módulos;</li>
+                        <li><code><strong>inicio</strong>:</code> marca o início do algoritmo;</li>
+                        <li><code><strong>fim</strong>:</code> marca o fim do algoritmo.</li>
+                    </ul>
+
+                    <pre class="pre">
+                        <span class="comentario">// Estrutura Básica:</span><br>
+                        <span class="reservada">variaveis</span><br>
+                        <span class="comentario">&nbsp;&nbsp;&nbsp;&nbsp;// Nesta área declaramos as variáveis</span><br>
+                        <span class="comentario">&nbsp;&nbsp;&nbsp;&nbsp;// utilizadas no algoritmo</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;var_nome<span class="caractere">:</span> <span class="tipo">cadeia</span>;<br>
+                        <span class="reservada">inicio</span>
+                        <span class="comentario">// A partir daqui começa o algoritmo</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Digite seu nome:"</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> var_nome;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Olá "</span>, var_nome;<br>
+                        <span class="reservada">fim</span> <span class="comentario">// Esta instrução indica o fim do algoritmo</span><br>
+                    </pre>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Rodape -->
+    <footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+    <!-- JS -->
+    <!-- Bootstrap 5 Bundle Core -->
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script></body>
+
+</html>

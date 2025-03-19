@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+<body>
+
+<!-- Header -->
+<!-- Cabecalho -->
+<header th:replace="~{/fragmentos/header :: header}"></header>
+<!-- Corpo principal do site -->
+<main>
+    <div class="container py-5 px-5 px-sm-2">
+        <!-- Content -->
+        <!-- Primeira secao -->
+        <!-- Contem o titulo, pequena descricao e link para download -->
+        <section>
+            <div class="d-flex flex-row justify-content-center align-items-center">
+                <div class="col-lg-6">
+
+                    <div>
+                        <h1 class="text-center text-lg-start">Mapler - ERROR</h1>
+                    </div>
+
+                    <div>
+                        <p class="text-center text-lg-start lead">
+                            Esta pagina não foi encontrada.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</main>
+
+<!-- Rodape -->
+<footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+<!-- JS -->
+<!-- Bootstrap 5 Bundle Core -->
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+/*
+    Name: Custom Theme
+    Based on: Dracula Theme
+*/
+
+.cm-s-custom.CodeMirror, .cm-s-custom .CodeMirror-gutters {
+  background-color: #2e5be0 !important; /* Fundo do editor */
+  color: #e8eaed !important; /* Cor padrão do texto */
+  border: none;
+}
+
+.cm-s-custom .CodeMirror-gutters {
+  color: #1c4ad3;
+}
+
+.cm-s-custom .CodeMirror-cursor {
+  border-left: solid thin #e8eaed;
+}
+
+.cm-s-custom .CodeMirror-linenumber {
+  color: #888d93; /* Linhas */
+}
+
+.cm-s-custom .CodeMirror-selected {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.cm-s-custom .CodeMirror-line::selection, .cm-s-custom .CodeMirror-line > span::selection, .cm-s-custom .CodeMirror-line > span > span::selection {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.cm-s-custom .CodeMirror-line::-moz-selection, .cm-s-custom .CodeMirror-line > span::-moz-selection, .cm-s-custom .CodeMirror-line > span > span::-moz-selection {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+/* Estilo dos comentários */
+.cm-s-custom span.cm-comment {
+  color: #6a737d; /* Comentários */
+}
+
+/* Estilo das strings */
+.cm-s-custom span.cm-string, .cm-s-custom span.cm-string-2 {
+  color: #f1fa8c; /* Strings */
+}
+
+/* Estilo dos números */
+.cm-s-custom span.cm-number {
+  color: #bd93f9; /* Números */
+}
+
+/* Estilo de variáveis */
+.cm-s-custom span.cm-variable {
+  color: #50fa7b;
+}
+
+.cm-s-custom span.cm-variable-2 {
+  color: white;
+}
+
+.cm-s-custom span.cm-def {
+  color: #50fa7b; /* Definições */
+}
+
+.cm-s-custom span.cm-operator {
+  color: #ff79c6; /* Operadores */
+}
+
+.cm-s-custom span.cm-keyword {
+  color: #ff79c6; /* Palavras-chave */
+}
+
+.cm-s-custom span.cm-atom {
+  color: #bd93f9; /* Constantes */
+}
+
+.cm-s-custom span.cm-meta {
+  color: #e8eaed; /* Meta */
+}
+
+.cm-s-custom span.cm-tag {
+  color: #ff79c6; /* Tags */
+}
+
+.cm-s-custom span.cm-attribute {
+  color: #50fa7b; /* Atributos */
+}
+
+.cm-s-custom span.cm-qualifier {
+  color: #50fa7b;
+}
+
+.cm-s-custom span.cm-property {
+  color: #c7c8c9; /* Propriedades */
+}
+
+.cm-s-custom span.cm-builtin {
+  color: #b4beb6; /* Funções builtin */
+}
+
+.cm-s-custom span.cm-variable-3, .cm-s-custom span.cm-type {
+  color: #ffb86c; /* Tipos */
+}
+
+.cm-s-custom .CodeMirror-activeline-background {
+  background: rgba(255,255,255,0.1);
+}
+
+.cm-s-custom .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}
+
+.cm-s-custom span.cm-keyword {
+  color: #ff79c6; /* Palavras-chave (exemplo: variaveis, inicio, fim) */
+  font-weight: bold;
+}
+
+.cm-s-custom span.cm-builtin {
+  color: #50fa7b; /* Funções built-in (exemplo: escrever, ler) */
+}
+
+.cm-s-custom span.cm-string {
+  color: #f1fa8c; /* Strings (entre aspas) */
+}
+
+.cm-s-custom span.cm-number {
+  color: #bd93f9; /* Números */
+}
+
+.cm-s-custom span.cm-comment {
+  color: #6272a4; /* Comentários */
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+<body>
+
+<!-- Header -->
+<!-- Cabecalho -->
+<header th:replace="~{/fragmentos/header :: header}"></header>
+<!-- Corpo principal do site -->
+<main>
+    <div class="container py-5 px-3 pt-3 px-sm-5">
+        <!-- Menu -->
+        <div th:replace="@{/fragmentos/menu-exemplo-portugol.html}"></div>
+        <div th:replace="@{/fragmentos/menu-exemplo-fluxograma.html}"></div>
+        <!-- Content -->
+
+        <!-- Secao principal -->
+        <section>
+            <div class="mt-4">
+                <!-- Visao Geral -->
+                <section id="VisaoGeral">
+                    <!-- Descrição rapida -->
+                    <!-- <hr class="mt-5"> -->
+                    <h1>Estruturas Condicionais</h1>
+                    <p class="lead">
+                        São estruturas que permitem a execução de determinados trechos do algoritmo, desde que a determinada condição. Usamos os comandos <code>se</code> e <code>senao</code>.
+                    </p>
+                </section>
+
+                <!-- Se -->
+                <section id="Se">
+                    <hr class="mt-5">
+                    <h2>Comando Se</h2>
+                    <p class="lead">
+                        O comando <code>se</code> é utilizado dentro do bloco <code>inicio</code>.
+                    </p>
+
+                    <pre class="pre">
+                        <span class="comentario">// Exemplo de Adição</span><br>
+                        <span class="reservada">variaveis</span><br>
+                        <span class="reservada">inicio</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Se essa condição for verdadeira</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">se </span> &lt;condicao> <span class="reservada"> entao</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Execute esse trecho de código</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;trecho de codigo><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim</span><span class="reservada"> se</span>;<br>
+                        <span class="reservada">fim</span><br>
+                    </pre>
+
+                    <div class="alert alert-warning" role="alert">
+                        <h4 class="alert-heading">Observação!</h4>
+                        <ul>
+                            <li>O comando "se" sempre deve ser finalizado com "fim se;"</li>
+                            <li>
+                                O comando "se" aceita outros blocos de "se" dentro de seu &lt;trecho de codigo>.</br>
+                                Porém, estes devem ser fechados antes que o "se" mais externo finalize.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h4 class="mt-5">Exemplo</h4>
+                    <pre class="pre">
+                        <span class="comentario">// Exemplo usando o comando se</span><br>
+                        <span class="reservada">variaveis</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;idade<span class="caractere">:</span> <span class="tipo">inteiro</span>;<br>
+
+                        <span class="reservada">inicio</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;idade <span class="caractere">&lt;-</span> 17;<br><br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">se </span>idade => 16<span class="reservada"> entao</span> <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Pode votar!"</span>;<br><br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">se </span>idade >= 18<span class="reservada"> entao</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Pode votar e dirigir também!"</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim</span><span class="reservada"> se</span>;<br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim</span><span class="reservada"> se</span>;<br>
+
+                        <span class="reservada">fim</span><br>
+                    </pre>
+                </section>
+
+                <!-- Senao -->
+                <section id="Senao">
+                    <hr class="mt-5">
+                    <h2>Comando Senao</h2>
+                    <p class="lead">
+                        O comando <code>senao</code> é um complemento do comando <code>se</code>.
+                    </p>
+
+                    <pre class="pre">
+                        <span class="comentario">// Exemplo de Adição</span><br>
+                        <span class="reservada">variaveis</span><br>
+                        <span class="reservada">inicio</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Se essa condição for verdadeira</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">se </span> &lt;condicao> <span class="reservada"> entao</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Execute esse trecho de código</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;trecho de codigo><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Se aquela condição for falsa</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">senao</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Execute esse trecho de código</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;trecho de codigo><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim</span><span class="reservada"> se</span>;<br>
+                        <span class="reservada">fim</span><br>
+                    </pre>
+
+                    <div class="alert alert-warning" role="alert">
+                        <h4 class="alert-heading">Observação!</h4>
+                        <ul>
+                            <li>O "fim se;" deverá ficar após os comandos do "senao", indicando que o "se" e o "senao" estão em um mesmo bloco.</li>
+                            <li>
+                                O comando "senao" aceita outros blocos de "se" dentro de seu &lt;trecho de codigo>. <br>
+                                Porém, estes devem ser fechados antes que o "se" mais externo finalize.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h4 class="mt-5">Exemplo</h4>
+                    <pre class="pre">
+                        <span class="comentario">// Exemplo usando o comando se</span><br>
+                        <span class="reservada">variaveis</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;idade<span class="caractere">:</span> <span class="tipo">inteiro</span>;<br>
+
+                        <span class="reservada">inicio</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;idade <span class="caractere">&lt;-</span> 17;<br><br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">se </span>idade => 16<span class="reservada"> entao</span> <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Pode votar!"</span>;<br><br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">se </span>idade >= 18<span class="reservada"> entao</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Pode votar e dirigir também!"</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">senao</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Pode votar, mas não dirigir!"</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim</span><span class="reservada"> se</span>;<br><br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">senao</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Não pode votar, nem dirigir!"</span>;<br>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim</span><span class="reservada"> se</span>;<br>
+
+                        <span class="reservada">fim</span><br>
+                    </pre>
+                </section>
+            </div>
+        </section>
+        </div>
+    </main>
+
+<!-- Rodape -->
+<footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+<!-- JS -->
+<!-- Bootstrap 5 Bundle Core -->
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+
+</html>

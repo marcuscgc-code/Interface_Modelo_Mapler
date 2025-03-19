@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+
+<body>
+<header th:replace="~{/fragmentos/header :: header}"></header>
+<main>
+    <div class="container py-5 px-3 pt-3 px-sm-5">
+        <div th:replace="@{/fragmentos/menu-ajuda-fluxograma.html}"></div>
+        <section>
+            <div class="mt-4">
+                <!-- Visao Geral -->
+                <section id="VisaoGeral">
+                    <!-- Descrição rapida -->
+                    <!-- <hr class="mt-5"> -->
+                    <div id="inicio">
+                        <h2>Início</h2>
+                        <figure class="figure">
+                            <figcaption class="figure-caption">Este é um exemplo de laço de repetição.</figcaption>
+                            <img th:src="@{/images/fluxograma/repeticao.png}" class="rounded float-left" alt="A generic square placeholder image with rounded corners in a figure.">
+                        </figure>
+                        <p>
+                            Os laços de repetição são estruturas lógicas que permitem que um algoritmo retorne repetidamente ao mesmo ponto, com base em uma condição de validação. Nos fluxogramas, essa funcionalidade é representada através da estrutura de decisão, na qual o resultado determina se o fluxo retorna a um ponto anterior ou segue por um caminho diferente em direção ao seu término.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+</main>
+<!-- Rodape -->
+<footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+<!-- JS -->
+<!-- Bootstrap 5 Bundle Core -->
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+
+</html>

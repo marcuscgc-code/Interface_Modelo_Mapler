@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+
+<body>
+<header th:replace="~{/fragmentos/header :: header}"></header>
+
+<!-- Corpo principal do site -->
+<main>
+    <div class="container py-5 px-3 pt-3 px-sm-5">
+        <div th:replace="@{/fragmentos/menu-ajuda-fluxograma.html}"></div>
+
+        <!-- Secao principal -->
+        <section>
+            <div class="mt-4">
+                <!-- Visao Geral -->
+                <section id="VisaoGeral">
+                    <!-- Descrição rapida -->
+                    <!-- <hr class="mt-5"> -->
+                    <div id="geral">
+                        <h2 class="rosa">Exemplo</h2>
+                        <figure class="figure">
+                            <figcaption class="figure-caption">Este é um exemplo de fluxograma com entrada e saída.</figcaption>
+                            <img th:src="@{/images/fluxograma/exemplo.png}" class="rounded float-left" alt="A generic square placeholder image with rounded corners in a figure.">
+                        </figure>
+                        <p>
+                            Em resumo, as figuras de entrada e saída são elementos essenciais em fluxogramas, permitindo que os algoritmos interajam com os usuários, recebendo entradas e fornecendo saídas, tornando o processo de resolução de problemas ou execução de tarefas mais interativo e compreensível.
+                        </p>
+                    </div>
+
+                    <div class="accordion mb-3">
+                        <h5 class="accordion-header">
+                            <button class="accordion-button custom-icon" type="button" data-bs-toggle="collapse" data-bs-target="#figuras" aria-expanded="true">
+                                Sobre as figuras
+                            </button>
+                        </h5>
+                        <div id="figuras" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <div id="entrada">
+                                    <h2 class="rosa">Entrada</h2>
+                                    <figure class="figure">
+                                        <figcaption class="figure-caption">Representação da figura Entrada</figcaption>
+                                        <img th:src="@{/images/fluxograma/fig-entrada.png}" class="figure-img img-fluid rounded" alt="Uma figura de entrada.">
+                                    </figure>
+                                    <p>
+                                        O símbolo 'Entrada' indica que o usuário deve fornecer um valor, o qual o algoritmo irá ler e armazenar em uma variável. Essa figura é utilizada para solicitar que o usuário insira informações essenciais para o prosseguimento do algoritmo.
+                                    </p>
+                                </div>
+                                <div id="saida">
+                                    <h2 class="rosa">Saída</h2>
+                                    <figure class="figure">
+                                        <figcaption class="figure-caption">Representação da figura Saída</figcaption>
+                                        <img th:src="@{/images/fluxograma/fig-saida.png}" class="figure-img img-fluid rounded" alt="Uma figura de saida.">
+                                    </figure>
+                                    <p>
+                                        O símbolo 'Saída' representa a forma como o algoritmo se comunica com o usuário do sistema, exibindo informações no terminal ou visor. Geralmente, é usado para que o sistema compartilhe resultados ou mensagens importantes com o usuário, facilitando a interação entre ambos.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+</main>
+<!-- Rodape -->
+<footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+<!-- JS -->
+<!-- Bootstrap 5 Bundle Core -->
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+
+</html>

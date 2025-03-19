@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+
+<body>
+<header th:replace="~{/fragmentos/header :: header}"></header>
+
+<main>
+    <div class="container py-5 px-3 pt-3 px-sm-5">
+        <div th:replace="@{/fragmentos/menu-ajuda-fluxograma.html}"></div>
+        <!-- Secao principal -->
+        <section>
+            <div class="mt-4">
+                <!-- Visao Geral -->
+                <section id="VisaoGeral">
+                    <!-- Descrição rapida -->
+                    <!-- <hr class="mt-5"> -->
+
+                    <p>
+                        No software Mapler, a criação e edição de fluxogramas são facilitadas por um conjunto de três botões essenciais que desempenham funções específicas:
+                    </p>
+
+                    <div class="accordion mb-3">
+                        <h5 class="accordion-header">
+                            <button class="accordion-button custom-icon" type="button" data-bs-toggle="collapse" data-bs-target="#mover" aria-expanded="mover">
+                                Mover
+                            </button>
+                        </h5>
+                        <div id="mover" class="accordion-collapse collapse">
+                            <h5 class="rosa">Função</h5>
+                            <p>O botão 'Mover' é projetado para permitir o deslocamento de elementos individuais do fluxograma para diferentes posições dentro do diagrama.</p>
+                            <h5 class="rosa">Utilização</h5>
+                            <p>Isso é particularmente útil quando se deseja ajustar a disposição dos elementos, organizar o fluxo lógico de maneira mais clara ou reposicionar caixas de decisão, entrada, saída ou outras figuras conforme necessário.</p>
+                        </div>
+                    </div>
+                    <div class="accordion mb-3">
+                        <h5 class="accordion-header">
+                            <button class="accordion-button custom-icon" type="button" data-bs-toggle="collapse" data-bs-target="#associar" aria-expanded="associar">
+                                Associar
+                            </button>
+                        </h5>
+                        <div id="associar" class="accordion-collapse collapse">
+                            <h5 class="rosa">Função</h5>
+                            <p>O botão 'Associar' tem como finalidade estabelecer conexões entre os elementos do fluxograma, criando linhas ou setas que representam a sequência lógica das operações.</p>
+                            <h5 class="rosa">Utilização</h5>
+                            <p>Ao clicar no botão 'Associar' e selecionar duas figuras no fluxograma, você pode criar uma linha que indica a relação entre esses elementos, ajudando a definir a ordem de execução das ações no algoritmo.</p>
+                        </div>
+                    </div>
+                    <div class="accordion mb-3">
+                        <h5 class="accordion-header">
+                            <button class="accordion-button custom-icon" type="button" data-bs-toggle="collapse" data-bs-target="#remover" aria-expanded="remover">
+                                Remover
+                            </button>
+                        </h5>
+                        <div id="remover" class="accordion-collapse collapse">
+                            <h5 class="rosa">Função</h5>
+                            <p>O botão 'Remover' permite a exclusão de elementos indesejados do fluxograma, como figuras ou conexões entre elas.</p>
+                            <h5 class="rosa">Utilização</h5>
+                            <p>Ao clicar no botão 'Associar' e selecionar duas figuras no fluxograma, você pode criar uma linha que indica a relação entre esses elementos, ajudando a definir a ordem de execução das ações no algoritmo.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+    </div>
+</main>
+<!-- Rodape -->
+<footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+<!-- JS -->
+<!-- Bootstrap 5 Bundle Core -->
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+
+</html>

@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background: linear-gradient(90deg, #1e1e2f, #3b3b6d, #6b3b6d);
+    background: linear-gradient(90deg, #1e1e2f, #1D2671, #C33764);
 }
 
 .code-editor {
@@ -51,3 +51,70 @@ pre {
     white-space: pre-wrap; /* Quebra de linha */
     word-break: break-word; /* Quebra de palavra */
   }
+
+/* constância do editor */
+/* Garante que os editores não aumentem de altura */
+.code-editor .CodeMirror {
+    height: 100%; /* Mantém o tamanho máximo dentro do container */
+    max-height: 100%; /* Evita crescimento */
+    overflow: auto; /* Adiciona rolagem interna */
+}
+
+/* Mantém a altura fixa proporcional à tela */
+.row {
+    height: 70vh; /* Mantém o mesmo tamanho que já está no seu código */
+}
+
+
+
+
+
+/* Duplicacao de numero e barras */
+/* Remove barras de rolagem extras */
+.CodeMirror {
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden; /* Evita rolagem dupla */
+}
+
+/* Remove duplicação da numeração */
+.CodeMirror-gutters {
+    background: #252540 !important;
+    border-right: 1px solid #3b3b6d;
+}
+
+/* Ajusta a altura do editor corretamente */
+.code-editor {
+    position: relative;
+    overflow: hidden; /* Impede que outra barra de rolagem apareça */
+}
+
+
+/* correçao na altura e barras de rolagem */
+/* Define um tamanho fixo para evitar crescimento vertical do editor */
+.code-editor {
+    background-color: #252540;
+    border: 1px solid #3b3b6d;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden; /* Impede que outra barra de rolagem apareça */
+    height: 100%;
+    max-height: 100%;
+}
+
+.code-editor .CodeMirror {
+    height: 100%;
+    max-height: 100%;
+    overflow: auto; /* Garante a rolagem apenas dentro do editor */
+}
+
+/* Remove a duplicação da numeração */
+.CodeMirror-gutters {
+    background: #252540 !important;
+    border-right: 1px solid #3b3b6d;
+}
+
+/* Mantém o tamanho fixo da linha do editor */
+.CodeMirror-scroll {
+    overflow: auto !important;
+}

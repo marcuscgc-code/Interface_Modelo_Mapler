@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+<body>
+
+<!-- Header -->
+<!-- Cabecalho -->
+<header th:replace="~{/fragmentos/header :: header}"></header>
+    <!-- Corpo principal do site -->
+    <main>
+        <div class="container py-5 px-3 pt-3 px-sm-5">
+            <!-- Menu -->
+            <div th:replace="@{/fragmentos/menu-exemplo-portugol.html}"></div>
+            <div th:replace="@{/fragmentos/menu-exemplo-fluxograma.html}"></div>
+            <!-- Content -->
+            
+            <!-- Secao principal -->
+            <section>
+                <div class="mt-4">
+                    <!-- Visao Geral -->
+                    <section id="VisaoGeral">
+                        <!-- Descrição rapida -->
+                        <!-- <hr class="mt-5"> -->
+                        <h1>Operações Matemáticas</h1>
+                        <p class="lead">
+                            As operações em Portugol são:
+                        </p>
+
+                        <ul>
+                            <li class="lead">
+                                <strong>Adição</strong>, definida como a soma de valores e para isso utiliza o operador "<code>+</code>";
+                            </li>
+
+                            <li class="lead">
+                                <strong>Subtração</strong>, definida como a diferença entre valores e utiliza como operador o "<code>-</code>";
+                            </li>
+
+                            <li class="lead">
+                                <strong>Multiplicação</strong>, é o produto de valores e utiliza o operador "<code>*</code>";
+                            </li>
+
+                            <li class="lead">
+                                <strong>Divisão</strong>, a divisao utiliza um dividendo e um divisor para seu calculo e usa o operador "<code>/</code>".
+                            </li>
+                        </ul>
+
+                        <pre class="pre">
+                            <span class="comentario">// Exemplo de Operações</span><br>
+                            <span class="reservada">variaveis</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;resultado<span class="caractere">:</span> <span class="tipo">real</span>;<br>
+
+                            <span class="reservada">inicio</span><br>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Adição</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;resultado <span class="caractere">&lt;-</span> 5<span class="caractere">.</span>0 + 4<span class="caractere">.</span>0;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Operação: 5 + 4 = "</span>, resultado;<br><br>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Subtração</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;resultado <span class="caractere">&lt;-</span> 5<span class="caractere">.</span>0 - 4<span class="caractere">.</span>0;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Operação: 5 - 4 = "</span>, resultado;<br><br>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Multiplicação</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;resultado <span class="caractere">&lt;-</span> 5<span class="caractere">.</span>0 * 4<span class="caractere">.</span>0; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Operação: 5 * 4 = "</span>, resultado;<br><br>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Divisão</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;resultado <span class="caractere">&lt;-</span> 5<span class="caractere">.</span>0 / 4<span class="caractere">.</span>0;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Operação: 5 / 4 = "</span>,  resultado;	 <br>
+                            <span class="reservada">fim</span><br>
+                        </pre>
+
+                        <div class="alert alert-warning" role="alert">
+                            <h4 class="alert-heading">Observação!</h4>
+                            <p>
+                                O compilador realiza jogo de sinais, de forma que verifica se o resultado será positivo ou negativo.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Adicao -->
+                    <section id="Adicao">
+                        <hr class="mt-5">
+                        <h2>Adição</h2>
+                        <p class="lead">
+                            A Adicao é feita usando o operador "<code>+</code>". <br> "<code>x + y</code>", onde <code>X</code> e <code>Y</code> são valores quaisquer.
+                        </p>
+
+                        <pre class="pre">
+                            <span class="comentario">// Exemplo de Adição</span><br>
+                            <span class="reservada">variaveis</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;soma <span class="caractere">:</span> <span class="tipo">inteiro</span>;<br>
+                            <span class="reservada">inicio</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;soma <span class="caractere">&lt;-</span> 6 + 2;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span>soma;<br>
+                            <span class="reservada">fim</span><br>
+                        </pre>
+                    </section>
+
+                    <!-- Subtracao -->
+                    <section id="Subtracao">
+                        <hr class="mt-5">
+                        <h2>Subtração</h2>
+                        <p class="lead">
+                            A Subtração é feita usando o operador "<code>-</code>". <br> "<code>x - y</code>", onde <code>X</code> e <code>Y</code> são valores.
+                        </p>
+
+                        <pre class="pre">
+                            <span class="comentario">// Exemplo de Subtração</span><br>
+                            <span class="reservada">variaveis</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;resto <span class="caractere">:</span> <span class="tipo">inteiro</span>;<br>
+                            <span class="reservada">inicio</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;resto <span class="caractere">&lt;-</span> 16 - 4;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span>resto;<br>
+                            <span class="reservada">fim</span><br>
+                        </pre>
+                    </section>
+
+                    <!-- Multiplicacao -->
+                    <section id="Multiplicacao">
+                        <hr class="mt-5">
+                        <h2>Multiplicação</h2>
+                        <p class="lead">
+                            A Multiplicação é feita usando o operador "<code>*</code>". <br> "<code>x * y</code>", onde <code>X</code> e <code>Y</code> são valores.
+                        </p>
+
+                        <pre class="pre">
+                            <span class="comentario">// Exemplo de Multiplicação</span><br>
+                            <span class="reservada">variaveis</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;produto <span class="caractere">:</span> <span class="tipo">inteiro</span>;<br>
+                            <span class="reservada">inicio</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;produto <span class="caractere">&lt;-</span> 16 * 4;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span>produto;<br>
+                            <span class="reservada">fim</span><br>
+                        </pre>
+                    </section>
+
+                    <!-- Divisao -->
+                    <section id="Divisao">
+                        <hr class="mt-5">
+                        <h2>Divisão</h2>
+                        <p class="lead">
+                            A Divisão é feita usando o operador "<code>/</code>". <br> "<code>x / y</code>", onde <code>X</code> e <code>Y</code> são valores.
+                        </p>
+
+                        <pre class="pre">
+                            <span class="comentario">// Exemplo de Divisão</span><br>
+                            <span class="reservada">variaveis</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;quociente <span class="caractere">:</span> <span class="tipo">inteiro</span>;<br>
+                            <span class="reservada">inicio</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;quociente <span class="caractere">&lt;-</span> 16 / 4;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span>quociente;<br>
+                            <span class="reservada">fim</span><br>
+                        </pre>
+                    </section>
+
+                    <!-- Precedencia -->
+                    <section id="Precedencia">
+                        <hr class="mt-5">
+                        <h2>Precedência</h2>
+                        <p class="lead">
+                            O compilador tem três níveis de precedência:
+                        </p>
+
+                        <ul>
+                            <li class="lead"><strong>Nível 1:</strong> parênteses (<code>()</code>);</li>
+                            <li class="lead"><strong>Nível 2:</strong> multiplicação e divisão (<code>*</code> e <code>/</code>);</li>
+                            <li class="lead"><strong>Nível 3:</strong> adição e subtração (<code>+</code> e <code>-</code>);</li>
+                        </ul>
+
+                        <p class="lead">
+                            São executados do nível 1 ao nível 3.
+                        </p>
+
+                        <pre class="pre">
+                            <span class="comentario">// Exemplos de operações com diferentes precedências</span><br>
+                            <span class="reservada">variaveis</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;res<span class="caractere">:</span> <span class="tipo">real</span>;<br>
+                            <span class="reservada">inicio</span><br>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Resultado: 13</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;res <span class="caractere">&lt;-</span> 5<span class="caractere">.</span>0 + 4<span class="caractere">.</span>0 * 2<span class="caractere">.</span>0;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Operação: 5 + 4 * 2 = "</span>, res;<br><br>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Resultado: 18</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;res <span class="caractere">&lt;-</span> <span class="caractere">(</span>5<span class="caractere">.</span>0 + 4<span class="caractere">.</span>0<span class="caractere">)</span> * 2<span class="caractere">.</span>0;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Operação: (5 + 4) * 2 = "</span>, res;	<br><br>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Resultado: 3.66..</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;res <span class="caractere">&lt;-</span> 1<span class="caractere">.</span>0 + 2<span class="caractere">.</span>0 / 3<span class="caractere">.</span>0 * 4<span class="caractere">.</span>0; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Operação: 1 + 2 / 3 * 4 = "</span>, res;<br><br>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Resultado: 0.25</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;res <span class="caractere">&lt;-</span> <span class="caractere">(</span>1<span class="caractere">.</span>0 + 2<span class="caractere">.</span>0<span class="caractere">)</span> / <span class="caractere">(</span>3<span class="caractere">.</span>0 * 4<span class="caractere">.</span>0<span class="caractere">)</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Operação: (1 + 2) / (3 * 4) = "</span>, res;<br><br>
+                            <span class="reservada">fim</span><br>
+                        </pre>
+
+                        <div class="alert alert-warning" role="alert">
+                            <h4 class="alert-heading">Observação!</h4>
+                            <ul>
+                                <li>A precedência é dada sempre ao nível mais alto.</li>
+                                <li>Para operadores do mesmo nivel, é dado precedência para aquele que está mais a esquerda.</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Rodape -->
+    <footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+    <!-- JS -->
+    <!-- Bootstrap 5 Bundle Core -->
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script></body>
+
+</html>

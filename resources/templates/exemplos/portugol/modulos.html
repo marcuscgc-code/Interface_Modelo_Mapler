@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+<body>
+
+<!-- Header -->
+<!-- Cabecalho -->
+<header th:replace="~{/fragmentos/header :: header}"></header>
+    <!-- Corpo principal do site -->
+    <main>
+        <div class="container py-5 px-3 pt-3 px-sm-5">
+            <!-- Menu -->
+            <div th:replace="@{/fragmentos/menu-exemplo-portugol.html}"></div>
+            <div th:replace="@{/fragmentos/menu-exemplo-fluxograma.html}"></div>
+            <!-- Content -->
+            
+            <!-- Secao principal -->
+            <section>
+                <div class="mt-4">
+                    <!-- Visao Geral -->
+                    <section id="VisaoGeral">
+                        <!-- Descrição rapida -->
+                        <!-- <hr class="mt-5"> -->
+                        <h1>Módulos</h1>
+                        <p class="lead">
+                            <strong>Módulos</strong> são blocos externos ao bloco principal, podem ser executados várias vezes apenas com uma chamada. Assim, módulos evitam que um mesmo algoritmo precise ser escrito várias vezes.
+                        </p>
+
+                        <h4 class="mt-5">Sintaxe</h4>
+                        <pre class="pre">
+                            <span class="reservada">variaveis</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Declaração do módulo</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;dizerOla<span class="caractere">:</span> <span class="tipo">modulo</span>;<br>
+
+                            <span class="reservada">inicio</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Chamada do módulo</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;dizerOla;<br>
+
+                            <span class="reservada">fim</span><br><br>
+
+                            <span class="comentario">// Definição do módulo</span><br>
+                            <span class="tipo">modulo</span> dizerOla; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Olá, mundo!"</span>;<br>
+                            <span class="reservada">fim</span> <span class="tipo">modulo</span>;<br><br>
+                        </pre>
+
+                        <div class="alert alert-warning" role="alert">
+                            <h4 class="alert-heading">Observação!</h4>
+                            <ul>
+                                <li>O <strong>módulo</strong> precisa ser declarado no bloco principal.</li>
+                                <li>Um <strong>módulo</strong> reconhece as variáveis que pertecem ao bloco principal.</li>
+                                <li>Um <strong>módulo</strong> pode ter diversos comandos internos.</li>
+                            </ul>
+                        </div>
+
+                        <h4 class="mt-5">Exemplo</h4>
+                        <pre class="pre">
+                            <span class="reservada">variaveis</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;a, b<span class="caractere">:</span><span class="tipo">inteiro</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;somar<span class="caractere">:</span> <span class="tipo">modulo</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;dividir<span class="caractere">:</span> <span class="tipo">modulo</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;sibtrair<span class="caractere">:</span> <span class="tipo">modulo</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;multiplicar<span class="caractere">:</span> <span class="tipo">modulo</span>;<br>
+
+                            <span class="reservada">inicio</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;a<span class="caractere">&lt;-</span>10;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;b<span class="caractere">&lt;-</span>5;<br><br>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;somar;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;sibtrair;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;multiplicar;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;dividir;<br>
+
+                            <span class="reservada">fim</span><br><br>
+
+                            <span class="tipo">modulo</span> somar <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span>a, <span class="string">"+"</span>, b, <span class="string">"="</span>, a+b;<br>
+                            <span class="reservada">fim</span> <span class="tipo">modulo</span>;<br><br>
+
+                            <span class="tipo">modulo</span> multiplicar <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span>a, <span class="string">"*"</span>, b, <span class="string">"="</span>, a*b;<br>
+                            <span class="reservada">fim</span> <span class="tipo">modulo</span>;<br><br>
+
+                            <span class="tipo">modulo</span> sibtrair <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span>a, <span class="string">"-"</span>, b, <span class="string">"="</span>, a-b;<br>
+                            <span class="reservada">fim</span> <span class="tipo">modulo</span>;<br><br>
+
+                            <span class="tipo">modulo</span> dividir <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span>a, <span class="string">"/"</span>, b, <span class="string">"="</span>, a/b;<br>
+                            <span class="reservada">fim</span> <span class="tipo">modulo</span>;<br><br>
+                        </pre>
+                    </section>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Rodape -->
+    <footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+    <!-- JS -->
+    <!-- Bootstrap 5 Bundle Core -->
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script></body>
+
+</html>

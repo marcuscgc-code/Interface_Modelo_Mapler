@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+<body>
+
+<!-- Header -->
+<!-- Cabecalho -->
+<header th:replace="~{/fragmentos/header :: header}"></header>
+    <!-- Corpo principal do site -->
+    <main>
+        <div class="container py-5 px-3 pt-3 px-sm-5">
+            <!-- Menu -->
+            <div th:replace="@{/fragmentos/menu-exemplo-portugol.html}"></div>
+            <div th:replace="@{/fragmentos/menu-exemplo-fluxograma.html}"></div>
+            <!-- Content -->
+            
+            <!-- Secao principal -->
+            <section>
+                <div class="mt-4">
+                    <!-- Descrição rapida -->
+                    <h1 id="VisaoGeral">Comandos de Entrada e Saída</h1>
+                    <p class="lead">
+                        Comando usados para interação do usuário com o algoritmo.
+                    </p>
+
+                    <!-- Comandos de Entrada -->
+                    <h4 class="mt-5">Entrada</h4>
+                    <p class="lead">
+                        Recebe dados do usuário a partir do teclado. O valor digitado será armazenado na variável indicada.<br>
+                        <code>ler &lt;variavel&gt;;</code>
+                    </p>
+
+                    <pre class="pre">
+                        <span class="comentario">// Exemplo do comando de entrada</span><br>
+                        <span class="reservada">variaveis</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;numero<span class="caractere">:</span> <span class="tipo">inteiro</span>;<br>
+                        <span class="reservada">inicio</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> numero;<br>
+                        <span class="reservada">fim</span><br>
+                    </pre>
+
+                    <!-- Comandos de Saida -->
+                    <h4 class="mt-5">Saída</h4>
+                    <p class="lead">
+                        Exibe o conteúdo no terminal. O comando aceita um texto ou uma variavel como parâmetro. Pode-se também concatenar um texto com uma variável. <br>
+                        <code>escrever &lt;"texto"&gt;&lt;, variavel&gt;;</code>
+                    </p>
+
+                    <pre class="pre">
+                        <span class="comentario">// Exemplo do comando de saída</span><br>
+                        <span class="reservada">variaveis</span><br>
+                        <span class="reservada">inicio</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Hello, world!"</span>;<br>
+                        <span class="reservada">fim</span><br>
+                    </pre>
+
+                    <!-- Exemplos -->
+                    <h4 class="mt-5">Exemplo</h4>
+                    <pre class="pre">
+                        <span class="comentario">// Exemplo utilizando comandos de entrada e saída<br></span>
+                        <span class="reservada">variaveis</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;nome<span class="caractere">:</span> <span class="tipo">cadeia</span>;<br>
+                        <span class="reservada">inicio</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Digite seu nome:"</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> nome;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Olá "</span>, nome;<br>
+                        <span class="reservada">fim</span><br>
+                    </pre>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Rodape -->
+    <footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+    <!-- JS -->
+    <!-- Bootstrap 5 Bundle Core -->
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script></body>
+
+</html>

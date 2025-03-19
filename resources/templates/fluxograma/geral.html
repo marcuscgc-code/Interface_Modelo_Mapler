@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+
+<body>
+<header th:replace="~{/fragmentos/header :: header}"></header>
+<main>
+    <div class="container py-5 px-3 pt-3 px-sm-5">
+        <div th:replace="@{/fragmentos/menu-ajuda-fluxograma.html}"></div>
+        <!-- Secao principal -->
+        <section>
+            <div class="mt-4">
+                <!-- Visao Geral -->
+                <section id="VisaoGeral">
+                    <!-- Descrição rapida -->
+                    <!-- <hr class="mt-5"> -->
+                    <div class="accordion mb-3">
+                        <h5 class="accordion-header">
+                            <button class="accordion-button custom-icon" type="button" data-bs-toggle="collapse" data-bs-target="#fig-inicio" aria-expanded="fig-inicio">
+                                Início
+                            </button>
+                        </h5>
+                        <div id="fig-inicio" class="accordion-collapse collapse">
+                            <div id="inicio">
+                                <figure class="figure">
+                                    <figcaption class="figure-caption">Representação da figura Início</figcaption>
+                                    <img th:src="@{/images/fluxograma/fig-inicio.png}" class="rounded float-left" alt="A generic square placeholder image with rounded corners in a figure.">
+                                </figure>
+                                <p>
+                                    O ponto de partida do fluxograma é simbolizado pela figura de início, que representa o ponto inicial do algoritmo. Essa figura é sempre utilizada como o ponto de partida lógico para o desenvolvimento do processo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion mb-3">
+                        <h5 class="accordion-header">
+                            <button class="accordion-button custom-icon" type="button" data-bs-toggle="collapse" data-bs-target="#fig-fim" aria-expanded="fig-fim">
+                                Fim
+                            </button>
+                        </h5>
+                        <div id="fig-fim" class="accordion-collapse collapse">
+                            <div id="fim">
+                                <figure class="figure">
+                                    <figcaption class="figure-caption">Representação da figura Fim</figcaption>
+                                    <img th:src="@{/images/fluxograma/fig-fim.png}" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                                </figure>
+                                <p>
+                                    A figura de encerramento, representada como 'Fim', sinaliza o término do programa. Quando a lógica alcança este ponto, o código é finalizado.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion mb-3">
+                        <h5 class="accordion-header">
+                            <button class="accordion-button custom-icon" type="button" data-bs-toggle="collapse" data-bs-target="#fig-entrada" aria-expanded="fig-entrada">
+                                Entrada
+                            </button>
+                        </h5>
+                        <div id="fig-entrada" class="accordion-collapse collapse">
+                            <div id="entrada">
+                                <figure class="figure">
+                                    <figcaption class="figure-caption">Representação da figura Entrada</figcaption>
+                                    <img th:src="@{/images/fluxograma/fig-entrada.png}" class="figure-img img-fluid rounded" alt="Uma figura de entrada.">
+                                </figure>
+                                <p>
+                                    O símbolo 'Entrada' indica que o usuário deve fornecer um valor, o qual o algoritmo irá ler e armazenar em uma variável. Essa figura é utilizada para solicitar que o usuário insira informações essenciais para o prosseguimento do algoritmo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion mb-3">
+                        <h5 class="accordion-header">
+                            <button class="accordion-button custom-icon" type="button" data-bs-toggle="collapse" data-bs-target="#fig-saida" aria-expanded="fig-saida">
+                                Saída
+                            </button>
+                        </h5>
+                        <div id="fig-saida" class="accordion-collapse collapse">
+                            <div id="saida">
+                                <figure class="figure">
+                                    <figcaption class="figure-caption">Representação da figura Saída</figcaption>
+                                    <img th:src="@{/images/fluxograma/fig-saida.png}" class="figure-img img-fluid rounded" alt="Uma figura de saida.">
+                                </figure>
+                                <p>
+                                    O símbolo 'Saída' representa a forma como o algoritmo se comunica com o usuário do sistema, exibindo informações no terminal ou visor. Geralmente, é usado para que o sistema compartilhe resultados ou mensagens importantes com o usuário, facilitando a interação entre ambos.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="accordion mb-3">
+                        <h5 class="accordion-header">
+                            <button class="accordion-button custom-icon" type="button" data-bs-toggle="collapse" data-bs-target="#fig-processamento" aria-expanded="fig-processamento">
+                                Processamento
+                            </button>
+                        </h5>
+                        <div id="fig-processamento" class="accordion-collapse collapse">
+                            <div id="processamento">
+                                <figure class="figure">
+                                    <figcaption class="figure-caption">Representação da figura processamento</figcaption>
+                                    <img th:src="@{/images/fluxograma/fig-processamento.png}" class="figure-img img-fluid rounded" alt="Uma figura de processamento.">
+                                </figure>
+                                <p>
+                                    O símbolo 'Processamento' engloba as figuras relacionadas a cálculos e alterações de valores no fluxograma. É usado para representar ações como atribuições, operações matemáticas e outras interações com variáveis, indicando o processamento de dados e informações dentro do algoritmo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion mb-3">
+                        <h5 class="accordion-header">
+                            <button class="accordion-button custom-icon" type="button" data-bs-toggle="collapse" data-bs-target="#fig-decisao" aria-expanded="fig-decisao">
+                                Decisão
+                            </button>
+                        </h5>
+                        <div id="fig-decisao" class="accordion-collapse collapse">
+                            <div id="decisao">
+                                <figure class="figure">
+                                    <figcaption class="figure-caption">Representação da figura decisão</figcaption>
+                                    <img th:src="@{/images/fluxograma/fig-decisao.png}" class="figure-img img-fluid rounded" alt="Uma figura de decisao.">
+                                </figure>
+                                <p>
+                                    A figura 'Decisão' é a única no fluxograma que pode ter dois caminhos saindo dela. Um valor, que pode ser configurado automaticamente ou pelo desenvolvedor, é definido para determinar qual caminho será percorrido com base no resultado da condição presente na decisão.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+<!-- Rodape -->
+<footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+<!-- JS -->
+<!-- Bootstrap 5 Bundle Core -->
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+
+</html>

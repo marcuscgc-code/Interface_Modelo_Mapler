@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+<body>
+
+<!-- Header -->
+<!-- Cabecalho -->
+<header th:replace="~{/fragmentos/header :: header}"></header>
+<!-- Corpo principal do site -->
+
+<main>
+    <div class="container py-5 px-3 pt-3 px-sm-5">
+        <!-- Menu -->
+        <div class="accordion mb-3" id="accordionManuais">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingManuais">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseManuais" aria-expanded="true" aria-controls="collapseManuais">
+                        Tópicos
+                    </button>
+                </h2>
+                <div id="collapseManuais" class="accordion-collapse collapse show" aria-labelledby="headingManuais" data-bs-parent="#accordionManuais">
+                    <div class="accordion-body">
+                        <ul>
+                            <div class="row">
+                                <div class="col-12 col-sm-4">
+                                    <li><a class="link-light text-decoration-none" href="#Download">Download</a></li>
+                                    <li><a class="link-light text-decoration-none" href="#Requerimentos">Requerimentos</a></li>
+                                    <li><a class="link-light text-decoration-none" href="#TelaInicial">Tela Inicial</a></li>
+                                </div>
+
+                                <div class="col-12 col-sm-4">
+                                    <li><a class="link-light text-decoration-none" href="#TelaDeCodificacao">Tela Codificação</a></li>
+                                    <li><a class="link-light text-decoration-none" href="#ExecucaoDeCodigo">Tela de Execução de Código</a></li>
+                                    <li><a class="link-light text-decoration-none" href="#TraduzindoOCodigo">Traduzindo o código Código</a></li>
+                                </div>
+
+                                <div class="col-12 col-sm-4">
+                                    <li><a class="link-light text-decoration-none" href="#DepurandoOCodigo">Depurando o código Código</a></li>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Content -->
+
+        <!-- Secao principal -->
+        <section>
+            <div class="mt-4">
+                <!-- Visao Geral -->
+                <section id="VisaoGeral">
+                    <!-- Descrição rapida -->
+                    <!-- <hr class="mt-5"> -->
+                    <h1>Manual de uso do Mapler</h1>
+                    <p class="lead">
+                        O <span class="rosa">Interpretador Portugol MAPLER</span> é uma ferramenta educacional para aprendizagem e desenvolvimento de algoritmos utilizando <span class="rosa">pseudo-código</span> com a linguagem português estruturado
+                        (ou "<span class="rosa">portugol</span>").
+                    </p>
+
+                    <p class="lead">
+                        Atualmente desenvolvido e mantido por alunos do Instituto Federal do Maranhão (<span class="rosa">IFMA</span>), a ferramenta encontra-se em fase beta de desenvolvimento e testes, disponibilizando as seguintes funcionalidades
+                        básicas:
+                    </p>
+
+                    <ul class=lead>
+                        <li>Execucao do <span class="rosa">pseudo-código</span>;</li>
+                        <li>Depuração (<span class="rosa">debug</span>) passo-a-passo;</li>
+                        <li>Tradução do pseudo-código para linguagens alto nível: <span class="rosa">Java</span>, <span class="rosa">C</span>, <span class="rosa">C++</span>, <span class="rosa">Pascal</span> e <span class="rosa">Python.</span></li>
+                    </ul>
+
+                </section>
+
+                <!-- Download -->
+                <section id="Download">
+                    <hr class="mt-5">
+                    <h2>Download</h2>
+                    <p class="lead">
+                        O software é <span class="rosa">gratuito</span> e pode ser baixado clicando no botão "<span class="rosa">baixar</span>" da página inicial ou indo pelo menu "<span class="rosa">Download</span>", para facilitar esse <a class="text-decoration-none"
+                                                                                                                                                                                                                                                 href="https://sourceforge.net/projects/portugol/files/"><span class="rosa">link</span></a> também pode ser usado para download.
+                    </p>
+                </section>
+
+                <!-- Requerimentos -->
+                <section id="Requerimentos">
+                    <hr class="mt-5">
+                    <h2>Requerimentos</h2>
+                    <p class="lead">
+                        Atualmente o software demanda a versão <span class="rosa">Java 11</span> como requisito minimo. Caso necessite baixar a versão 11 ou superior, busque
+                        <a class="text-decoration-none" href="https://www.oracle.com/java/technologies/downloads/"><span class="rosa">aqui</span></a>.
+                    </p>
+
+                    <p class="lead">
+                        Em alguns sistemas operacionais, pode ocorrer erros por falta de algumas <code>DLLs</code> e para resolver recomendamos seguir os seguintes passos:
+                    </p>
+
+                    <ol class="lead">
+                        <li>Baixar a <span class="rosa">SDK</span> do <span class="rosa">javafx</span> de seu Sistema Operacional;</li>
+                        <li>Extrair os <code>.dll(windows)</code>, <code>.so(linux)</code> ou <code>.dylib(mac)</code> da pasta bin para a pasta bin do java instalado em seu Sistema Operacional.</li>
+                    </ol>
+                </section>
+
+                <!-- Tela Inicial -->
+                <section id="TelaInicial">
+                    <hr class="mt-5">
+                    <h2>Tela Inicial</h2>
+                    <p class="lead">
+                        Em sua tela inicial ficam as opções padrões para trabalhar com arquivos: <span class="rosa">novo</span>, <span class="rosa">abrir</span>. Ao desenvolver seu código, o usuário pode também salvar seu trabalho em um arquivo de
+                        texto (<code>.txt</code>). Em sua tela inicial se encontram também links para navegar os exemplos da sintaxe e para visitar o site do projeto.
+                    </p>
+
+                    <div class="col-12 col-sm-6">
+                        <img th:src="@{/images/manuais/inicio.png}" class="img-fluid" alt="Tela de Início">
+                    </div>
+                </section>
+
+                <!-- Tela de Codificação -->
+                <section id="TelaDeCodificacao">
+                    <hr class="mt-5">
+                    <h2>Tela de Codificação</h2>
+                    <p class="lead">
+                        Na tela de codificação encontra-se a área de texto para desenvolvimento, painel lateral com as ações possíveis (<span class="rosa">executar</span>, <span class="rosa">depurar</span> e <span class="rosa">traduzir</span>), e
+                        a barra de ferramentas superior para com opções para manipular o arquivo atual(<span class="rosa">novo</span>, <span class="rosa">salvar</span>, <span class="rosa">abrir</span>), <span class="rosa">exemplos</span>, <span class="rosa">links</span>                            para o site do projeto, opções para <span class="rosa">traduzir</span> para uma linguagem específica.
+                    </p>
+
+                    <div class="col-12 col-sm-6">
+                        <img th:src="@{/images/manuais/tela_codigo.png}" class="img-fluid" alt="Tela de Codificação">
+                    </div>
+
+                </section>
+                
+                <!-- Execução de Código -->
+                <section id="ExecucaoDeCodigo">
+                    <hr class="mt-5">
+                    <h2>Execução de Código</h2>
+                    <p class="lead">
+                        Para executar um código, basta clicar no botão "<span class="rosa">executar</span>" no painel lateral direito. <br> O console deve abrir logo abaixo da área de texto (<span class="rosa">console</span>) para exibir saídas e
+                        entradas do programa.
+                    </p>
+
+                    <div class="col-12 col-sm-6">
+                        <img th:src="@{/images/manuais/rodando.png}" class="img-fluid" alt="Código Rodando">
+                    </div>
+
+                    <p class="lead mt-4">
+                        Quando o <span class="rosa">pseudo-código</span> espera uma informação do usuário (ao se utilizar o comando <code>ler</code>), o console irá exibir o simbolo "<code>></code>" em uma nova linha, como na figura abaixo:
+                    </p>
+
+                    <div class="col-12 col-sm-6">
+                        <img th:src="@{/images/manuais/ler.png}" class="img-fluid" alt="Aguardando input">
+                    </div>
+
+                </section>
+
+                <!-- Traduzindo o Código -->
+                <section id="TraduzindoOCodigo">
+                    <hr class="mt-5">
+                    <h2>Traduzindo o Código</h2>
+                    <p class="lead">
+                        Para traduzir o <span class="rosa">pseudo-código</span> para uma linguagem de alto nível, no menu "<span class="rosa">Linguagem</span>" da barra de ferramentas superior, deve-se selecionar uma das opções de linguagem suportada.
+                    </p>
+
+                    <div class="col-12 col-sm-6">
+                        <img th:src="@{/images/manuais/traducao.png}" class="img-fluid" alt="Código Rodando">
+                    </div>
+
+                    <ul class="lead mt-4">
+                        <li>O painel de tradução aparecerá ao lado da área de texto do <span class="rosa">pseudo-código</span> para comparação dos códigos.</li>
+                        <li>O botão "<span class="rosa">Traduzir</span>" no painel lateral esconde/exibe a área de tradução.</li>
+                    </ul>
+                </section>
+
+                <!-- Depurando o Código -->
+                <section id="DepurandoOCodigo">
+                    <hr class="mt-5">
+                    <h2>Depurando o Código</h2>
+                    <p class="lead">
+                        Para depurar o código passo-a-passo, deve-se utilizar o botão "<span class="rosa">Debug</span>" no painel lateral. Será exibido a tabela de depuração ao lado da área de texto do <span class="rosa">pseudo-código</span>, juntamente
+                        com o <span class="rosa">console</span> para observar as saídas e informar entradas.
+                    </p>
+
+                    <div class="col-12 col-sm-6">
+                        <img th:src="@{/images/manuais/debug.png}" class="img-fluid" alt="Código Rodando">
+                    </div>
+
+                    <p class="lead mt-4">
+                        A depuração <span class="rosa">passo-a-passo</span> consiste em executar o código pausando <span class="rosa">linha por linha</span>, exibindo na tabela os valores das variáveis na <span class="rosa">linha atual</span> para
+                        verificação do usuário. A tabela de depuração possui os seguintes botões para controle:
+                    </p>
+
+                    <ul class="lead">
+                        <li><span class="rosa">Executar</span>: Executa o código a partir da linha atual sem depurador</li>
+                        <li><span class="rosa">Próximo passo</span>: Executa a próxima linha do código</li>
+                        <li><span class="rosa">Parar</span>: Termina a depuração atual</li>
+                    </ul>
+
+                    <p class="lead mt-4">
+                        Clicando novamente em "<span class="rosa">Debug</span>" no painel lateral, o processo atual será terminado e o painel do depurador será escondido novamente.
+                    </p>
+                </section>
+            </div>
+
+        </section>
+
+    </div>
+</main>
+<!-- Rodape -->
+<footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+<!-- JS -->
+<!-- Bootstrap 5 Bundle Core -->
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+
+</html>

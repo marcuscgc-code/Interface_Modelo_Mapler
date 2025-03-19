@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+<body>
+
+    <!-- Header -->
+    <!-- Cabecalho -->
+    <header th:replace="~{/fragmentos/header :: header}"></header>
+    <!-- Corpo principal do site -->
+    <main>
+        <div class="container py-5 px-3 pt-3 px-sm-5">
+        <!-- Content -->
+        <!-- Primeira secao -->
+            <section>
+                <div>
+                    <h1>Desenvolvimento do Projeto</h1>
+                    <p class="lead mt-3">
+                        Atualmente o <strong>Projeto Mapler</strong> tem focado em trazer suas funcionalidades para versões <span class="rosa">web</span> e <span class="rosa">mobile</span>. <br> Voce pode visitar o projeto no GitHub usando o botão abaixo:
+                    </p>
+                </div>
+
+                <a class="text-decoration-none" href="https://github.com/Projeto-Mapler">
+                    <button type="button" class="btn btn-light px-3 mb-3 me-md-3" id="btn-interface">
+                        <svg id="i-github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="16" height="16">
+                            <path stroke-width="0" fill="currentColor" d="M32 0 C14 0 0 14 0 32 0 53 19 62 22 62 24 62 24 61 24 60 L24 55 C17 57 14 53 13 50 13 50 13 49 11 47 10 46 6 44 10 44 13 44 15 48 15 48 18 52 22 51 24 50 24 48 26 46 26 46 18 45 12 42 12 31 12 27 13 24 15 22 15 22 13 18 15 13 15 13 20 13 24 17 27 15 37 15 40 17 44 13 49 13 49 13 51 20 49 22 49 22 51 24 52 27 52 31 52 42 45 45 38 46 39 47 40 49 40 52 L40 60 C40 61 40 62 42 62 45 62 64 53 64 32 64 14 50 0 32 0 Z" />
+                        </svg>
+                        Projeto Mapler:
+                    </button>
+                </a>
+            </section>
+
+             <!-- Segunda secao -->
+            <section>
+                 <div class="mt-5">
+                    <div>
+                        <h5>Ultimas funções adicionadas ao projeto</h5>
+                    </div>
+
+                    <ul class="lead">
+                        <li>Adicionado uma interface para desenvolvimento de <span class="rosa">fluxogramas</span>;</li>
+                        <li>Adicionado <span class="rosa">exemplos</span> na área código;</li>
+                        <li>Adicionado sistema para <span class="rosa">depuração</span> passo-a-passo (<span class="rosa">Debug</span>);</li>
+                        <li>Tradução para a linguagem <span class="rosa">Python</span>, <span class="rosa">Java</span>, <span class="rosa">C</span>, <span class="rosa">C++</span> e <span class="rosa">Pascal</span>;</li>
+                        <li>Nova estrutura de interpretação;</li>
+                        <li>Nova estrutura de colorir na área código;</li>
+                        <li>Nova interface para o sistema;</li>
+                        <li>Design do projeto reformulado;</li>
+                        <li>Projeto <span class="rosa">MACP</span> renomeado para <span class="rosa">Mapler</span>;</li>
+                        <li>Tradução em <span class="rosa">JavaScript</span>, <span class="rosa">TypeScript</span>, <span class="rosa">CoffeScript</span> e <span class="rosa">Ruby</span> adicionados ao <span class="rosa">Mapler</span>.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Rodape -->
+    <footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+    <!-- JS -->
+    <!-- Bootstrap 5 Bundle Core -->
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+
+
+</html>

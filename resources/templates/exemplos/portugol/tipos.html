@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+<body>
+
+<!-- Header -->
+<!-- Cabecalho -->
+<header th:replace="~{/fragmentos/header :: header}"></header>
+    <!-- Corpo principal do site -->
+    <main>
+        <div class="container py-5 px-3 pt-3 px-sm-5">
+            <!-- Menu -->
+            <div th:replace="@{/fragmentos/menu-exemplo-portugol.html}"></div>
+            <div th:replace="@{/fragmentos/menu-exemplo-fluxograma.html}"></div>
+            <!-- Content -->
+            
+            <!-- Secao principal -->
+            <section>
+                <div class="mt-4">
+                    <!-- Visao Geral -->
+                    <section id="VisaoGeral">
+                        <!-- Descrição rapida -->
+                        <!-- <hr class="mt-5"> -->
+                        <h1>Tipos de Dados</h1>
+                        <p class="lead">
+                            <strong>Variáveis</strong> são espaços de memória reservados para armazenar valores obtidos pelo algoritmo.
+                        </p>
+
+                        <p class="lead">
+                            Em portugol, as variáveis são declaradas na parte do bloco principal chamada <code>variaveis</code> e depois usado o seu nome declarado para acessar e manipular seus valores.
+                        </p>
+
+                        <pre class="pre">
+                            <span class="reservada">variaveis</span><br>
+                            <span class="comentario">// Local para declaração de variáveis</span><br>
+                            <span class="reservada">inicio</span><br>
+                            <span class="reservada">fim</span><br>
+                        </pre>
+
+                        <!-- Sintaxe -->
+                        <h4 class="mt-5">Sintaxe</h4>
+
+                        <!-- Sintaxe de Declaração -->
+                        <p class="lead">
+                            Uma variável é declarada dentro da estrutura <code>variaveis</code> usando <code>variavel:tipo;</code>.
+                        </p>
+
+                        <pre class="pre">
+                            <span class="comentario">// Declarando uma variável</span><br>
+                            <span class="reservada">variaveis</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;numero<span class="caractere">:</span> <span class="tipo">inteiro</span>;<br>
+                            <span class="reservada">inicio</span><br>
+                            <span class="reservada">fim</span><br>
+                        </pre>
+
+                        <!-- Sintaxe de Acesso -->
+                        <h4 class="mt-5">Acessando variáveis</h4>
+                        <p class="lead">
+                            Uma variavel para ser acessada basta usar seu nome na estrutura <code>inicio</code>, exemplo: <code>escrever variavel;</code>. <br>
+                        </p>
+
+                        <pre class="pre">
+                            <span class="comentario">// Acessando uma variável</span><br>
+                            <span class="reservada">variaveis</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;numero<span class="caractere">:</span> <span class="tipo">inteiro</span>;<br>
+                            <span class="reservada">inicio</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> numero;<br>
+                            <span class="reservada">fim</span><br>
+                        </pre>
+
+                        <!-- Sintaxe de Manipulação -->
+                        <h4 class="mt-5">Manipulando variáveis</h4>
+                        <p class="lead">
+                            Um variável pode ser manipulada atribuindo valores, variáveis ou expressões dessa forma <code>variavel &lt;- valor</code>.
+                        </p>
+
+                        <pre class="pre">
+                            <span class="comentario">// Manipulando variáveis</span><br>
+                            <span class="reservada">variaveis</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;numero<span class="caractere">:</span> <span class="tipo">inteiro</span>;<br>
+                            <span class="reservada">inicio</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;numero <span class="caractere">&lt;-</span> 15 ;<br>
+                            <span class="reservada">fim</span><br>
+                        </pre>
+
+                        <!-- Observações -->
+                        <div class="alert alert-warning" role="alert">
+                            <h4 class="alert-heading">Observação!</h4>
+                            <ul>
+                                <li>O sistema irá reportar erro sempre que uma variável chamada não tenha sido declarada.</li>
+                                <li>É considerado como erro uma variável receber um valor de tipagem diferente ao declarado para aquela variável.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Exemplos -->
+                        <h4 class="mt-5">Exemplo</h4>
+                        <pre class="pre">
+                            <span class="comentario">
+                                // ===== TIPOS DE DADOS =====<br>
+                            </span>
+                            <span class="reservada">variaveis</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;idade<span class="caractere">:</span><span class="tipo"> inteiro</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;valor<span class="caractere">:</span><span class="tipo"> real</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;disponivel<span class="caractere">:</span><span class="tipo"> logico</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;cidade<span class="caractere">:</span><span class="tipo"> cadeia</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;letra<span class="caractere">:</span><span class="tipo"> caractere</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;vetor, vetor_2<span class="caractere">:</span><span class="tipo"> vetor</span><span class="caractere">[</span>1<span class="caractere">.</span><span class="caractere">.</span>4<span class="caractere">]</span> <span class="reservada">de</span> <span class="tipo"> inteiro</span>;<br>
+                            <span class="reservada">inicio</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;idade <span class="caractere">&lt;-</span> 25;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;valor <span class="caractere">&lt;-</span> 2.5;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;cidade <span class="caractere">&lt;-</span> <span class="string">"São Luís"</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;letra <span class="caractere">&lt;-</span> <span class="string">"c"</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;disponivel <span class="caractere">&lt;-</span> <span class="reservada">verdadeiro</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;vetor<span class="caractere">[</span>1<span class="caractere">]</span> <span class="caractere"><-</span> 2;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;vetor_2<span class="caractere">[</span>1<span class="caractere">]</span> <span class="caractere"><-</span> 2;<br>
+                            <span class="reservada">fim</span><br>
+                        </pre>
+                    </section>
+
+                    <!-- Numericos -->
+                    <section id="Numericos">
+                        <hr class="mt-5">
+                        <h2>Numéricos</h2>
+                        <p class="lead">
+                            Em Portugol variáveis do tipo numérico podem ser <code>inteiro</code>, números sem casas decimais, ou <code>real</code>, números com casas decimais.
+                        </p>
+
+                        <pre class="pre">
+                            <span class="comentario">// Exemplos de variáveis inteiras e reais</span><br>
+                            <span class="reservada">variaveis</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;var_inteiro<span class="caractere">:</span><span class="tipo"> inteiro</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;var_real<span class="caractere">:</span><span class="tipo"> real</span>;<br>
+                            <span class="reservada">inicio</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;var_inteiro <span class="caractere">&lt;-</span> -1;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;var_real <span class="caractere">&lt;-</span> 2.5;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;var_real <span class="caractere">&lt;-</span> 2.0 + var_inteiro;<br>
+                            <span class="reservada">fim</span><br>
+                        </pre>
+
+                        <div class="alert alert-warning" role="alert">
+                            <h4 class="alert-heading">Observação!</h4>
+                            <p>
+                                Atribuir valores reais a variáveis inteiras, ou vice-versa, resulta em erro.
+                            </p>
+                        </div>
+
+                        <h4 class="mt-5">Conversão de Tipo Inteiro para Real</h4>
+                        <p class="lead">
+                            Só é permitido a conversão de <code>inteiro</code> para <code>real</code>, entretando, para isso é necessario que o valor <code>inteiro</code> esteja em uma expressao que contenha um valor <code>real</code>.
+                        </p>
+
+                        <pre class="pre">
+                            <span class="comentario">// Exemplos de conversão</span><br>
+                            <span class="reservada">variaveis</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;var_real<span class="caractere">:</span><span class="tipo"> real</span>;<br>
+                            <span class="reservada">inicio</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Funciona</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;var_real <span class="caractere">&lt;-</span> 2.5 + 2;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Falha, pois precisa de pelo menos um valor real</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;var_real <span class="caractere">&lt;-</span> 2 + 2;<br>
+                            <span class="reservada">fim</span><br>
+                        </pre>
+                    </section>
+
+                    <!-- Booleano -->
+                    <section id="Booleano">
+                        <hr class="mt-5">
+                        <h2>Booleano</h2>
+                        <p class="lead">
+                            Variáveis do tipo Lógico, armazenam resultado de expressoes lógicas (<code>verdadeiro</code> ou <code>falso</code>).
+                        </p>
+
+                        <pre class="pre">
+                            <span class="comentario">// Exemplo com variáveis e expressões lógicas</span><br>
+                            <span class="reservada">variaveis</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;var_logico<span class="caractere">:</span><span class="tipo"> logico</span>;<br>
+                            <span class="reservada">inicio</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;var_logico <span class="caractere">&lt;-</span> <span class="reservada">verdadeiro</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span>var_logico;<br><br>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Falso</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;var_logico <span class="caractere">&lt;-</span> 1 >= 2;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span>var_logico;<br><br>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Verdadeiro</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;var_logico <span class="caractere">&lt;-</span><span class="reservada"> nao </span>var_logico; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span>var_logico;<br><br>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Falso</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span><span class="reservada"> nao </span>var_logico; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Verdadeiro</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span>var_logico;<br>
+                            <span class="reservada">fim</span><br>
+                        </pre>
+                    </section>
+
+                    <!-- Literais -->
+                    <section id="Literais">
+                        <hr class="mt-5">
+                        <h2>Literais</h2>
+                        <p class="lead">
+                            Variáveis literais armazenam textos, podendo ser <code>cadeia</code>, usadas para textos curtos ou longos, ou <code>caractere</code>, usado para armazenar apenas um caractere.
+                        </p>
+
+                        <p class="lead">
+                            O uso de variáveis do tipo <code>caractere</code> pode trazer economia de memória se comparadas ao uso variáveis de <code>cadeia</code>.
+                        </p>
+
+                        <pre class="pre">
+                            <span class="comentario">// Exemplo de variáveis Literais</span><br>
+                            <span class="reservada">variaveis</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;cidade<span class="caractere">:</span><span class="tipo"> cadeia</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;letra<span class="caractere">:</span><span class="tipo"> caractere</span>;<br>
+                            <span class="reservada">inicio</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Variável do tipo cadeia utilizada</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// para armazenar um texto</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;cidade <span class="caractere">&lt;-</span> <span class="string">"São Luís - MA"</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Variável do tipo caractere </span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// utilizada para armazenar um unico caractere</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;letra <span class="caractere">&lt;-</span> <span class="string">"c"</span>;<br>
+                            <span class="reservada">fim</span><br>
+                        </pre>
+                    </section>
+
+                    <!-- Vetor -->
+                    <section id="Vetor">
+                        <hr class="mt-5">
+                        <h2>Vetor</h2>
+                        <p class="lead">
+                            Vetor é um conjunto de valores de mesmo tipo. Uma variável do tipo <code>vetor</code> tem tamanho definido. Para acessar algum elemento, é usado a posição dele no vetor, também chamada de índice.
+                        </p>
+
+                        <pre class="pre">
+                            <span class="comentario">// Sintaxe para declaração de um vetor</span> <br>
+                            <span class="comentario">// 1 - posição inicial</span> <br>
+                            <span class="comentario">// 9 - posição final</span> <br>
+                            <span class="reservada">variaveis</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;numeros<span class="caractere">:</span><span class="tipo"> vetor</span> <span class="caractere">[</span>1<span class="caractere">.</span><span class="caractere">.</span>9<span class="caractere">]</span> de<span class="tipo"> inteiro</span>;<br>
+
+                            <span class="reservada">inicio</span><br>
+                            <span class="reservada">fim</span><br>
+                        </pre>
+
+                        <div class="alert alert-warning" role="alert">
+                            <h4 class="alert-heading">Observação!</h4>
+                            <p>
+                                A posicao inicial de um vetor não pode ser maior que a posição final.
+                            </p>
+                        </div>
+
+                        <h4 class="mt-5">Exemplo</h4>
+                        <pre class="pre">
+                            <span class="reservada">variaveis</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;numeros<span class="caractere">:</span><span class="tipo"> vetor</span> <span class="caractere">[</span>1<span class="caractere">.</span><span class="caractere">.</span>9<span class="caractere">]</span> de<span class="tipo"> inteiro</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;i<span class="caractere">:</span><span class="tipo"> inteiro</span>; <span class="comentario">// Será usado como indice </span><br>
+
+                            <span class="reservada">inicio</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Percorre o vetor inserindo o valor de i</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">para </span>i<span class="reservada"> de </span>1 <span class="reservada">ate </span>9<span class="reservada"> passo </span>1<span class="reservada"> faca</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numeros<span class="caractere">[</span>i<span class="caractere">]</span> <span class="caractere">&lt;-</span> i;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim</span><span class="reservada"> para</span>;<br><br>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Percorre o vetor exibindo os seus elementos</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Vetor gerado: "</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">para </span>i<span class="reservada"> de </span>1 <span class="reservada">ate </span>9<span class="reservada"> passo </span>1<span class="reservada"> faca</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Posição "</span>, i, <span class="string">" = "</span>, numeros<span class="caractere">[</span>i<span class="caractere">]</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim</span><span class="reservada"> para</span>;<br><br>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;i <span class="caractere">&lt;-</span> 9;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Vetor gerado invertido: "</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">enquanto </span>i >= 1<span class="reservada"> faca</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Posição "</span>, i, <span class="string">" = "</span>, numeros<span class="caractere">[</span>i<span class="caractere">]</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i <span class="caractere">&lt;-</span> i-1;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim</span><span class="reservada"> enquanto</span>;<br>
+
+                            <span class="reservada">fim</span><br>
+                        </pre>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Rodape -->
+    <footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+    <!-- JS -->
+    <!-- Bootstrap 5 Bundle Core -->
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script></body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="@{/fragmentos/head.html}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo ao Quiz!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #336699;
+        }
+
+        p {
+            color: #555;
+        }
+
+        #startQuizButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #336699;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header th:replace="~{/fragmentos/header :: header}"></header>
+    <h1>Bem-vindo ao Quiz!</h1>
+    <p>Teste seus conhecimentos com nosso quiz emocionante. Boa sorte!</p>
+
+    <button id="startQuizButton" onclick="startQuiz()">Iniciar Quiz</button>
+
+    <script>
+        function startQuiz() {
+            // Redirecionar para a página do quiz
+            window.location.href = "quiz";
+        }
+    </script>
+    <footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+</body>
+</html>

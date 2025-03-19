@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/fragmentos/head :: head}"></head>
+<body>
+
+<!-- Header -->
+<!-- Cabecalho -->
+<header th:replace="~{/fragmentos/header :: header}"></header>
+    <!-- Corpo principal do site -->
+    <main>
+        <div class="container py-5 px-5 px-sm-2">
+            <!-- Content -->
+            <!-- Primeira secao -->
+<!-- Contem o titulo, pequena descricao e link para download -->
+<section>
+    <div class="d-flex flex-row justify-content-center align-items-center">
+        <div class="col-lg-6">
+
+            <div>
+                <h1 class="text-center text-lg-start">Mapler - Compilador Portugol</h1>
+            </div>
+
+            <div>
+                <p class="text-center text-lg-start lead">
+                    Este projeto visa o desenvolvimento e produção de uma 
+                    ferramenta de compilação da <span class="rosa">pseudo-linguagem</span> português 
+                    estruturado (<strong>portugol</strong>) para auxiliar estudantes brasileiros 
+                    iniciando em atividades de programação.
+                </p>
+            </div>
+            
+            <div class="d-flex flex-column flex-lg-row align-items-center">
+                <a class="text-decoration-none" href="/download">
+                    <button type="button" class="btn btn-lg btn-primary px-5 mb-3 me-md-3">
+                        Baixar
+                    </button>
+                </a>
+
+                <span class="rosa">v0.0.6</span>
+            </div>
+        </div>
+
+        <div class="d-none d-lg-block">
+            <img src="images/imagem-banner-inicio.png" alt="Banner de Inicio" width="400px">
+        </div>
+    </div>
+
+    <div class="mt-5">
+        <p class="text-center text-lg-start lead">
+            O Projeto pretende possibilitar a geração de códigos em 
+            <span class="rosa">Pascal</span>, 
+            <span class="rosa">C</span>, 
+            <span class="rosa">C++</span>, 
+            <span class="rosa">Python</span>
+            e
+            <span class="rosa">Java</span>
+            a partir do código elaborado pelos alunos em Portugol com o objetivo de 
+            facilitar o aprendizado nestas novas linguagens, que provavelmente serão 
+            as próximas linguagens a serem aprendidas nos cursos na área de Computação 
+            e Programação.
+        </p>
+    </div>
+</section>
+
+<!-- Segunda secao -->
+<!-- Contem um pequeno exemplo de codigo -->
+<section>
+    <div class="mt-5">
+        <div>
+            <h2>Exemplo de Código</h2>
+        </div>
+
+        <pre class="pre">
+            <span class="comentario">// Exemplo de Código Portugol</span><br>
+            <span class="reservada">variaveis</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;senha<span class="caractere">:</span><span class="tipo"> cadeia</span>;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;senha_correta<span class="caractere">:</span><span class="tipo"> cadeia</span>;<br>
+
+            <span class="reservada">inicio</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;senha_correta <span class="caractere">&lt;-</span> <span class="string">"12345"</span>;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Digite a senha: "</span>;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler </span>senha;<br><br>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">se </span>senha = senha_correta<span class="reservada"> entao</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Senha correta!"</span>;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">senao</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Senha incorreta!"</span>;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim se</span>;<br>
+            
+            <span class="reservada">fim</span><span class="caractere">.</span><br>
+        </pre>
+    </div>
+</section>
+        </div>
+    </main>
+<!-- Rodape -->
+<footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+<!-- JS -->
+<!-- Bootstrap 5 Bundle Core -->
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
