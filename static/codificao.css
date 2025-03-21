@@ -1,264 +1,163 @@
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
-    background-color: #1e1e2f;
-    color: #d4d4d4;
-    font-family: 'Courier New', Courier, monospace;
+  background-color: #1e1e2f;
+  color: #d4d4d4;
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Adicionar box-sizing e transição aos elementos afetados */
+header,
+.container-fluid,
+.terminal {
+  box-sizing: border-box;
+  transition: padding-left 0.3s ease;
 }
 
 header {
-    background: linear-gradient(90deg, #1e1e2f, #1D2671, #C33764);
+  background: linear-gradient(90deg, #1e1e2f, #1d2671, #c33764);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Ajustar padding quando a sidebar está aberta */
+.sidebar:not(.collapsed) ~ header,
+.sidebar:not(.collapsed) ~ .container-fluid,
+.sidebar:not(.collapsed) ~ .terminal {
+  padding-left: 60px;
+}
+
+/* Restante do CSS permanece igual */
+.logo-header {
+  width: 40px;
+  height: 40px;
 }
 
 .code-editor {
-    background-color: #252540;
-    border: 1px solid #3b3b6d;
-    border-radius: 5px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    height: 300px
-    
+  background-color: #252540;
+  border: 1px solid #3b3b6d;
+  border-radius: 5px;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .code-editor h5 {
-    color: #569cd6;
-    margin-bottom: 10px;
+  color: #569cd6;
+  margin-bottom: 10px;
 }
 
-.code-editor pre {
-    margin: 0;
-    color: #d4d4d4;
-}
-
-.code-editor code {
-    white-space: pre-wrap;
-}
-
-.terminal {
-    background-color: #1e1e2f;
-    border-top: 1px solid #3b3b6d;
-    color: #d4d4d4;
-    height: 20vh;
-    overflow-y: auto;
-}
-
-/* codificao */
-pre {
-    font-family: monospace; /* Fonte de código */
-    background-color: #f0f0f0; /* Cor de fundo */
-    padding: 10px; /* Espaçamento interno */
-    border: 1px solid #ccc; /* Borda */
-    border-radius: 5px; /* Borda arredondada */
-  }
-  
-  code {
-    color: #333; /* Cor do texto */
-    white-space: pre-wrap; /* Quebra de linha */
-    word-break: break-word; /* Quebra de palavra */
-  }
-
-/* constância do editor */
-/* Garante que os editores não aumentem de altura */
 .code-editor .CodeMirror {
-    height: 100%; /* Mantém o tamanho máximo dentro do container */
-    max-height: 300px; /* Evita crescimento */
- /* Adiciona rolagem interna */
- overflow: hidden;
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
 }
 
-/* Mantém a altura fixa proporcional à tela */
-
-
-
-
-
-
-/* Duplicacao de numero e barras */
-/* Remove barras de rolagem extras */
-.CodeMirror {
-    height: 100%;
-    max-height: 100%;
-    overflow: hidden; /* Evita rolagem dupla */
-}
-
-/* Remove duplicação da numeração */
 .CodeMirror-gutters {
-    background: #252540 !important;
-    border-right: 1px solid #3b3b6d;
+  background: #252540 !important;
+  border-right: 1px solid #3b3b6d;
 }
 
-/* Ajusta a altura do editor corretamente */
-
-
-
-/* correçao na altura e barras de rolagem */
-/* Define um tamanho fixo para evitar crescimento vertical do editor */
-.code-editor {
-    background-color: #252540;
-    border: 1px solid #3b3b6d;
-    border-radius: 5px;
-    position: relative;
-    overflow: hidden; /* Impede que outra barra de rolagem apareça */
-    height: 300px;
-    max-height: 800px;
-}
-
-.code-editor .CodeMirror {
-    height: 100%;
-    max-height: 100%;
-
-}
-
-/* Remove a duplicação da numeração */
-.CodeMirror-gutters {
-    background: #252540 !important;
-    border-right: 1px solid #3b3b6d;
-}
-
-/* Mantém o tamanho fixo da linha do editor */
-.CodeMirror-scroll {
-    overflow: auto !important;
+.container-fluid .row {
+  height: calc(100vh - 90px);
+  overflow: hidden;
 }
 
 .terminal {
-    width: 100%;
-    height: 100%;
+  background-color: #1e1e2f;
+  border-top: 1px solid #3b3b6d;
+  color: #d4d4d4;
+  height: 20vh;
+  overflow-y: auto;
 }
 
-
-/* teste de codigo */
-.code-editor {
-    background-color: #252540;
-    border: 1px solid #3b3b6d;
-    border-radius: 5px;
-    height: 100%;
-    overflow: hidden;
-}
-
-.code-editor .CodeMirror {
-    height: 100%;
-    overflow: hidden;
-}
-
-.terminal-container {
-    background-color: #1e1e2f;
-    border-top: 1px solid #3b3b6d;
-    height: 20vh;
-    overflow: hidden;
-}
-
-.terminal {
-    width: 100%;
-    height: 100%;
-}
-
-#portugol-editor{
-    height: 300px;
-}
-
-.logo-header{
-    width: 40px;
-    height: 40px;
-    display: inline;
-    margin-top: 0px;
-}
-
-
-
-
-/* ajudanto a side barra */
-
-/* inicio da barra lateral ou SIDEBAR */
 .sidebar {
-    position: fixed;
-    left: 0;
-    top: 50px;
-    width: 60px;
-    height: 60vh;
-    background-color: #1e1e2f;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 0px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
-    z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 50px;
+  width: 60px;
+  height: 710px;
+  background-color: #1e1e2f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease;
 }
 
-/* Botões da barra lateral */
+.icon-img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+.sidebar.collapsed {
+  transform: translateX(-100%);
+}
+
 .sidebar-btn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    margin: 15px 0;
-    transition: transform 0.2s ease, background 0.2s;
-    padding: 10px;
-    border-radius: 50%;
-;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 15px 0;
+  transition: transform 0.2s ease, background 0.2s;
+  border-radius: 50%;
 }
 
-/* novo teste de side bar */
-/* Estilizando a sidebar */
-
-
-/* Estilizando os botões da sidebar */
-.sidebar-btn {
-    display: block; /* Cada botão em uma linha */
-    width: 100%; /* Ocupa a largura da sidebar */
-    padding: 15px 0; /* Espaçamento interno maior para ícones */
-    border: none; /* Remove borda padrão */
-    background: none; /* Remove fundo padrão */
-    font-size: 20px; /* Tamanho dos ícones */
-    text-align: center; /* Centraliza os ícones */
-    cursor: pointer; /* Mãozinha ao passar o mouse */
+.menu-icon {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  margin-right: 10px;
 }
 
-.sidebar-btn:hover {
-    background-color: #71a6db; /* Cor ao passar o mouse */
-}
-
-/* Ajustando o corpo para evitar sobreposição */
-body {
-    margin: 0; /* Remove margens padrão */
-    overflow-x: hidden; /* Evita rolagem horizontal */
-}
-
-/* Ajustando o header */
-header {
-    margin-left: 50px; /* Margem para não sobrepor a sidebar */
-    width: calc(100% - 50px); /* Ajusta a largura do header */
-}
-
-/* Ajustando o container principal */
-.container-fluid {
-    margin-left: 50px; /* Margem para alinhar com o header */
-    width: calc(100% - 50px); /* Ocupa o espaço restante */
-}
-
-/* Ajuste responsivo para telas menores */
 @media (max-width: 768px) {
-    .sidebar {
-        width: 100%; /* Sidebar ocupa toda a largura */
-        min-height: auto; /* Remove a altura fixa */
-        float: none; /* Remove o float */
-        display: flex; /* Alinha os botões horizontalmente */
-        justify-content: center; /* Centraliza os botões */
-        padding: 5px 0; /* Espaçamento ajustado */
-    }
-    .sidebar-btn {
-        display: inline-block; /* Botões lado a lado */
-        width: auto; /* Largura automática */
-        padding: 5px 15px; /* Espaçamento ajustado */
-    }
-    header {
-        margin-left: 0; /* Remove a margem em telas pequenas */
-        width: 100%; /* Ocupa toda a largura */
-    }
-    .container-fluid {
-        margin-left: 0; /* Remove a margem */
-        width: 100%; /* Ocupa toda a largura */
-    }
-    .code-editor {
-        width: 100%; /* Garante que o editor ocupe a largura disponível */
-    }
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px 0;
+  }
+
+  .sidebar-btn {
+    display: inline-block;
+    width: auto;
+    padding: 5px 15px;
+  }
+
+  .sidebar:not(.collapsed) ~ header,
+  .sidebar:not(.collapsed) ~ .container-fluid,
+  .sidebar:not(.collapsed) ~ .terminal {
+    padding-left: 0;
+  }
+
+  .container-fluid .row {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .code-editor {
+    height: 50vh;
+  }
 }
