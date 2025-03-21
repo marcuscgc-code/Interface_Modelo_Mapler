@@ -161,3 +161,104 @@ pre {
     display: inline;
     margin-top: 0px;
 }
+
+
+
+
+/* ajudanto a side barra */
+
+/* inicio da barra lateral ou SIDEBAR */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 50px;
+    width: 60px;
+    height: 60vh;
+    background-color: #1e1e2f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+/* Botões da barra lateral */
+.sidebar-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 15px 0;
+    transition: transform 0.2s ease, background 0.2s;
+    padding: 10px;
+    border-radius: 50%;
+;
+}
+
+/* novo teste de side bar */
+/* Estilizando a sidebar */
+
+
+/* Estilizando os botões da sidebar */
+.sidebar-btn {
+    display: block; /* Cada botão em uma linha */
+    width: 100%; /* Ocupa a largura da sidebar */
+    padding: 15px 0; /* Espaçamento interno maior para ícones */
+    border: none; /* Remove borda padrão */
+    background: none; /* Remove fundo padrão */
+    font-size: 20px; /* Tamanho dos ícones */
+    text-align: center; /* Centraliza os ícones */
+    cursor: pointer; /* Mãozinha ao passar o mouse */
+}
+
+.sidebar-btn:hover {
+    background-color: #71a6db; /* Cor ao passar o mouse */
+}
+
+/* Ajustando o corpo para evitar sobreposição */
+body {
+    margin: 0; /* Remove margens padrão */
+    overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+/* Ajustando o header */
+header {
+    margin-left: 50px; /* Margem para não sobrepor a sidebar */
+    width: calc(100% - 50px); /* Ajusta a largura do header */
+}
+
+/* Ajustando o container principal */
+.container-fluid {
+    margin-left: 50px; /* Margem para alinhar com o header */
+    width: calc(100% - 50px); /* Ocupa o espaço restante */
+}
+
+/* Ajuste responsivo para telas menores */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Sidebar ocupa toda a largura */
+        min-height: auto; /* Remove a altura fixa */
+        float: none; /* Remove o float */
+        display: flex; /* Alinha os botões horizontalmente */
+        justify-content: center; /* Centraliza os botões */
+        padding: 5px 0; /* Espaçamento ajustado */
+    }
+    .sidebar-btn {
+        display: inline-block; /* Botões lado a lado */
+        width: auto; /* Largura automática */
+        padding: 5px 15px; /* Espaçamento ajustado */
+    }
+    header {
+        margin-left: 0; /* Remove a margem em telas pequenas */
+        width: 100%; /* Ocupa toda a largura */
+    }
+    .container-fluid {
+        margin-left: 0; /* Remove a margem */
+        width: 100%; /* Ocupa toda a largura */
+    }
+    .code-editor {
+        width: 100%; /* Garante que o editor ocupe a largura disponível */
+    }
+}

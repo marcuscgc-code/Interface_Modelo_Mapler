@@ -27,3 +27,17 @@ document.addEventListener("DOMContentLoaded", function () {
         </footer>
     `;
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("run-btn").addEventListener("click", function() {
+        alert("Executar código!");
+    });
+
+    document.getElementById("stop-btn").addEventListener("click", function() {
+        alert("Parar código!");
+    });
+
+    document.getElementById("debug-btn").addEventListener("click", function() {
+        alert("Debug ativado!");
+    });
+});

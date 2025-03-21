@@ -24,10 +24,23 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css">
 </head>
 <body>
+    <!-- Barra Lateral -->
+<div class="sidebar">
+    <button class="sidebar-btn" id="run-btn" title="Executar">
+        ▶️
+    </button>
+    <button class="sidebar-btn" id="stop-btn" title="Parar">
+        ⏹️
+    </button>
+    <button class="sidebar-btn" id="debug-btn" title="Debug">
+        🐞
+    </button>
+</div>
+
     <!-- Header -->
     <header class="bg-dark text-white p-2 ">
         <img src="/icones/icone_logo.ico" alt="logo_do_header" class="logo-header">
-        <h1 class="h4 mb-md-0  style="display: inline;">MAPLER</h1>
+        <h1 class="h4 mb-1" style="display: inline;">MAPLER</h1>
     </header>
 
     <!-- Main Content: Split Code Editors -->
